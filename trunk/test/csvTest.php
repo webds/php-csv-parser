@@ -59,6 +59,14 @@ class csvTest extends PHPUnit2_Framework_TestCase {
      */
     protected $fpath = 'data/';
 
+    protected $ninth_row_from_symetric = array (
+      0 => '9aa',
+      1 => '9bb',
+      2 => '9cc',
+      3 => '9dd',
+      4 => '9ee',
+    );
+
     protected $non_valid_files = array(
        "no_exists.csv" => 'non existent file',
        "invalid_ext.csv.txt" => 'invalid extension file',
@@ -360,6 +368,26 @@ class csvTest extends PHPUnit2_Framework_TestCase {
         $this->assertEquals($this->original_headers, $this->csv->headers());
         $this->assertFalse($this->csv->inject_headers($this->expected_headers));
         $this->assertEquals($this->original_headers, $this->csv->headers());
+    }
+
+    public function test_row_count_is_correct()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $expected_count = count($this->symmetric_connection);
+        $this->assertEquals($expected_count, $this->csv->count_rows());
+    }
+
+    public function test_row_fetching_returns_correct_result()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $this->assertEquals($this->ninth_row_from_symetric, $this->csv->row(9));
+    }
+
+    public function test_row_must_be_empty_array_when_row_does_not_exist()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $this->assertEquals(array(), $this->csv->row(-1));
+        $this->assertEquals(array(), $this->csv->row(10));
     }
 
 }
