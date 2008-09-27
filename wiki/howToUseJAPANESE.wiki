@@ -21,13 +21,13 @@
       
        // ヘーダの数や全てのデータの数が会う場合
        // ヘーダやデータ会わせって配列に読み込む
-        if ($csv->symetric()) {
+        if ($csv->symmetric()) {
             // array(array('header1' => 'row1'), array('header1' => 'row2'));
             $array = $csv->connect(); // <- sample 上記の配列と同じです。
         } else {
             // ヘーダとデータの数が会わない場合
 　　　　　　// 会わない本文だけ配列に読み込む
-            $array = $csv->asymetry();
+            $array = $csv->asymmetry();
         }
       
         // 全てのヘーダ＋データを読み込む
