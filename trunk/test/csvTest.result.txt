@@ -1,0 +1,7 @@
+PHPUnit 2.3.6 by Sebastian Bergmann.
+
+..............
+
+Time: 0.005584
+
+OK (14 tests)
