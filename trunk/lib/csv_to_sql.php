@@ -42,7 +42,7 @@ class csv_to_sql extends csv
         if (!$this->symmetric()) return $queries;
         $headers = join(', ', $this->headers());
 
-        foreach ($this->data() as $record) {
+        foreach ($this->rows() as $record) {
             $values = $this->join_record_values($record);
             $queries[] = sprintf($this->query_template, $tablename, $headers,
                 $values);
