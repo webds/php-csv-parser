@@ -128,19 +128,6 @@ class csv
     }
 
     /**
-     * csv data extractor
-     *
-     * extracts csv data excluding the headers
-     *
-     * @access  public
-     * @return  array
-     */
-    public function data()
-    {
-        return $this->_data;
-    }
-
-    /**
      * header and value connector
      *
      * Builds a connection for each record and its header
@@ -260,6 +247,19 @@ class csv
             return $this->_data[$number];
         }
         return array();
+    }
+
+    /**
+     * multiple row fetcher
+     *
+     * extracts csv rows excluding the headers
+     *
+     * @access  public
+     * @return  array
+     */
+    public function rows()
+    {
+        return $this->_data;
     }
 
     /**
