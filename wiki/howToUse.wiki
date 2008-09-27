@@ -1,15 +1,11 @@
 #summary Quick sample!
 #labels Featured
 
-= Introduction =
-
-
 Lets get started with quick samples
 
-
 = Usage =
+{{{
 
-<pre>
      // usage sample
      $csv = new csv;
   
@@ -37,5 +33,4 @@ Lets get started with quick samples
         // ignore everything and simply get the data as an array
         $array = $csv->raw_array();
      }
-
-</pre>
+}}}
