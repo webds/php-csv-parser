@@ -59,7 +59,7 @@ class csvTest extends PHPUnit2_Framework_TestCase {
      */
     protected $fpath = 'data/';
 
-    protected $ninth_row_from_symetric = array (
+    protected $ninth_row_from_symmetric = array (
       0 => '9aa',
       1 => '9bb',
       2 => '9cc',
