@@ -380,7 +380,7 @@ class csvTest extends PHPUnit2_Framework_TestCase {
     public function test_row_fetching_returns_correct_result()
     {
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
-        $this->assertEquals($this->ninth_row_from_symetric, $this->csv->row(9));
+        $this->assertEquals($this->ninth_row_from_symmetric, $this->csv->row(9));
     }
 
     public function test_row_must_be_empty_array_when_row_does_not_exist()
