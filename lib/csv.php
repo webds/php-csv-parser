@@ -133,7 +133,7 @@ class csv
      * extracts csv data excluding the headers
      *
      * @access  public
-     * @return  void
+     * @return  array
      */
     public function data()
     {
@@ -239,6 +239,40 @@ class csv
             $ret_arr[] = $data[$key];
         }
         return $ret_arr;
+    }
+
+    /**
+     * row fetcher
+     *
+     * Note: first row is zero
+     *
+     * @param   integer $number
+     * @access  public
+     * @return  array   the row identified by number, if $number does
+     *                  not exist an empty array is returned instead
+     * <code>
+     *   $array = $csv->row(3); # array('val1', 'val2', 'val3')
+     * </code>
+     */
+    public function row($number)
+    {
+        if (array_key_exists($number, $this->_data)) {
+            return $this->_data[$number];
+        }
+        return array();
+    }
+
+    /**
+     * row counter
+     *
+     * this function excludes the headers
+     *
+     * @access  public
+     * @return  integer
+     */
+    public function count_rows()
+    {
+        return count($this->_data);
     }
 
     /**
