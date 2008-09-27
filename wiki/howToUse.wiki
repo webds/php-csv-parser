@@ -23,11 +23,11 @@ Lets get started with quick samples
        // get each record with its related header
        // ONLY if all records length match the number
        // of headers
-        if ($csv->symetric()) {
+        if ($csv->symmetric()) {
             $array = $csv->connect();
         } else {
             // fetch records that dont match headers length
-            $array = $csv->asymetry();
+            $array = $csv->asymmetry();
         }
       
         // ignore everything and simply get the data as an array
