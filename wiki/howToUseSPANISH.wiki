@@ -1,4 +1,5 @@
 #summary Simple Manual
+#labels Featured
 
 = Ejemplo Simple =
 
