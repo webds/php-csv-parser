@@ -333,6 +333,7 @@ class csv
         if (!$this->symmetric()) return false;
         if (!is_array($list)) return false;
         if (count($list) != count($this->_headers)) return false;
+        $this->move_headers_to_data();
         $this->_headers = $list;
         return true;
     }
