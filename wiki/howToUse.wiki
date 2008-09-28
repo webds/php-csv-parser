@@ -3,7 +3,25 @@
 
 Lets get started with quick samples
 
-= Usage =
+= Quick Samples =
+
+{{{
+
+  $csv->headers(); // array('name', 'age');
+
+  $csv->column('name'); // array('john', 'tanaka');
+
+  $csv->row(1); // array('john', '13');
+
+  $csv->connect(); // array(
+                   //   array('name' => 'john', 'age' => 13),
+                   //   array('name' => 'tanaka', 'age' => 8)
+                   // );
+
+}}}
+
+= Detailed Usage =
+
 {{{
 
      // usage sample
