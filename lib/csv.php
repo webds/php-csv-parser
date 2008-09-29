@@ -37,10 +37,10 @@
  *
  * <code>
  *
- * @version     $id$
+ * @version     $Id:$
  * @copyright   1997-2005 The PHP Group
  * @author      Kazuyoshi Tlacaelel <kazu.dev@gmail.com>
- * @license     PHP Version 3.0 {@link http://www.php.net/license/3_0.txt}
+ * @license     MIT
  */
 class csv
 {
