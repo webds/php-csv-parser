@@ -6,6 +6,11 @@ Lets get started with quick samples
 = Quick Samples =
 
 {{{
+<?php
+
+  $csv = new csv;
+ 
+  $csv->uses('my_file.csv'); // boolean
 
   $csv->headers(); // array('name', 'age');
 
@@ -18,11 +23,15 @@ Lets get started with quick samples
                    //   array('name' => 'tanaka', 'age' => 8)
                    // );
 
+?>
+
 }}}
+
 
 = Detailed Usage =
 
 {{{
+<?php
 
      // usage sample
      $csv = new csv;
@@ -51,4 +60,6 @@ Lets get started with quick samples
         // ignore everything and simply get the data as an array
         $array = $csv->raw_array();
      }
+
+?>
 }}}
