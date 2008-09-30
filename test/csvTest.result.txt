@@ -1,7 +1,7 @@
 PHPUnit 2.3.6 by Sebastian Bergmann.
 
-.................
+......................
 
-Time: 0.053590
+Time: 0.009245
 
-OK (17 tests)
+OK (22 tests)

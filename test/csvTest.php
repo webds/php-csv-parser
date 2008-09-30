@@ -250,6 +250,45 @@ class csvTest extends PHPUnit2_Framework_TestCase {
       ),
     );
 
+    protected $header_a_connection = array (
+        0 => 
+        array (
+        'header_a' => '1aa',
+        ),
+        1 => 
+        array (
+        'header_a' => '2aa',
+        ),
+        2 => 
+        array (
+        'header_a' => '3aa',
+        ),
+        3 => 
+        array (
+        'header_a' => '4aa',
+        ),
+        4 => 
+        array (
+        'header_a' => '5aa',
+        ),
+        5 => 
+        array (
+        'header_a' => '6aa',
+        ),
+        6 => 
+        array (
+        'header_a' => '7aa',
+        ),
+        7 => 
+        array (
+        'header_a' => '8aa',
+        ),
+        8 => 
+        array (
+        'header_a' => '9aa',
+        ),
+    );
+
     public function testUses() {
 
         // must false when a file is not valid
@@ -388,6 +427,38 @@ class csvTest extends PHPUnit2_Framework_TestCase {
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
         $this->assertEquals(array(), $this->csv->row(-1));
         $this->assertEquals(array(), $this->csv->row(10));
+    }
+
+    public function test_connect_must_build_relationship_for_needed_headers_only()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $result = $this->csv->connect(array('header_a'));
+        $this->assertEquals($this->header_a_connection, $result);
+    }
+
+    public function test_connect_must_return_empty_array_if_given_params_are_of_invalid_datatype()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $this->assertEquals(array(), $this->csv->connect('header_a'));
+    }
+
+    public function test_connect_should_ignore_non_existant_headers_AND_return_empty_array()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $this->assertEquals(array(), $this->csv->connect(array('non_existent_header')));
+    }
+
+    public function test_connect_should_ignore_non_existant_headers_BUT_get_existent_ones()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $result = $this->csv->connect(array('non_existent_header', 'header_a'));
+        $this->assertEquals($this->header_a_connection, $result);
+    }
+
+    public function test_count_headers()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $this->assertEquals(5, $this->csv->count_headers());
     }
 
 }
