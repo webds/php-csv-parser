@@ -37,7 +37,7 @@
  *
  * <code>
  *
- * @version     $Id:$
+ * @version     $Id$
  * @copyright   1997-2005 The PHP Group
  * @author      Kazuyoshi Tlacaelel <kazu.dev@gmail.com>
  * @license     MIT
@@ -128,6 +128,17 @@ class csv
     }
 
     /**
+     * header counter
+     *
+     * @access  public
+     * @return  integer
+     */
+    public function count_headers()
+    {
+        return count($this->_headers);
+    }
+
+    /**
      * header and value connector
      *
      * Builds a connection for each record and its header
@@ -135,6 +146,9 @@ class csv
      * Note: if the data is not symmetric an emty array will be
      * returned instead.
      *
+     * @param   array   $columns    the columns to connect, if nothing
+     *                              is given all headers will be used
+     *                              to create a connection
      * @access  public
      * @return  array   fetches a collection of hashes like
      * <code>
@@ -143,9 +157,11 @@ class csv
      *   );
      * </code>
      */
-    public function connect()
+    public function connect($columns = array())
     {
         if (!$this->symmetric()) return array();
+        if (!is_array($columns)) return array();
+        if ($columns === array()) $columns = $this->_headers;
 
         $ret_arr = array();
 
@@ -153,9 +169,13 @@ class csv
             $item_array = array();
             foreach ($record as $column => $value) {
                 $header = $this->_headers[$column];
-                $item_array[$header] = $value;
+                if (in_array($header, $columns)) {
+                    $item_array[$header] = $value;
+                }
             }
-            array_push($ret_arr, $item_array);
+
+            # do not append empty results
+            if ($item_array !== array()) array_push($ret_arr, $item_array);
         }
 
         return $ret_arr;
