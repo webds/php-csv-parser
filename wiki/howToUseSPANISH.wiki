@@ -5,6 +5,12 @@
 
 {{{
 
+<?php
+
+  $csv = new csv;
+ 
+  $csv->uses('my_file.csv'); // boolean
+
   $csv->headers(); // array('name', 'age');
 
   $csv->column('name'); // array('john', 'tanaka');
@@ -16,11 +22,15 @@
                    //   array('name' => 'tanaka', 'age' => 8)
                    // );
 
+?>
+
 }}}
+
 
 
 = Un Ejemplo un poco mas complicado =
 {{{
+<?php
 
      // instancia
      $csv = new csv;
@@ -48,4 +58,6 @@
         // pone todos los datos de el archivo en un array
         $array = $csv->raw_array();
      }
+?>
+
 }}}
