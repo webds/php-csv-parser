@@ -1,0 +1,23 @@
+#labels Featured
+= Join the Project! = 
+
+=== Coding Style ===
+
+  * pear coding standards http://pear.php.net/manual/en/standards.php
+  * unit tests http://www.phpunit.de/
+
+=== Translation ===
+
+  * Any language that you can provide will help a lot of people!
+
+=== Source ===
+{{{
+  # Non-members may check out a read-only working copy anonymously over HTTP.
+  svn checkout http://php-csv-parser.googlecode.com/svn/trunk/ php-csv-parser-read-only
+}}}
+
+  * Please send patches and after a few times we'll provide you with a svn account.
+
+=== Contact ===
+
+  * *Kazuyoshi Tlacaelel* (kazu d0t dev at gmail)
