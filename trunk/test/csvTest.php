@@ -343,13 +343,11 @@ class csvTest extends PHPUnit2_Framework_TestCase {
     }
 
     public function testSymmetric_OK() {
-        // true
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
         $this->assertTrue($this->csv->symmetric());
     }
 
     public function testSymmetric_NG() {
-        // true
         $this->assertTrue($this->csv->uses('data/asymmetric.csv'));
         $this->assertFalse($this->csv->symmetric());
     }
