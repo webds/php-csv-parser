@@ -89,6 +89,8 @@ class csv_to_sql extends csv
 
     public function convertable($string)
     {
+        if (empty($string)) return false;
+        if (empty($this->from)) return false;
         if (!mb_check_encoding($string, $this->from)) return false;
         return true;
     }
