@@ -44,34 +44,41 @@ class csv_to_sql extends csv
         if (!$this->symmetric()) return $queries;
         if ($headers === array()) $headers = $this->headers();
 
-        $header_keys = array_keys($headers);
-        $headers = join(', ', $headers);
         foreach ($this->rows() as $record) {
-            $values = $this->_join_record_values($record, $header_keys);
-            $queries[] = sprintf($this->query_template, $tablename, $headers,
-                $values);
+            $queries[] = sprintf(
+                $this->query_template,
+                $tablename,
+                join(', ', $headers),
+                $this->_join_record_values($record, $headers)
+            );
         }
         return $queries;
     }
 
-    private function _join_record_values($record, $header_keys)
+    private function _join_record_values($record, $headers)
     {
-        $values = array();
-        foreach ($record as $key => $value) {
-
-            if (in_array($key, $header_keys)) {
-                if ($this->convertable($value)) {
-                    $value = mb_ereg_replace("/'/", '\'', $value);
-                    $value = mb_convert_encoding($value, $this->from, $this->to);
-                } else {
-                    $value = preg_replace("/'/", '\'', $value);
-                }
-                $values[] = "'" . $value . "'";
+        foreach ($this->headers() as $key => $header) {
+            if (in_array($header, $headers)) {
+                $values[] = $this->convert($record[$key]);
             }
-
         }
         unset($record);
         return join(', ', $values);
+    }
+
+    public function convert($value)
+    {
+        if ($this->convertable($value)) {
+            $value = mb_ereg_replace("/'/", '\'', $value);
+            $value = mb_ereg_replace('\s+$', '', $value);
+            $value = mb_ereg_replace('^\s+', '', $value);
+            $value = mb_convert_encoding($value, 'utf8', 'sjis');
+        } else {
+            $value = preg_replace("/'/", '\'', $value);
+            $value = preg_replace('/\s+$/', '', $value);
+            $value = preg_replace('/^\s+/', '', $value);
+        }
+        return "'" . $value . "'";
     }
 
     public function conversion($from, $to)
@@ -82,10 +89,7 @@ class csv_to_sql extends csv
 
     public function convertable($string)
     {
-        $encodings = mb_list_encodings();
-        if (!in_array($from, $encodings)) return false;
-        if (!in_array($to, $encodings)) return false;
-        if (!mb_check_encoding($string, $from)) return false;
+        if (!mb_check_encoding($string, $this->from)) return false;
         return true;
     }
 

@@ -51,6 +51,10 @@ class sqlTest extends PHPUnit_Framework_TestCase
     }
 
 
+    public function test_convert()
+    {
+    }
+
 }
 
 ?>
