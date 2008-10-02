@@ -12,6 +12,18 @@ $fixtures = array(
       4 => 'header_e',
     ),
 
+
+    'first_row_from_symmetric' => array (
+      0 => 
+      array (
+        'header_a' => '1aa',
+        'header_b' => '1bb',
+        'header_c' => '1cc',
+        'header_d' => '1dd',
+        'header_e' => '1ee',
+      ),
+    ),
+
     'ninth_row_from_symmetric' => array (
       0 => '9aa',
       1 => '9bb',

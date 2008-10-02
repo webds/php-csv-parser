@@ -217,6 +217,13 @@ class csvTest extends PHPUnit_Framework_TestCase
         $expected = fix('symmetric_range_of_rows');
         $this->assertEquals($expected, $this->csv->rows(array(22, 19, 2, 3)));
     }
+
+    public function test_fist_row_must_be_zero()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        // $this->assertEquals(fix('first_row_from_symmetric'), $this->csv->row(0));
+    }
+
 }
 
 // Call csvTest::main() if this source file is executed directly.
