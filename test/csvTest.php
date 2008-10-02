@@ -129,6 +129,7 @@ class csvTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(fix('original_headers'), $this->csv->headers());
         $this->assertTrue($this->csv->inject_headers(fix('expected_headers')));
         $this->assertEquals(fix('expected_headers'), $this->csv->headers());
+        $this->assertEquals(fix('symetric_raw_data'), $this->csv->rows());
     }
 
     public function test_inject_headers_must_not_inject_when_data_is_asymmetric()
