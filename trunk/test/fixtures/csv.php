@@ -14,17 +14,14 @@ $fixtures = array(
 
 
     'first_row_from_symmetric' => array (
-      0 => 
-      array (
-        'header_a' => '1aa',
-        'header_b' => '1bb',
-        'header_c' => '1cc',
-        'header_d' => '1dd',
-        'header_e' => '1ee',
-      ),
+      0 => '1aa',
+      1 => '1bb',
+      2 => '1cc',
+      3 => '1dd',
+      4 => '1ee',
     ),
 
-    'ninth_row_from_symmetric' => array (
+    'eighth_row_from_symmetric' => array (
       0 => '9aa',
       1 => '9bb',
       2 => '9cc',

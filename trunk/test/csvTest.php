@@ -149,8 +149,8 @@ class csvTest extends PHPUnit_Framework_TestCase
     public function test_row_fetching_returns_correct_result()
     {
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
-        $expected = fix('ninth_row_from_symmetric');
-        $this->assertEquals($expected, $this->csv->row(9));
+        $expected = fix('eighth_row_from_symmetric');
+        $this->assertEquals($expected, $this->csv->row(8));
     }
 
     public function test_row_must_be_empty_array_when_row_does_not_exist()
@@ -221,7 +221,7 @@ class csvTest extends PHPUnit_Framework_TestCase
     public function test_fist_row_must_be_zero()
     {
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
-        // $this->assertEquals(fix('first_row_from_symmetric'), $this->csv->row(0));
+        $this->assertEquals(fix('first_row_from_symmetric'), $this->csv->row(0));
     }
 
 }
