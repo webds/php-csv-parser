@@ -67,7 +67,7 @@ class csv
      * @var     array
      * @access  private
      */
-    $_data = array(),
+    $_rows = array(),
 
     /**
      * csv file to parse
@@ -165,7 +165,7 @@ class csv
 
         $ret_arr = array();
 
-        foreach ($this->_data as $record) {
+        foreach ($this->_rows as $record) {
             $item_array = array();
             foreach ($record as $column => $value) {
                 $header = $this->_headers[$column];
@@ -192,7 +192,7 @@ class csv
     public function symmetric()
     {
         $hc = count($this->_headers);
-        foreach ($this->_data as $data) {
+        foreach ($this->_rows as $data) {
             if (count($data) != $hc) return false;
         }
         return true;
@@ -210,7 +210,7 @@ class csv
     {
         $ret_arr = array();
         $hc = count($this->_headers);
-        foreach ($this->_data as $data) {
+        foreach ($this->_rows as $data) {
             if (count($data) != $hc) {
                 $ret_arr[] = $data;
             }
@@ -242,7 +242,7 @@ class csv
         if (!in_array($name, $this->_headers)) return array();
         $key = array_search($name, $this->_headers, true);
         $ret_arr = array();
-        foreach ($this->_data as $data) {
+        foreach ($this->_rows as $data) {
             $ret_arr[] = $data[$key];
         }
         return $ret_arr;
@@ -263,7 +263,7 @@ class csv
      */
     public function row($number)
     {
-        $raw = $this->raw_array();
+        $raw = $this->_rows;
         if (array_key_exists($number, $raw)) return $raw[$number];
         return array();
     }
@@ -279,9 +279,9 @@ class csv
      */
     public function rows($range = array())
     {
-        if ($range === array()) return $this->_data;
+        if ($range === array()) return $this->_rows;
         $ret_arr = array();
-        foreach($this->_data as $key => $row) {
+        foreach($this->_rows as $key => $row) {
             if (in_array($key +1, $range)) $ret_arr[] = $row;
         }
         return $ret_arr;
@@ -297,7 +297,7 @@ class csv
      */
     public function count_rows()
     {
-        return count($this->_data);
+        return count($this->_rows);
     }
 
     /**
@@ -310,7 +310,7 @@ class csv
     {
         $ret_arr = array();
         $ret_arr[] = $this->_headers;
-        foreach ($this->_data as $row) $ret_arr[] = $row;
+        foreach ($this->_rows as $row) $ret_arr[] = $row;
         return $ret_arr;
     }
 
@@ -329,7 +329,7 @@ class csv
     {
         if (!$this->symmetric()) return false;
         $length = count($this->_headers) + 1;
-        $this->move_headers_to_data();
+        $this->move_headers_to_rows();
 
         $ret_arr = array();
         for ($i = 1; $i < $length; $i ++) {
@@ -358,7 +358,7 @@ class csv
         if (!$this->symmetric()) return false;
         if (!is_array($list)) return false;
         if (count($list) != count($this->_headers)) return false;
-        $this->move_headers_to_data();
+        $this->move_headers_to_rows();
         $this->_headers = $list;
         return true;
     }
@@ -391,8 +391,8 @@ class csv
         }
         fclose($res);
         unset($a[0]);
-        $this->_data = $a;
-        $this->_data = $this->_removeEmptyRecords($a);
+        $this->_rows = $a;
+        $this->_rows = $this->_removeEmptyRecords($a);
         return true;
     }
 
@@ -427,14 +427,14 @@ class csv
         return true;
     }
 
-    private function move_headers_to_data()
+    private function move_headers_to_rows()
     {
         $arr = array();
         $arr[] = $this->_headers;
-        foreach ($this->_data as $row) {
+        foreach ($this->_rows as $row) {
             $arr[] = $row;
         }
-        $this->_data = $arr;
+        $this->_rows = $arr;
         $this->_headers = array();
     }
 }
