@@ -155,14 +155,12 @@ $fixtures = array(
     ),
 
     'expected_raw' => array (
-      0 => 
-      array (
-        0 => 'h_one',
-        1 => 'h_two',
-        2 => 'h_three',
-      ),
-      1 => 
-      array (
+        0 => 
+        array (
+          0 => 'h_one',
+          1 => 'h_two',
+          2 => 'h_three',
+        ),
         1 => 
         array (
           0 => 'v_1one',
@@ -181,11 +179,6 @@ $fixtures = array(
           1 => 'v_3two',
           2 => 'v_3three',
         ),
-        4 => 
-        array (
-          0 => '',
-        ),
-      ),
     ),
 
     'expected_escaped' => array (

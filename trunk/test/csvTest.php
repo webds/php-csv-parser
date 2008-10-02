@@ -192,6 +192,17 @@ class csvTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(5, $this->csv->count_headers());
     }
 
+    public function test_raw_array_must_remove_empty_lines()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric_with_empty_lines.csv'));
+        $this->assertEquals(fix('symmetric_connection'), $this->csv->connect());
+    } 
+
+    public function test_raw_array_must_remove_empty_records()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric_with_empty_records.csv'));
+        $this->assertEquals(fix('symmetric_connection'), $this->csv->connect());
+    } 
 }
 
 // Call csvTest::main() if this source file is executed directly.
