@@ -97,6 +97,7 @@ class csv
     public function uses($filename)
     {
         $this->_filename = $filename;
+        $this->_flush();
         return $this->_parse();
     }
 
@@ -435,6 +436,12 @@ class csv
             $arr[] = $row;
         }
         $this->_rows = $arr;
+        $this->_headers = array();
+    }
+
+    private function _flush()
+    {
+        $this->_rows = array();
         $this->_headers = array();
     }
 
