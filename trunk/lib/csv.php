@@ -117,7 +117,7 @@ class csv
     /**
      * header fetcher
      *
-     * gets all headers into an array
+     * gets csv headers into an array
      *
      * @access  public
      * @return  array
@@ -375,7 +375,6 @@ class csv
     {
         if (! $this->_validates()) return false;
 
-        $a = array();
         $c = 0;
         $d = $this->settings['delimiter'];
         $e = $this->settings['escape'];
@@ -384,15 +383,16 @@ class csv
         $res = fopen($this->_filename, 'r');
         while ($keys = fgetcsv($res, $l, $d, $e)) {
 
-            if ($c == 0) $this->_headers = $keys;
+            if ($c == 0) {
+                $this->_headers = $keys;
+            } else {
+                array_push($this->_rows, $keys);
+            }
 
-            array_push($a, $keys);
             $c ++;
         }
         fclose($res);
-        unset($a[0]);
-        $this->_rows = $a;
-        $this->_rows = $this->_removeEmptyRecords($a);
+        $this->_rows = $this->_removeEmptyRecords($this->_rows);
         return true;
     }
 
@@ -437,6 +437,7 @@ class csv
         $this->_rows = $arr;
         $this->_headers = array();
     }
+
 }
 
 ?>
