@@ -239,30 +239,30 @@ $fixtures = array(
      *  
      */
     'symmetric_queries' => array (
-        0 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'1aa\', \'1bb\', \'1cc\', \'1dd\', \'1ee\');',
-        1 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'2aa\', \'2bb\', \'2cc\', \'2dd\', \'2ee\');',
-        2 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'3aa\', \'3bb\', \'3cc\', \'3dd\', \'3ee\');',
-        3 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'4aa\', \'4bb\', \'4cc\', \'4dd\', \'4ee\');',
-        4 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'5aa\', \'5bb\', \'5cc\', \'5dd\', \'5ee\');',
-        5 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'6aa\', \'6bb\', \'6cc\', \'6dd\', \'6ee\');',
-        6 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'7aa\', \'7bb\', \'7cc\', \'7dd\', \'7ee\');',
-        7 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'8aa\', \'8bb\', \'8cc\', \'8dd\', \'8ee\');',
-        8 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'9aa\', \'9bb\', \'9cc\', \'9dd\', \'9ee\');',
+        0 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'1aa\', \'1bb\', \'1cc\', \'1dd\', \'1ee\')',
+        1 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'2aa\', \'2bb\', \'2cc\', \'2dd\', \'2ee\')',
+        2 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'3aa\', \'3bb\', \'3cc\', \'3dd\', \'3ee\')',
+        3 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'4aa\', \'4bb\', \'4cc\', \'4dd\', \'4ee\')',
+        4 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'5aa\', \'5bb\', \'5cc\', \'5dd\', \'5ee\')',
+        5 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'6aa\', \'6bb\', \'6cc\', \'6dd\', \'6ee\')',
+        6 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'7aa\', \'7bb\', \'7cc\', \'7dd\', \'7ee\')',
+        7 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'8aa\', \'8bb\', \'8cc\', \'8dd\', \'8ee\')',
+        8 => 'INSERT INTO test_table (header_a, header_b, header_c, header_d, header_e) VALUES (\'9aa\', \'9bb\', \'9cc\', \'9dd\', \'9ee\')',
     ),
 
 // ---
 
     # column one and three
     'alternated_header_queries' => array (
-        0 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'1aa\', \'1cc\');',
-        1 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'2aa\', \'2cc\');',
-        2 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'3aa\', \'3cc\');',
-        3 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'4aa\', \'4cc\');',
-        4 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'5aa\', \'5cc\');',
-        5 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'6aa\', \'6cc\');',
-        6 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'7aa\', \'7cc\');',
-        7 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'8aa\', \'8cc\');',
-        8 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'9aa\', \'9cc\');',
+        0 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'1aa\', \'1cc\')',
+        1 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'2aa\', \'2cc\')',
+        2 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'3aa\', \'3cc\')',
+        3 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'4aa\', \'4cc\')',
+        4 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'5aa\', \'5cc\')',
+        5 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'6aa\', \'6cc\')',
+        6 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'7aa\', \'7cc\')',
+        7 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'8aa\', \'8cc\')',
+        8 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'9aa\', \'9cc\')',
     ),
 
 );
