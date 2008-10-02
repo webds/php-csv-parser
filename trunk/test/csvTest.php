@@ -203,6 +203,20 @@ class csvTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($this->csv->uses('data/symmetric_with_empty_records.csv'));
         $this->assertEquals(fix('symmetric_connection'), $this->csv->connect());
     } 
+
+    public function test_range_of_rows_should_retrive_specific_rows_only()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $expected = fix('symmetric_range_of_rows');
+        $this->assertEquals($expected, $this->csv->rows(range(2, 3)));
+    }
+
+    public function test_non_existent_rows_in_range_should_be_ignored()
+    {
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $expected = fix('symmetric_range_of_rows');
+        $this->assertEquals($expected, $this->csv->rows(array(22, 19, 2, 3)));
+    }
 }
 
 // Call csvTest::main() if this source file is executed directly.

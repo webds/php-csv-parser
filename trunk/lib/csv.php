@@ -273,12 +273,18 @@ class csv
      *
      * extracts csv rows excluding the headers
      *
+     * @param   array   $range  a list of rows to retrive
      * @access  public
      * @return  array
      */
-    public function rows()
+    public function rows($range = array())
     {
-        return $this->_data;
+        if ($range === array()) return $this->_data;
+        $ret_arr = array();
+        foreach($this->_data as $key => $row) {
+            if (in_array($key +1, $range)) $ret_arr[] = $row;
+        }
+        return $ret_arr;
     }
 
     /**
