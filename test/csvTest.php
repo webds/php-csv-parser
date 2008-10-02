@@ -225,6 +225,15 @@ class csvTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(fix('first_row_from_symmetric'), $this->csv->row(0));
     }
 
+    public function test_uses_must_flush_internal_data_when_new_file_is_given()
+    {
+        $this->assertTrue($this->csv->uses('data/another_symmetric.csv'));
+        $this->assertTrue($this->csv->uses('data/symmetric.csv'));
+        $this->assertEquals(fix('symmetric_headers'), $this->csv->headers());
+        $this->assertEquals(fix('symmetric_rows'), $this->csv->rows());
+        $this->assertEquals(fix('symetric_raw_data'), $this->csv->raw_array());
+    }
+
 }
 
 // Call csvTest::main() if this source file is executed directly.
