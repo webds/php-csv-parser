@@ -265,6 +265,26 @@ $fixtures = array(
         8 => 'INSERT INTO test_table (header_a, header_c) VALUES (\'9aa\', \'9cc\')',
     ),
 
+    # range of rows for symmetric file
+    'symmetric_range_of_rows' => array (
+      0 => 
+      array (
+        0 => '2aa',
+        1 => '2bb',
+        2 => '2cc',
+        3 => '2dd',
+        4 => '2ee',
+      ),
+      1 => 
+      array (
+        0 => '3aa',
+        1 => '3bb',
+        2 => '3cc',
+        3 => '3dd',
+        4 => '3ee',
+      ),
+    ),
+
 );
 
 function fix($key) {
