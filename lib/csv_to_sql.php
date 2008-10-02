@@ -23,7 +23,7 @@ class csv_to_sql extends csv
      * @var     string
      * @access  protected
      */
-    protected $query_template = 'INSERT INTO %s (%s) VALUES (%s);';
+    protected $query_template = 'INSERT INTO %s (%s) VALUES (%s)';
 
     /**
      * sql dumper for symmetric data
