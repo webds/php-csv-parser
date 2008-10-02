@@ -263,9 +263,8 @@ class csv
      */
     public function row($number)
     {
-        if (array_key_exists($number, $this->_data)) {
-            return $this->_data[$number];
-        }
+        $raw = $this->raw_array();
+        if (array_key_exists($number, $raw)) return $raw[$number];
         return array();
     }
 
@@ -305,7 +304,7 @@ class csv
     {
         $ret_arr = array();
         $ret_arr[] = $this->_headers;
-        $ret_arr[] = $this->_data;
+        foreach ($this->_data as $row) $ret_arr[] = $row;
         return $ret_arr;
     }
 
@@ -387,7 +386,20 @@ class csv
         fclose($res);
         unset($a[0]);
         $this->_data = $a;
+        $this->_data = $this->_removeEmptyRecords($a);
         return true;
+    }
+
+    private function _removeEmptyRecords($records)
+    {
+        $ret_arr = array();
+        foreach($records as $rec) {
+            $line = trim(join('', $rec));
+            if (!empty($line)) {
+                $ret_arr[] = $rec;
+            }
+        }
+        return $ret_arr;
     }
 
     /**
