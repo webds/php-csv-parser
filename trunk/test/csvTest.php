@@ -18,7 +18,6 @@ class csvTest extends PHPUnit_Framework_TestCase
         $this->csv = null;
     }
 
-
     public function testUses()
     {
 
