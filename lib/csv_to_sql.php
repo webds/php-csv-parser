@@ -8,7 +8,7 @@
  * @uses        csv
  * @package
  * @version     $Id$
- * @copyright   1997-2005 The PHP Group
+ * @copyright   2008 Kazuyoshi Tlacaelel
  * @author      Kazuyoshi Tlacaelel <kazu.dev@gmail.com>
  * @license     MIT
  */
