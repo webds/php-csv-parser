@@ -11,7 +11,7 @@
   <maintainer>
    <user>kazuyoshi_tlacaelel</user>
    <name>Kazuyoshi Tlacaelel</name>
-   <email>vincent@blavet.net</email>
+   <email>kazu.dev@gmail.com</email>
    <role>lead</role>
   </maintainer>
   </maintainers>
@@ -20,7 +20,8 @@
   <date>2008-10-06</date>
   <license>MIT</license>
   <state>beta</state>
-  <notes> </notes>
+  <notes> draft </notes>
+
   <provides type="class" name="File_CSV_Get" />
   <provides type="function" name="File_CSV_Get::asymmetry" />
   <provides type="function" name="File_CSV_Get::column" />
@@ -36,7 +37,8 @@
   <provides type="function" name="File_CSV_Get::settings" />
   <provides type="function" name="File_CSV_Get::symmetric" />
   <provides type="function" name="File_CSV_Get::uses" />
-  <provides type="class" name="File_CSV_Get" />
+
+  <provides type="class" name="File_CSV_GetSql" />
   <provides type="function" name="File_CSV_GetSql::createQueries" />
   <provides type="function" name="File_CSV_GetSql::convert" />
   <provides type="function" name="File_CSV_GetSql::conversion" />
@@ -47,11 +49,5 @@
   </filelist>
  </release>
  <changelog>
-   <release>
-    <version>0.1.0</version>
-    <date>2008-10-06</date>
-    <state>beta</state>
-    <notes>First release </notes>
-   </release>
  </changelog>
 </package>
