@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0" packagerversion="1.4.4">
+ <name>File_CSV_Get</name>
+ <summary>CSV data getter</summary>
+ <description>This class provides handling of csv files in PHP.
+     It supports fetchgin column, rows, headers.
+     Also on the fly relationship building, and sql query transformations.
+ </description>
+ <maintainers>
+  <maintainer>
+   <user>kazuyoshi_tlacaelel</user>
+   <name>Kazuyoshi Tlacaelel</name>
+   <email>vincent@blavet.net</email>
+   <role>lead</role>
+  </maintainer>
+  </maintainers>
+ <release>
+  <version>0.1.0</version>
+  <date>2008-10-06</date>
+  <license>MIT</license>
+  <state>beta</state>
+  <notes> </notes>
+  <provides type="class" name="File_CSV_Get" />
+  <provides type="function" name="File_CSV_Get::asymmetry" />
+  <provides type="function" name="File_CSV_Get::column" />
+  <provides type="function" name="File_CSV_Get::connect" />
+  <provides type="function" name="File_CSV_Get::countHeaders" />
+  <provides type="function" name="File_CSV_Get::countRows" />
+  <provides type="function" name="File_CSV_Get::createHeaders" />
+  <provides type="function" name="File_CSV_Get::headers" />
+  <provides type="function" name="File_CSV_Get::injectHeaders" />
+  <provides type="function" name="File_CSV_Get::rawArray" />
+  <provides type="function" name="File_CSV_Get::row" />
+  <provides type="function" name="File_CSV_Get::rows" />
+  <provides type="function" name="File_CSV_Get::settings" />
+  <provides type="function" name="File_CSV_Get::symmetric" />
+  <provides type="function" name="File_CSV_Get::uses" />
+  <provides type="class" name="File_CSV_Get" />
+  <provides type="function" name="File_CSV_GetSql::createQueries" />
+  <provides type="function" name="File_CSV_GetSql::convert" />
+  <provides type="function" name="File_CSV_GetSql::conversion" />
+  <provides type="function" name="File_CSV_GetSql::convertable" />
+  <filelist>
+   <file role="php" baseinstalldir="/" md5sum="e476aa2698f1ec120b3ad950b6ea33b8" name="Get/Get.php"/>
+   <file role="php" baseinstalldir="/" md5sum="33c505738c1c0b4d3eca5b862e9fe5e3" name="Get/GetSql.php"/>
+  </filelist>
+ </release>
+ <changelog>
+   <release>
+    <version>0.1.0</version>
+    <date>2008-10-06</date>
+    <state>beta</state>
+    <notes>First release </notes>
+   </release>
+ </changelog>
+</package>
