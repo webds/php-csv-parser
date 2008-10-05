@@ -12,7 +12,7 @@
  * @author      Kazuyoshi Tlacaelel <kazu.dev@gmail.com>
  * @license     MIT
  */
-class csv_to_sql extends csv
+class csv_to_sql extends File_CSV_Get
 {
 
     /**
