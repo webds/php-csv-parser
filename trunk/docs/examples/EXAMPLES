@@ -2,7 +2,7 @@
 
 
      // usage sample
-     $csv = new csv;
+     $csv = new File_CSV_Get;
   
      // tell the object to parse a specific file
      if ($csv->uses('my_file.csv')) {
