@@ -1,0 +1,32 @@
+
+
+
+     // usage sample
+     $csv = new csv;
+  
+     // tell the object to parse a specific file
+     if ($csv->uses('my_file.csv')) {
+  
+       // execute the following if given file is usable
+  
+       // get the headers found in file
+       $array = $csv->headers();
+      
+       // get a specific column from csv file
+       $csv->column($array[2]);
+      
+       // get each record with its related header
+       // ONLY if all records length match the number
+       // of headers
+        if ($csv->symmetric()) {
+            $array = $csv->connect();
+        } else {
+            // fetch records that dont match headers length
+            $array = $csv->asymmetry();
+        }
+      
+        // ignore everything and simply get the data as an array
+        $array = $csv->raw_array();
+     }
+
+
