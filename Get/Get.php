@@ -395,7 +395,7 @@ class File_CSV_Get
      */
     private function _parse()
     {
-        if (! $this->_validates()) {
+        if (!$this->_validates()) {
             return false;
         }
 
