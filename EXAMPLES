@@ -26,7 +26,7 @@
         }
       
         // ignore everything and simply get the data as an array
-        $array = $csv->raw_array();
+        $array = $csv->rawArray();
      }
 
 

@@ -10,7 +10,7 @@ class csvTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->csv = new csv;
+        $this->csv = new File_CSV_Get;
     }
 
     protected function tearDown()
@@ -99,7 +99,7 @@ class csvTest extends PHPUnit_Framework_TestCase
     public function testRaw_array()
     {
         $this->assertTrue($this->csv->uses('data/raw.csv'));
-        $this->assertEquals(fix('expected_raw'), $this->csv->raw_array());
+        $this->assertEquals(fix('expected_raw'), $this->csv->rawArray());
     }
 
     public function test_if_connect_ignores_valid_escaped_delims()
@@ -111,14 +111,14 @@ class csvTest extends PHPUnit_Framework_TestCase
     public function test_create_headers_must_generate_headers_for_symmetric_data()
     {
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
-        $this->assertTrue($this->csv->create_headers('COL'));
+        $this->assertTrue($this->csv->createHeaders('COL'));
         $this->assertEquals(fix('expected_headers'), $this->csv->headers());
     }
 
     public function tets_create_headers_must_not_create_when_data_is_asymmetric()
     {
         $this->assertTrue($this->csv->uses('data/asymmetric.csv'));
-        $this->assertFalse($this->csv->create_headers('COL'));
+        $this->assertFalse($this->csv->createHeaders('COL'));
         $this->assertEquals(fix('original_headers'), $this->csv->headers());
     }
 
@@ -126,7 +126,7 @@ class csvTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
         $this->assertEquals(fix('original_headers'), $this->csv->headers());
-        $this->assertTrue($this->csv->inject_headers(fix('expected_headers')));
+        $this->assertTrue($this->csv->injectHeaders(fix('expected_headers')));
         $this->assertEquals(fix('expected_headers'), $this->csv->headers());
         $this->assertEquals(fix('symetric_raw_data'), $this->csv->rows());
     }
@@ -135,7 +135,7 @@ class csvTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue($this->csv->uses('data/asymmetric.csv'));
         $this->assertEquals(fix('original_headers'), $this->csv->headers());
-        $this->assertFalse($this->csv->inject_headers(fix('expected_headers')));
+        $this->assertFalse($this->csv->injectHeaders(fix('expected_headers')));
         $this->assertEquals(fix('original_headers'), $this->csv->headers());
     }
 
@@ -143,7 +143,7 @@ class csvTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
         $expected_count = count(fix('symmetric_connection'));
-        $this->assertEquals($expected_count, $this->csv->count_rows());
+        $this->assertEquals($expected_count, $this->csv->countRows());
     }
 
     public function test_row_fetching_returns_correct_result()
@@ -189,7 +189,7 @@ class csvTest extends PHPUnit_Framework_TestCase
     public function test_count_headers()
     {
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
-        $this->assertEquals(5, $this->csv->count_headers());
+        $this->assertEquals(5, $this->csv->countHeaders());
     }
 
     public function test_raw_array_must_remove_empty_lines()
@@ -230,7 +230,7 @@ class csvTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($this->csv->uses('data/symmetric.csv'));
         $this->assertEquals(fix('symmetric_headers'), $this->csv->headers());
         $this->assertEquals(fix('symmetric_rows'), $this->csv->rows());
-        $this->assertEquals(fix('symetric_raw_data'), $this->csv->raw_array());
+        $this->assertEquals(fix('symetric_raw_data'), $this->csv->rawArray());
     }
 
 }
