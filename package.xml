@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
-<package version="1.0" packagerversion="1.4.4">
+<package version="1.0" packagerversion="1.6.1">
  <name>File_CSV_Get</name>
  <summary>CSV data getter</summary>
  <description>This class provides handling of csv files in PHP.
@@ -17,11 +17,11 @@
   </maintainers>
  <release>
   <version>0.1.0</version>
-  <date>2008-10-06</date>
+  <date>2008-10-05</date>
   <license>MIT</license>
   <state>beta</state>
-  <notes> draft </notes>
-
+  <notes>draft
+  </notes>
   <provides type="class" name="File_CSV_Get" />
   <provides type="function" name="File_CSV_Get::asymmetry" />
   <provides type="function" name="File_CSV_Get::column" />
@@ -37,7 +37,6 @@
   <provides type="function" name="File_CSV_Get::settings" />
   <provides type="function" name="File_CSV_Get::symmetric" />
   <provides type="function" name="File_CSV_Get::uses" />
-
   <provides type="class" name="File_CSV_GetSql" />
   <provides type="function" name="File_CSV_GetSql::createQueries" />
   <provides type="function" name="File_CSV_GetSql::convert" />
@@ -48,6 +47,4 @@
    <file role="php" baseinstalldir="/" md5sum="33c505738c1c0b4d3eca5b862e9fe5e3" name="Get/GetSql.php"/>
   </filelist>
  </release>
- <changelog>
- </changelog>
 </package>
