@@ -1,7 +1,6 @@
 <?php
 
 $fixtures = array (
-  'fpath' => 'data/',
   'symmetric_headers' => 
   array (
     0 => 'header_a',
