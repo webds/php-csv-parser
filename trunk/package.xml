@@ -17,7 +17,7 @@
   </maintainers>
  <release>
   <version>0.1.0</version>
-  <date>2008-10-05</date>
+  <date>2008-10-07</date>
   <license>MIT</license>
   <state>beta</state>
   <notes>draft
@@ -43,7 +43,8 @@
   <provides type="function" name="File_CSV_GetSql::conversion" />
   <provides type="function" name="File_CSV_GetSql::convertable" />
   <filelist>
-   <file role="php" baseinstalldir="/" md5sum="e476aa2698f1ec120b3ad950b6ea33b8" name="Get/Get.php"/>
+
+   <file role="php" baseinstalldir="/" md5sum="bf7e603e6d1e4631b069dfe5689ecff0" name="Get/Get.php"/>
    <file role="php" baseinstalldir="/" md5sum="33c505738c1c0b4d3eca5b862e9fe5e3" name="Get/GetSql.php"/>
   </filelist>
  </release>
