@@ -6,9 +6,17 @@ function print_file ($package, $file, $role)
 {
     $fi = $file;
     $te = '<file baseinstalldir="%s/%s" md5sum="%s" name="%s" role="%s" />';
-    // $base = preg_replace('/_/', '/', $package);
-    $base = $package;
-    $st = sprintf($te, $base, $fi, md5_file($fi), $fi, $role);
+    if ($role == 'php') {
+        $base = preg_replace('/_/', '/', $package);
+        $parts = split('/', $base);
+        array_pop($parts);
+        $base = join('/', $parts);
+        $fii = '';
+    } else {
+        $base = $package;
+        $fii = $fi;
+    }
+    $st = sprintf($te, $base, $fii, md5_file($fi), $fi, $role);
     echo "\n$st";
 }
 
@@ -34,6 +42,7 @@ print_file('File_CSV_Get', 'GetSql.php', 'php');
 print_file('File_CSV_Get', 'Get.php', 'php');
 print_files('File_CSV_Get', 'tests/', 'test');
 print_files('File_CSV_Get', 'misc/', 'data');
+print_files('File_CSV_Get', 'docs/', 'doc');
 
 
 ?>
