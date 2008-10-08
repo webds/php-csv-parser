@@ -1,9 +1,9 @@
 <?php
 require_once 'PHPUnit/Framework.php';
 
-require_once dirname(__FILE__) . "/../Get/Get.php";
-require_once dirname(__FILE__) . "/../Get/GetSql.php";
-require_once dirname(__FILE__) . "/fixtures/csv.php";
+require_once "CSV/Get.php";
+require_once "CSV/GetSql.php";
+require_once "CSV/tests/fixtures/csv.php";
 
 /**
  * @todo fix class name

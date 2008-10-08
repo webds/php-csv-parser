@@ -15,6 +15,11 @@
  */
 
 /**
+ * csv parser utility
+ */
+require_once 'CSV/Get.php';
+
+/**
  * csv data fetcher
  *
  * @category  File
