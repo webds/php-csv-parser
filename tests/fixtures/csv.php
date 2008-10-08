@@ -455,4 +455,9 @@ function fix($key) {
     return $fixtures[$key];
 }
 
+function path($file)
+{
+    return 'File/CSV/tests/data/' . $file;
+}
+
 ?>
