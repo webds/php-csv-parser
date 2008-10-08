@@ -15,6 +15,7 @@ $cmds = array(
     array('msg' => 'Packaging     ', 'cmd' => 'pear package > misc/pear_package_output'),
     array('msg' => '+- output     ', 'cmd' => 'cat misc/pear_package_output'),
     array('msg' => 'Installing    ', 'cmd' => 'pear install --force *.tgz > misc/pear_install_output'),
+    array('msg' => '+- output     ', 'cmd' => 'cat misc/pear_install_output'),
 );
 
 foreach ($cmds as $task) {
