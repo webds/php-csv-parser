@@ -1,0 +1,39 @@
+#!/usr/bin/php
+<?php
+
+
+function print_file ($package, $file, $role)
+{
+    $fi = $file;
+    $te = '<file baseinstalldir="%s/%s" md5sum="%s" name="%s" role="%s" />';
+    // $base = preg_replace('/_/', '/', $package);
+    $base = $package;
+    $st = sprintf($te, $base, $fi, md5_file($fi), $fi, $role);
+    echo "\n$st";
+}
+
+function print_files($package, $dir, $role)
+{
+    foreach (new DirectoryIterator($dir) as $item) {
+        $pa = $item->getPathname();
+
+        if ($item->isDir() && (!$item->isDot())) {
+            if (!preg_match('/\.svn/', $pa)) {
+                print_files($package, $pa, $role);
+            }
+        } else {
+            if ($item->isFile()) {
+                print_file($package, $pa, $role);
+            }
+        }
+
+    }
+}
+
+print_file('File_CSV_Get', 'GetSql.php', 'php');
+print_file('File_CSV_Get', 'Get.php', 'php');
+print_files('File_CSV_Get', 'tests/', 'test');
+print_files('File_CSV_Get', 'misc/', 'data');
+
+
+?>

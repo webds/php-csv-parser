@@ -1,0 +1,25 @@
+#!/usr/bin/php
+<?php
+
+$cmds = array(
+    array('msg' => 'Uninstalling  ', 'cmd' => 'pear uninstall File_CSV_Get'),
+    array('msg' => '+- DELETE pkge', 'cmd' => 'rm *.tgz'),
+    array('msg' => 'Code Sniffing ', 'cmd' => 'phpcs *.php > misc/phpcs_output'),
+    array('msg' => '+- output     ', 'cmd' => 'cat misc/phpcs_output'),
+    array('msg' => 'Running Tests ', 'cmd' => 'cd ../.. && phpunit File > File/CSV/misc/phpunit_output'),
+    array('msg' => '+- output     ', 'cmd' => 'cat misc/phpunit_output'),
+    array('msg' => 'Compiling XML ', 'cmd' => 'rm package.xml'),
+    array('msg' => '+- Top    XML ', 'cmd' => 'cat data/top.xml >> package.xml'),
+    array('msg' => '+- Files  XML ', 'cmd' => 'php mk_filelist >> package.xml'),
+    array('msg' => '+- Bottom XML ', 'cmd' => 'cat data/bottom.xml >> package.xml'),
+    array('msg' => 'Packaging     ', 'cmd' => 'pear package > misc/pear_package_output'),
+    array('msg' => '+- output     ', 'cmd' => 'cat misc/pear_package_output'),
+    array('msg' => 'Installing    ', 'cmd' => 'pear install --force *.tgz > misc/pear_install_output'),
+);
+
+foreach ($cmds as $task) {
+    echo "\n[1;37;41m {$task['msg']} [0;37;0m\n";
+    echo shell_exec($task['cmd']);
+}
+
+?>

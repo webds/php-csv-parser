@@ -56,4 +56,5 @@ class File_CSV_GetSqlTest extends PHPUnit_Framework_TestCase
     }
 
 }
+
 ?>

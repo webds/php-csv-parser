@@ -1,50 +1,74 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
-<package version="1.0" packagerversion="1.6.1">
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.6.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+http://pear.php.net/dtd/tasks-1.0.xsd
+http://pear.php.net/dtd/package-2.0
+http://pear.php.net/dtd/package-2.0.xsd">
  <name>File_CSV_Get</name>
+ <channel>pear.php.net</channel>
  <summary>CSV data getter</summary>
  <description>This class provides handling of csv files in PHP.
      It supports fetchgin column, rows, headers.
      Also on the fly relationship building, and sql query transformations.
+ 
  </description>
- <maintainers>
-  <maintainer>
-   <user>kazuyoshi_tlacaelel</user>
-   <name>Kazuyoshi Tlacaelel</name>
-   <email>kazu.dev@gmail.com</email>
-   <role>lead</role>
-  </maintainer>
-  </maintainers>
- <release>
-  <version>0.1.0</version>
-  <date>2008-10-08</date>
-  <license>MIT</license>
-  <state>beta</state>
-  <notes>draft
-  </notes>
-  <provides type="class" name="File_CSV_Get" />
-  <provides type="function" name="File_CSV_Get::asymmetry" />
-  <provides type="function" name="File_CSV_Get::column" />
-  <provides type="function" name="File_CSV_Get::connect" />
-  <provides type="function" name="File_CSV_Get::countHeaders" />
-  <provides type="function" name="File_CSV_Get::countRows" />
-  <provides type="function" name="File_CSV_Get::createHeaders" />
-  <provides type="function" name="File_CSV_Get::headers" />
-  <provides type="function" name="File_CSV_Get::injectHeaders" />
-  <provides type="function" name="File_CSV_Get::rawArray" />
-  <provides type="function" name="File_CSV_Get::row" />
-  <provides type="function" name="File_CSV_Get::rows" />
-  <provides type="function" name="File_CSV_Get::settings" />
-  <provides type="function" name="File_CSV_Get::symmetric" />
-  <provides type="function" name="File_CSV_Get::uses" />
-  <provides type="class" name="File_CSV_GetSql" />
-  <provides type="function" name="File_CSV_GetSql::createQueries" />
-  <provides type="function" name="File_CSV_GetSql::convert" />
-  <provides type="function" name="File_CSV_GetSql::conversion" />
-  <provides type="function" name="File_CSV_GetSql::convertable" />
-  <filelist>
-   <file role="php" baseinstalldir="File/CSV" md5sum="bf7e603e6d1e4631b069dfe5689ecff0" name="Get.php"/>
-   <file role="php" baseinstalldir="File/CSV" md5sum="1d57058e7122a3fcccb39cf2b718630f" name="GetSql.php"/>
-  </filelist>
- </release>
+ <lead>
+  <name>Kazuyoshi Tlacaelel</name>
+  <user>ktlacaelel</user>
+  <email>kazu.dev@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2008-10-08</date>
+ <time>20:19:56</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+ <notes>draft </notes>
+ <contents>
+  <dir name="/">
+
+
+<file baseinstalldir="File_CSV_Get/GetSql.php" md5sum="1948f376d8235a0c48bfeb1582265369" name="GetSql.php" role="php" />
+<file baseinstalldir="File_CSV_Get/Get.php" md5sum="3f0477419a2f68a7cdba2d5c84485bd7" name="Get.php" role="php" />
+<file baseinstalldir="File_CSV_Get/tests/File_CSV_GetSqlTest.php" md5sum="f9fbdaf825f944c9847ab095c9dadd63" name="tests/File_CSV_GetSqlTest.php" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/fixtures/csv.php" md5sum="e2478962ab787d850ca8a0e7d0d06240" name="tests/fixtures/csv.php" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/File_CSV_GetTest.php" md5sum="367186d4bb2ac68101b3a07c2a9aa94b" name="tests/File_CSV_GetTest.php" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/multcased.CsV" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/data/multcased.CsV" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/escape_ok.csv" md5sum="14f80e41d3b24b8ec445e6de302fac91" name="tests/data/escape_ok.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/symmetric_with_empty_records.csv" md5sum="56de44ebc2e1dc8b43fdec3538c24832" name="tests/data/symmetric_with_empty_records.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/asymmetric.csv" md5sum="f41f8e0eb7eaf4157ca9c7d57f0eef8e" name="tests/data/asymmetric.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/another_symmetric.csv" md5sum="09a35f28f04b51776134f16384a99329" name="tests/data/another_symmetric.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/empty.csv" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/data/empty.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/symmetric_with_trailing_spaces.csv" md5sum="ad7668bc22948a64f1e34844c03ab6ca" name="tests/data/symmetric_with_trailing_spaces.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/uppercased.CSV" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/data/uppercased.CSV" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/symmetric_with_empty_lines.csv" md5sum="74b383c1c4bbde61dc1e93f36565bc78" name="tests/data/symmetric_with_empty_lines.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/escape_ng.csv" md5sum="416cba0c90268e46b743a489ab84ed4c" name="tests/data/escape_ng.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/raw.csv" md5sum="2d685671e2241dea99e14dcba117e165" name="tests/data/raw.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/symmetric.csv" md5sum="9f5ff6ff83be3a0eac91db8e06c8fb06" name="tests/data/symmetric.csv" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/data/invalid_ext.csv.txt" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/data/invalid_ext.csv.txt" role="test" />
+<file baseinstalldir="File_CSV_Get/misc/pear_install_output" md5sum="352ab197cb0be9050ebe7efac27c1f89" name="misc/pear_install_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/pear_package_output" md5sum="7d7da403a83c5845f5fff31bd46f1c56" name="misc/pear_package_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/phpcs_output" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="misc/phpcs_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/File_CSV.php" md5sum="542a2e0700a7913da32191a8fbb1c088" name="misc/File_CSV.php" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/README" md5sum="6386d3d99d9dcf5d2fcbbbbdec2e5451" name="misc/README" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/phpunit_output" md5sum="35ea23dc98f8a849b68d02acf9d43a64" name="misc/phpunit_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/LICENSE" md5sum="696e8fb6aaa950b49f232f2b498d4b9e" name="misc/LICENSE" role="data" />
+  </dir> <!-- / -->
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
 </package>
