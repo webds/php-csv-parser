@@ -1,7 +1,7 @@
 <?php
 
 require_once 'PHPUnit/Framework.php';
-require_once "CSV/Get/Get.php";
+require_once "CSV/Get.php";
 require_once "CSV/tests/fixtures/csv.php";
 
 class csvTest extends PHPUnit_Framework_TestCase
