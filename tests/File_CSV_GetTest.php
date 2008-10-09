@@ -22,7 +22,6 @@ class xFile_CSV_GetTest extends PHPUnit_Framework_TestCase
         $this->csv = null;
     }
 
-
     public function testUses()
     {
 
@@ -133,7 +132,7 @@ class xFile_CSV_GetTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(fix('original_headers'), $this->csv->headers());
         $this->assertTrue($this->csv->injectHeaders(fix('expected_headers')));
         $this->assertEquals(fix('expected_headers'), $this->csv->headers());
-        $this->assertEquals(fix('symetric_raw_data'), $this->csv->rows());
+        $this->assertEquals(fix('symmetric_raw_data'), $this->csv->rows());
     }
 
     public function test_inject_headers_must_not_inject_when_data_is_asymmetric()
@@ -235,7 +234,69 @@ class xFile_CSV_GetTest extends PHPUnit_Framework_TestCase
         $this->assertTrue($this->csv->uses(path('symmetric.csv')));
         $this->assertEquals(fix('symmetric_headers'), $this->csv->headers());
         $this->assertEquals(fix('symmetric_rows'), $this->csv->rows());
-        $this->assertEquals(fix('symetric_raw_data'), $this->csv->rawArray());
+        $this->assertEquals(fix('symmetric_raw_data'), $this->csv->rawArray());
+    }
+
+    public function test_cell()
+    {
+        $this->assertTrue($this->csv->uses(path('symmetric.csv')));
+        $this->assertEquals(fix('first_symmetric_cell'), $this->csv->cell(0, 0));
+    }
+
+    public function test_header_exists()
+    {
+        $this->assertTrue($this->csv->uses(path('symmetric.csv')));
+        foreach (fix('symmetric_headers') as $h) {
+            $this->assertTrue($this->csv->columnExists($h));
+        }
+    }
+
+    public function test_header_exists_must_return_false_when_header_does_not_exist()
+    {
+        $this->assertTrue($this->csv->uses(path('symmetric.csv')));
+        $this->assertFalse($this->csv->columnExists(md5('x')));
+    }
+
+    public function test_fill_cell()
+    {
+        $this->assertTrue($this->csv->uses(path('symmetric.csv')));
+        $this->assertTrue($this->csv->fillCell(0, 0, 'hoge hoge'));
+        $this->assertEquals('hoge hoge', $this->csv->cell(0, 0));
+    }
+
+    public function test_coordinatable_must_return_true_when_coordinates_exist()
+    {
+        $this->assertTrue($this->csv->uses(path('symmetric.csv')));
+        $this->assertTrue($this->csv->coordinatable(0, 0));
+        $this->assertFalse($this->csv->coordinatable(-1, 0));
+        $this->assertFalse($this->csv->coordinatable(0, -1));
+        $this->assertFalse($this->csv->coordinatable(-1, -1));
+        $this->assertFalse($this->csv->coordinatable(1, 11));
+    }
+
+    public function test_fill_column_must_fill_all_values_of_a_column()
+    {
+        $this->assertTrue($this->csv->uses(path('symmetric.csv')));
+        $fh = fix('first_symmetric_header');
+        $this->csv->fillColumn($fh, '');
+        $this->assertTrue($this->csv->fillColumn($fh, ''));
+        $this->assertEquals(fix('empty_column'), $this->csv->column($fh));
+    }
+
+    public function test_append_column_must_create_new_header_and_blank_values()
+    {
+        $this->assertTrue($this->csv->uses(path('symmetric.csv')));
+
+///     var_export($this->csv->appendColumn('extra'));
+///     var_export($this->csv->connect());
+///     die();
+
+
+        $this->assertTrue($this->csv->appendColumn('extra'));
+        $se = fix('symmetric_extra_header');
+        $this->assertEquals($se, $this->csv->headers());
+        $this->assertEquals(fix('empty_column'), $this->csv->column('extra'));
+        $this->assertEquals(count($se), $this->csv->countHeaders());
     }
 
 }
