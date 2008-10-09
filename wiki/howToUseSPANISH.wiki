@@ -63,7 +63,7 @@ takaka, 8
         }
       
         // pone todos los datos de el archivo en un array
-        $array = $csv->raw_array();
+        $array = $csv->rawArray();
      }
 ?>
 
