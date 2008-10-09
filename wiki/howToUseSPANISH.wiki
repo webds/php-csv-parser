@@ -14,7 +14,7 @@ takaka, 8
 
 <?php
 
-  $csv = new csv;
+  $csv = new File_CSV_Get;
  
   $csv->uses('my_file.csv'); // boolean
 
@@ -40,7 +40,7 @@ takaka, 8
 <?php
 
      // instancia
-     $csv = new csv;
+     $csv = new File_CSV_Get;
   
      // verifica si el archivo se puede utilizar
      if ($csv->uses('my_file.csv')) {
