@@ -15,7 +15,7 @@ takaka, 8
 {{{
 <?php
 
-  $csv = new csv;
+  $csv = new File_CSV_Get;
  
   $csv->uses('my_file.csv'); // boolean
 
@@ -41,7 +41,7 @@ takaka, 8
 <?php
 
      // usage sample
-     $csv = new csv;
+     $csv = new File_CSV_Get;
   
      // tell the object to parse a specific file
      if ($csv->uses('my_file.csv')) {
@@ -65,7 +65,7 @@ takaka, 8
         }
       
         // ignore everything and simply get the data as an array
-        $array = $csv->raw_array();
+        $array = $csv->rawArray();
      }
 
 ?>
