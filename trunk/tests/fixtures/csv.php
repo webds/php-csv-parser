@@ -9,6 +9,19 @@ $fixtures = array (
     3 => 'header_d',
     4 => 'header_e',
   ),
+
+  'first_symmetric_header' => 'header_a',
+  'first_symmetric_cell' => '1aa',
+
+  'symmetric_extra_header' => 
+  array (
+    0 => 'header_a',
+    1 => 'header_b',
+    2 => 'header_c',
+    3 => 'header_d',
+    4 => 'header_e',
+    5 => 'extra',
+  ),
   'first_row_from_symmetric' => 
   array (
     0 => '1aa',
@@ -151,6 +164,18 @@ $fixtures = array (
       5 => 'extra2',
     ),
   ),
+  'empty_column' =>
+   array (
+     0 => '',
+     1 => '',
+     2 => '',
+     3 => '',
+     4 => '',
+     5 => '',
+     6 => '',
+     7 => '',
+     8 => '',
+  ),
   'expected_column' => 
   array (
     0 => '1cc',
@@ -238,7 +263,7 @@ $fixtures = array (
       4 => '9ee',
     ),
   ),
-  'symetric_raw_data' => 
+  'symmetric_raw_data' => 
   array (
     0 => 
     array (

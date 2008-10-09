@@ -248,6 +248,165 @@ class File_CSV_Get
     }
 
     /**
+     * column existance checker
+     *
+     * @param string $string an item returned by headers()
+     *
+     * @access public
+     * @return boolean
+     * @see headers()
+     */
+    public function columnExists($string)
+    {
+        return in_array($string, $this->_headers);
+    }
+
+    /**
+     * column appender
+     *
+     * @param string $column an item returned by headers()
+     * @param mixed  $values same as fillColumn()
+     *
+     * @access public
+     * @return boolean
+     * @see headers(), fillColumn()
+     */
+    public function appendColumn($column, $values = null)
+    {
+        if ($this->columnExists($column)) {
+            return false;
+        }
+        $this->_headers[] = $column;
+        $length           = $this->countHeaders();
+        $rows             = array();
+
+        foreach ($this->_rows as $row) {
+            $rows[] = array_pad($row, $length, '');
+        }
+
+        $this->_rows = $rows;
+
+        if ($values === null) {
+            $values = '';
+        }
+
+        return $this->fillColumn($column, $values);
+    }
+
+    /**
+     * collumn data injector
+     *
+     * fills alll the data in the given column with $values
+     * 
+     * @param mixed $column the column identified by a string
+     * @param mixed $values ither one of the following
+     *  - (Number) will fill the whole column with the value of number
+     *  - (String) will fill the whole column with the value of string
+     *  - (Array) will fill the while column with the values of array
+     *    the array gets ignored if it does not match the length of rows
+     *
+     * @access public
+     * @return void
+     */
+    public function fillColumn($column, $values = null)
+    {
+        if (!$this->columnExists($column)) {
+            return false;
+        }
+
+        if ($values === null) {
+            return false;
+        }
+
+        if (!$this->symmetric()) {
+            return false;
+        }
+
+        $y = array_search($column, $this->_headers);
+
+        if (is_numeric($values) || is_string($values)) {
+            foreach (range(0, $this->countRows() -1) as $x) {
+                $this->fillCell($x, $y, $values);
+            }
+            return true;
+        }
+
+        if ($values === array()) {
+            return false;
+        }
+
+        $length = $this->countRows();
+        if (is_array($values) && $length == count($values)) {
+            for ($x = 0; $x < $length; $x++) {
+                $this->fillCell($x, $y, $values[$x]);
+            }
+            return true;
+        }
+    }
+
+    /**
+     * cell fetcher
+     *
+     * gets the value of a specific cell by given coordinates
+     *
+     * @param integer $x the row to fetch
+     * @param integer $y the column to fetch
+     *
+     * @access public
+     * @return mixed the value of the cell or false if the cell does 
+     * not exist
+     * @see coordinatable(), row(), rows(), column()
+     */
+    public function cell($x, $y)
+    {
+        if ($this->coordinatable($x, $y)) {
+            $row = $this->row($x);
+            return $row[$y];
+        }
+        return false;
+    }
+
+    /**
+     * cell value filler
+     *
+     * replaces the value of a specific cell
+     *
+     * @param integer $x     the row to fetch
+     * @param integer $y     the column to fetch
+     * @param mixed   $value the value to fill the cell with
+     *
+     * @access public
+     * @return boolean
+     * @see coordinatable(), row(), rows(), column()
+     */
+    public function fillCell($x, $y, $value)
+    {
+        if (!$this->coordinatable($x, $y)) {
+            return false;
+        }
+        $row             = $this->row($x);
+        $row[$y]         = $value;
+        $this->_rows[$x] = $row;
+        return true;
+    }
+
+    /**
+     * checks if a coordinate is valid
+     * 
+     * @param mixed $x the row to fetch
+     * @param mixed $y the column to fetch
+     *
+     * @access public
+     * @return void
+     */
+    public function coordinatable($x, $y)
+    {
+        $has_x = array_key_exists($x, $this->_rows);
+        $has_y = array_key_exists($y, $this->_headers);
+        return ($has_x && $has_y);
+    }
+
+    /**
      * row fetcher
      *
      * Note: first row is zero
@@ -256,7 +415,7 @@ class File_CSV_Get
      *
      * @access public
      * @return array the row identified by number, if $number does
-     *                  not exist an empty array is returned instead
+     * not exist an empty array is returned instead
      * <code>
      *   $array = $csv->row(3); # array('val1', 'val2', 'val3')
      * </code>
