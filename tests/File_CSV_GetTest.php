@@ -286,12 +286,6 @@ class xFile_CSV_GetTest extends PHPUnit_Framework_TestCase
     public function test_append_column_must_create_new_header_and_blank_values()
     {
         $this->assertTrue($this->csv->uses(path('symmetric.csv')));
-
-///     var_export($this->csv->appendColumn('extra'));
-///     var_export($this->csv->connect());
-///     die();
-
-
         $this->assertTrue($this->csv->appendColumn('extra'));
         $se = fix('symmetric_extra_header');
         $this->assertEquals($se, $this->csv->headers());
