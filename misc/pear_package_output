@@ -1,3 +1,4 @@
 Analyzing GetSql.php
 Analyzing Get.php
+Warning: Channel validator warning: field "date" - Release Date "2008-10-08" is not today
 Package File_CSV_Get-0.1.0.tgz done
