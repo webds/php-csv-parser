@@ -1,0 +1,124 @@
+#api changes
+
+= The Api is Migrating to PEAR! =
+
+There is a lot of new features and also a lot of changes that do NOT
+support backwards compatibility.
+
+Please use the new (PEAR PACKAGE VERSION - beta)
+
+File_CSV_Get-0.1.0.tgz
+
+
+= Installing using pear =
+
+* download the file and run this on your commmand line.
+
+  $ pear install File_CSV_Get-0.1.0.tgz
+
+= Using the package =
+* csv file
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+* php file
+{{{
+
+<?php
+
+require_once 'File/CSV/Get.php';
+
+$csv = new File_CSV_Get;
+$csv->uses('my_cool.csv');
+var_export($csv->connect());
+
+?>
+
+}}}
+
+* output
+
+{{{
+
+array (
+  0 =>
+  array (
+    'name' => 'john',
+    'age' => '13',
+    'skill' => 'knows magic',
+  ),
+  1 =>
+  array (
+    'name' => 'tanaka',
+    'age' => '8',
+    'skill' => 'makes sushi',
+  ),
+  2 =>
+  array (
+    'name' => 'jose',
+    'age' => '5',
+    'skill' => 'dances salsa',
+  ),
+)
+
+
+}}}
+
+
+* getting headers
+
+{{{
+
+var_export($csv->headers());
+
+array (
+  0 => 'name',
+  1 => 'age',
+  2 => 'skill',
+)
+
+}}}
+
+* getting columns
+{{{
+
+var_export($csv->column('name'));
+
+array (
+  0 => 'john',
+  1 => 'tanaka',
+  2 => 'jose',
+)
+
+}}}
+
+= Current Interface =
+
+{{{
+
+function appendColumn($column, $values = null)
+function asymmetry()
+function cell($x, $y)
+function column($name)
+function columnExists($string)
+function connect($columns = array())
+function coordinatable($x, $y)
+function countHeaders()
+function countRows()
+function createHeaders($prefix)
+function fillCell($x, $y, $value)
+function fillColumn($column, $values = null)
+function headers()
+function injectHeaders($list)
+function rawArray()
+function row($number)
+function rows($range = array())
+function settings($array)
+function symmetric()
+function uses($filename)
+
+}}}
