@@ -14,7 +14,7 @@ takaka, 8
 
 <?php
 
-  $csv = new csv;
+  $csv = new File_CSV_Get;
  
   $csv->uses('my_file.csv'); // boolean
 
@@ -41,7 +41,7 @@ takaka, 8
 <?php
 
      // オブジェクトをつくる
-     $csv = new csv;
+     $csv = new File_CSV_Get;
   
      // 使いたいCSVの使用確認
      if ($csv->uses('my_file.csv')) {
