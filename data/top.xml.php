@@ -17,7 +17,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>kazu.dev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2008-10-08</date>
+ <date><?php echo date('Y-m-d'); ?></date>
  <time>20:19:56</time>
  <version>
   <release>0.1.0</release>

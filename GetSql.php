@@ -112,7 +112,7 @@ class File_CSV_GetSql extends File_CSV_Get
             $value = mb_ereg_replace("/'/", '\'', $value);
             $value = mb_ereg_replace('\s+$', '', $value);
             $value = mb_ereg_replace('^\s+', '', $value);
-            $value = mb_convert_encoding($value, 'utf8', 'sjis');
+            $value = mb_convert_encoding($value, $this->to, $this->from);
         } else {
             $value = preg_replace("/'/", '\'', $value);
             $value = preg_replace('/\s+$/', '', $value);

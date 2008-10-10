@@ -215,6 +215,35 @@ class File_CSV_Get
     }
 
     /**
+     * all rows length regularizer
+     *
+     * makes the length of all rows the same. If no $value is given 
+     * all unexistent cells will be filled with empty spaces
+     * 
+     * @param mixed $value the value to fill the unexistent cells
+     *
+     * @access public
+     * @return void
+     */
+    public function symmetrize($value = '')
+    {
+        $max_length = 0;
+
+        foreach ($this->_rows as $row) {
+            $row_length = count($row);
+            if ($max_length < $row_length) {
+                $max_length = $row_length;
+            }
+        }
+
+        foreach ($this->_rows as $key => $row) {
+            $this->_rows[$key] = array_pad($row, $max_length, $value);
+        }
+
+        $this->_headers = array_pad($this->_headers, $max_length, $value);
+    }
+
+    /**
      * column fetcher
      *
      * gets all the data for a specific column identified by $name
