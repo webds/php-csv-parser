@@ -293,5 +293,22 @@ class xFile_CSV_GetTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(count($se), $this->csv->countHeaders());
     }
 
+    public function test_symmetrize_must_convert_asymmetric_file()
+    {
+        $this->assertTrue($this->csv->uses(path('asymmetric.csv')));
+        $this->csv->symmetrize();
+        $this->assertTrue($this->csv->symmetric());
+    }
+
+    public function test_symetrize_must_not_alter_symmetric_data()
+    {
+        $this->assertTrue($this->csv->uses(path('symmetric.csv')));
+        $this->csv->symmetrize();
+        $this->assertEquals(fix('symmetric_headers'), $this->csv->headers());
+        $this->assertEquals(fix('symmetric_rows'), $this->csv->rows());
+        $this->assertEquals(fix('symmetric_raw_data'), $this->csv->rawArray());
+    }
+
 }
+
 ?>
