@@ -17,10 +17,10 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>kazu.dev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2008-10-10</date>
+ <date>2008-10-11</date>
  <time>20:19:56</time>
  <version>
-  <release>0.1.0</release>
+  <release>0.1.1</release>
   <api>0.1.0</api>
  </version>
  <stability>
@@ -33,8 +33,8 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <dir name="/">
 
 
-<file baseinstalldir="File/CSV/" md5sum="ac4236a91dc4269842f0b22434f0c91c" name="GetSql.php" role="php" />
-<file baseinstalldir="File/CSV/" md5sum="dcf8b5201ed18a8452cd397fccc5e31e" name="Get.php" role="php" />
+<file baseinstalldir="File/CSV/" md5sum="1662af0ebb1550e4f904a319a16b6963" name="GetSql.php" role="php" />
+<file baseinstalldir="File/CSV/" md5sum="d4b9dd0010f06906ef5763e68a353629" name="Get.php" role="php" />
 <file baseinstalldir="File_CSV_Get/tests/File_CSV_GetSqlTest.php" md5sum="104be0def8c97a37a9fbae9411376cc4" name="tests/File_CSV_GetSqlTest.php" role="test" />
 <file baseinstalldir="File_CSV_Get/tests/fixtures/csv.php" md5sum="9d79ebc43722b53bb23859a4dce78cbf" name="tests/fixtures/csv.php" role="test" />
 <file baseinstalldir="File_CSV_Get/tests/File_CSV_GetTest.php" md5sum="b0372aaefda08940841707f43d59eb36" name="tests/File_CSV_GetTest.php" role="test" />
@@ -51,10 +51,9 @@ http://pear.php.net/dtd/package-2.0.xsd">
 <file baseinstalldir="File_CSV_Get/tests/data/raw.csv" md5sum="2d685671e2241dea99e14dcba117e165" name="tests/data/raw.csv" role="test" />
 <file baseinstalldir="File_CSV_Get/tests/data/symmetric.csv" md5sum="9f5ff6ff83be3a0eac91db8e06c8fb06" name="tests/data/symmetric.csv" role="test" />
 <file baseinstalldir="File_CSV_Get/tests/data/invalid_ext.csv.txt" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/data/invalid_ext.csv.txt" role="test" />
-<file baseinstalldir="File_CSV_Get/misc/pear_install_output" md5sum="352ab197cb0be9050ebe7efac27c1f89" name="misc/pear_install_output" role="data" />
-<file baseinstalldir="File_CSV_Get/misc/pear_package_output" md5sum="7d7da403a83c5845f5fff31bd46f1c56" name="misc/pear_package_output" role="data" />
-<file baseinstalldir="File_CSV_Get/misc/build_output" md5sum="e54e7c592ebbd94df4577adf72f5a5ca" name="misc/build_output" role="data" />
-<file baseinstalldir="File_CSV_Get/misc/pear_package_validate_output" md5sum="2a04e2e319ecdd8d302892f9d446af6c" name="misc/pear_package_validate_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/pear_install_output" md5sum="5e25a082205159e20a93b3a6b832ae4e" name="misc/pear_install_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/pear_package_output" md5sum="d306727bc4af92d19fe818d48c201a29" name="misc/pear_package_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/build_output" md5sum="390e9d958f7bc196419a799812d806f7" name="misc/build_output" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/phpcs_output" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="misc/phpcs_output" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/File_CSV.php" md5sum="542a2e0700a7913da32191a8fbb1c088" name="misc/File_CSV.php" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/README" md5sum="6386d3d99d9dcf5d2fcbbbbdec2e5451" name="misc/README" role="data" />

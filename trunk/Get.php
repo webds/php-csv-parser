@@ -17,6 +17,14 @@
 /**
  * csv data fetcher
  *
+ * sample snippets refer to this csv file for demosntration.
+ * <code>
+ *   name,age,skill
+ *   john,13,knows magic
+ *   tanaka,8,makes sushi
+ *   jose,5,dances salsa
+ * </code>
+ *
  * @category  File
  * @package   File_CSV_Get
  * @author    Kazuyoshi Tlacaelel <kazu.dev@gmail.com>
@@ -72,10 +80,42 @@ class File_CSV_Get
      *
      * indicates the object which file is to be loaded
      *
+     * <code>
+     *
+     *   require_once 'File/CSV/Get.php';
+     *
+     *   $csv = new File_CSV_Get;
+     *   $csv->uses('my_cool.csv');
+     *   var_export($csv->connect());
+     *
+     *   array (
+     *     0 =>
+     *     array (
+     *       'name' => 'john',
+     *       'age' => '13',
+     *       'skill' => 'knows magic',
+     *     ),
+     *     1 =>
+     *     array (
+     *       'name' => 'tanaka',
+     *       'age' => '8',
+     *       'skill' => 'makes sushi',
+     *     ),
+     *     2 =>
+     *     array (
+     *       'name' => 'jose',
+     *       'age' => '5',
+     *       'skill' => 'dances salsa',
+     *     ),
+     *   )
+     *
+     * </code>
+     *
      * @param string $filename the csv filename to load
      *
      * @access public
      * @return boolean true if file was loaded successfully
+     * @see symmetric(), asymmetric(), symmetrize()
      */
     public function uses($filename)
     {
@@ -105,6 +145,18 @@ class File_CSV_Get
      *
      * gets csv headers into an array
      *
+     * <code>
+     *
+     *   var_export($csv->headers());
+     *
+     *   array (
+     *     0 => 'name',
+     *     1 => 'age',
+     *     2 => 'skill',
+     *   )
+     *
+     * </code>
+     *
      * @access public
      * @return array
      */
@@ -127,21 +179,67 @@ class File_CSV_Get
     /**
      * header and value connector
      *
-     * Builds a connection for each record and its header
+     * If the data is not symmetric an emty array will be returned instead.
+     * the sample below builds a connection for each record and its header
      *
-     * Note: if the data is not symmetric an emty array will be
-     * returned instead.
+     * <code>
+     *
+     *  var_export($csv->connect());
+     *
+     *  array (
+     *    0 =>
+     *    array (
+     *      'name' => 'john',
+     *      'age' => '13',
+     *      'skill' => 'knows magic',
+     *    ),
+     *    1 =>
+     *    array (
+     *      'name' => 'tanaka',
+     *      'age' => '8',
+     *      'skill' => 'makes sushi',
+     *    ),
+     *    2 =>
+     *    array (
+     *      'name' => 'jose',
+     *      'age' => '5',
+     *      'skill' => 'dances salsa',
+     *    ),
+     *  )
+     *
+     * </code>
+     *
+     *
+     * You can pass a collection of headers in an array to build 
+     * a connection for those columns only!
+     *
+     * <code>
+     * 
+     *  var_export($csv->connect(array('age')));
+     *
+     *  array (
+     *    0 =>
+     *    array (
+     *      'age' => '13',
+     *    ),
+     *    1 =>
+     *    array (
+     *      'age' => '8',
+     *    ),
+     *    2 =>
+     *    array (
+     *      'age' => '5',
+     *    ),
+     *  )
+     *
+     * </code>
      *
      * @param array $columns the columns to connect, if nothing
      * is given all headers will be used to create a connection
      *
      * @access public
      * @return array fetches a collection of hashes like
-     * <code>
-     *   array (
-     *     array('header1' => 'value1', 'header2' => 'value2')
-     *   );
-     * </code>
+     * @see symmetric(), asymmetry(), symmetrize()
      */
     public function connect($columns = array())
     {
