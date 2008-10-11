@@ -97,6 +97,81 @@ array (
 
 }}}
 
+* getting rows
+
+{{{
+
+var_export($csv->rows());
+
+
+array (
+  0 =>
+  array (
+    0 => 'john',
+    1 => '13',
+    2 => 'knows magic',
+  ),
+  1 =>
+  array (
+    0 => 'tanaka',
+    1 => '8',
+    2 => 'makes sushi',
+  ),
+  2 =>
+  array (
+    0 => 'jose',
+    1 => '5',
+    2 => 'dances salsa',
+  ),
+)
+
+
+}}}
+
+{{{
+
+var_export($csv->rows(range(1,2)));
+
+array (
+  0 =>
+  array (
+    0 => 'john',
+    1 => '13',
+    2 => 'knows magic',
+  ),
+  1 =>
+  array (
+    0 => 'tanaka',
+    1 => '8',
+    2 => 'makes sushi',
+  ),
+)
+
+
+}}}
+
+{{{
+
+var_export($csv->row(1));
+
+array (
+  0 => 'tanaka',
+  1 => '8',
+  2 => 'makes sushi',
+)
+
+
+}}}
+
+
+* getting cells
+{{{
+
+var_export($csv->cell(1, 2)); // returns 'makes sushi'
+
+}}}
+
+
 = Current Interface =
 
 {{{
