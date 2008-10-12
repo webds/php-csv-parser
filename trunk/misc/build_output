@@ -8,5 +8,5 @@ Time: 0 seconds
 OK (42 tests, 109 assertions)
 Analyzing GetSql.php
 Analyzing Get.php
-Package File_CSV_Get-0.1.1.tgz done
-install ok: channel://pear.php.net/File_CSV_Get-0.1.1
+Package File_CSV_Get-0.1.2.tgz done
+install ok: channel://pear.php.net/File_CSV_Get-0.1.2

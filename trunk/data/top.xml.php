@@ -20,8 +20,8 @@ http://pear.php.net/dtd/package-2.0.xsd">
  <date><?php echo date('Y-m-d'); ?></date>
  <time>20:19:56</time>
  <version>
-  <release>0.1.1</release>
-  <api>0.1.0</api>
+  <release>0.1.2</release>
+  <api>0.1.2</api>
  </version>
  <stability>
   <release>beta</release>

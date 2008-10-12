@@ -39,7 +39,21 @@ Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_GetSql/File_CSV_Ge
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/classtrees_File_CSV_Get.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/li_default.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/File_CSV_Get.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---fixtures---csv.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetSqlTest.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_Get.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_misc---File_CSV.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_data---top.xml.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/xFile_CSV_GetTest.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/xFile_CSV_GetSqlTest.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/li_File_CSV_GetSql.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/empty.png -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/style.css -- File not parsed, not a php file
@@ -94,7 +108,7 @@ Reading file /var/www/dev/utils/File/CSV/data/bottom.xml -- File not parsed, not
 Reading file /var/www/dev/utils/File/CSV/data/top.xml.php -- Parsing file
 WARNING in top.xml.php on line 32: File "/var/www/dev/utils/File/CSV/data/top.xml.php" has no page-level DocBlock, use @package in the first DocBlock to create one
 Reading file /var/www/dev/utils/File/CSV/Get.php -- Parsing file
-WARNING in Get.php on line 32: package default is already in category default, will now replace with category File
+WARNING in Get.php on line 35: package File_CSV_Get is already in category default, will now replace with category File
 Reading file /var/www/dev/utils/File/CSV/build -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/File_CSV_Get-0.1.1.tgz -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/GetSql.php -- Parsing file
@@ -131,15 +145,12 @@ Sorting Indexes...done
 
 Sorting @todo list...done
 Converting tutorials/extended docs
-Formatting Package Indexes...    Writing docs/phpdoc/elementindex_default.html
-    Writing docs/phpdoc/elementindex_File_CSV_Get.html
+Formatting Package Indexes...    Writing docs/phpdoc/elementindex_File_CSV_Get.html
     Writing docs/phpdoc/elementindex_File_CSV_GetSql.html
 
 done
 Formatting Index...
     Writing docs/phpdoc/elementindex.html
-
-    Writing docs/phpdoc/li_default.html
 
     Writing docs/phpdoc/li_File_CSV_Get.html
 
@@ -149,36 +160,62 @@ Formatting Index...
 done
 
 Formatting Left Quick Index...
-    Writing docs/phpdoc/classtrees_default.html
-
     Writing docs/phpdoc/classtrees_File_CSV_Get.html
 
     Writing docs/phpdoc/classtrees_File_CSV_GetSql.html
 
 done
 
-Converting /var/www/dev/utils/File/CSV/tests/fixtures/csv.php Procedural Page Elements... Classes... done
-    Writing docs/phpdoc/default/_tests---fixtures---csv.php.html
-Converting /var/www/dev/utils/File/CSV/misc/File_CSV.php Procedural Page Elements... Classes... done
-    Writing docs/phpdoc/default/_misc---File_CSV.php.html
-Converting /var/www/dev/utils/File/CSV/tests/File_CSV_GetSqlTest.php Procedural Page Elements... Classes...
-    Writing docs/phpdoc/default/xFile_CSV_GetSqlTest.html
+Converting /var/www/dev/utils/File/CSV/tests/fixtures/csv.php
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html
+
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html
+ Procedural Page Elements... Classes... done
+    Writing docs/phpdoc/File_CSV_Get/_tests---fixtures---csv.php.html
+Converting /var/www/dev/utils/File/CSV/misc/File_CSV.php
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html
+
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html
+ Procedural Page Elements... Classes... done
+    Writing docs/phpdoc/File_CSV_Get/_misc---File_CSV.php.html
+Converting /var/www/dev/utils/File/CSV/tests/File_CSV_GetSqlTest.php
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html
+
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html
+ Procedural Page Elements... Classes...
+    Writing docs/phpdoc/File_CSV_Get/xFile_CSV_GetSqlTest.html
  done
-    Writing docs/phpdoc/default/_tests---File_CSV_GetSqlTest.php.html
-Converting /var/www/dev/utils/File/CSV/tests/File_CSV_GetTest.php Procedural Page Elements... Classes...
-    Writing docs/phpdoc/default/xFile_CSV_GetTest.html
+    Writing docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetSqlTest.php.html
+Converting /var/www/dev/utils/File/CSV/tests/File_CSV_GetTest.php
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html
+
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html
+ Procedural Page Elements... Classes...
+    Writing docs/phpdoc/File_CSV_Get/xFile_CSV_GetTest.html
  done
-    Writing docs/phpdoc/default/_tests---File_CSV_GetTest.php.html
-Converting /var/www/dev/utils/File/CSV/Get.php Procedural Page Elements... Classes...
+    Writing docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html
+Converting /var/www/dev/utils/File/CSV/Get.php
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html
+
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html
+ Procedural Page Elements... Classes...
     Writing docs/phpdoc/File_CSV_Get/File_CSV_Get.html
  done
     Writing docs/phpdoc/File_CSV_Get/_Get.php.html
-Converting /var/www/dev/utils/File/CSV/GetSql.php Procedural Page Elements... Classes...
+Converting /var/www/dev/utils/File/CSV/GetSql.php
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html
+
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html
+ Procedural Page Elements... Classes...
     Writing docs/phpdoc/File_CSV_GetSql/File_CSV_GetSql.html
  done
     Writing docs/phpdoc/File_CSV_GetSql/_GetSql.php.html
-Converting /var/www/dev/utils/File/CSV/data/top.xml.php Procedural Page Elements... Classes... done
-    Writing docs/phpdoc/default/_data---top.xml.php.html
+Converting /var/www/dev/utils/File/CSV/data/top.xml.php
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html
+
+    Writing docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html
+ Procedural Page Elements... Classes... done
+    Writing docs/phpdoc/File_CSV_Get/_data---top.xml.php.html
 
 Converting @todo List...done
 
@@ -190,7 +227,7 @@ done
 
 Parsing time: 2 seconds
 
-Conversion time: 3 seconds
+Conversion time: 13 seconds
 
-Total Documentation Time: 5 seconds
+Total Documentation Time: 15 seconds
 done
