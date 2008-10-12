@@ -1,4 +1,7 @@
 <?php
+
+/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
+
 /**
  * csv data fetching tools
  *
@@ -16,7 +19,7 @@
 /**
  * csv data fetcher
  *
- * sample snippets refer to this csv file for demosntration.
+ * sample snippets refer to this csv file for demonstration.
  * <code>
  *   name,age,skill
  *   john,13,knows magic
@@ -338,9 +341,9 @@ class File_CSV_Get
     {
         $ret_arr = array();
         $hc      = count($this->_headers);
-        foreach ($this->_rows as $data) {
-            if (count($data) != $hc) {
-                $ret_arr[] = $data;
+        foreach ($this->_rows as $row) {
+            if (count($row) != $hc) {
+                $ret_arr[] = $row;
             }
         }
         return $ret_arr;
