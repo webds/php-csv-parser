@@ -1,6 +1,4 @@
 #labels Featured
-#api changes
-
 = The Api is Migrating to PEAR! =
 
 There is a lot of new features and also a lot of changes that do NOT
@@ -14,10 +12,12 @@ File_CSV_Get-0.1.1.tgz
 = Installing using pear =
 
 * download the file and run this on your commmand line.
-
+{{{
   $ pear install File_CSV_Get-0.1.1.tgz
+}}}
 
 = Using the package =
+
 * csv file
 {{{
 name,age,skill
@@ -309,6 +309,7 @@ function row($number)
 function rows($range = array())
 function settings($array)
 function symmetric()
+function symmetrize()
 function uses($filename)
 
 }}}
