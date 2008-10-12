@@ -1,5 +1,4 @@
 <?php
-
 /**
  * csv data fetching tools
  *
@@ -115,7 +114,7 @@ class File_CSV_Get
      *
      * @access public
      * @return boolean true if file was loaded successfully
-     * @see symmetric(), asymmetric(), symmetrize()
+     * @see symmetric(), asymmetry(), symmetrize()
      */
     public function uses($filename)
     {
@@ -177,10 +176,11 @@ class File_CSV_Get
     }
 
     /**
-     * header and value connector
+     * header and row relationship builder
      *
-     * If the data is not symmetric an emty array will be returned instead.
-     * the sample below builds a connection for each record and its header
+     * Attempts to create a relationship for every single cell that
+     * was captured and its corresponding header. The sample below shows
+     * how a connection/relationship is built.
      *
      * <code>
      *
@@ -210,11 +210,11 @@ class File_CSV_Get
      * </code>
      *
      *
-     * You can pass a collection of headers in an array to build 
+     * You can pass a collection of headers in an array to build
      * a connection for those columns only!
      *
      * <code>
-     * 
+     *
      *  var_export($csv->connect(array('age')));
      *
      *  array (
@@ -238,8 +238,9 @@ class File_CSV_Get
      * is given all headers will be used to create a connection
      *
      * @access public
-     * @return array fetches a collection of hashes like
-     * @see symmetric(), asymmetry(), symmetrize()
+     * @return array If the data is not symmetric an empty array
+     * will be returned instead
+     * @see symmetric(), asymmetry(), symmetrize(), headers()
      */
     public function connect($columns = array())
     {
@@ -295,10 +296,43 @@ class File_CSV_Get
     /**
      * asymmetric data fetcher
      *
-     * gets the data that does not match the headers length
+     * finds the rows that do not match the headers length
+     *
+     * lets assume that we add one more row to our csv file.
+     * that has only two values. Something like
+     *
+     * <code>
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     *   niki,6
+     * </code>
+     *
+     * Then in our php code
+     *
+     * <code>
+     *   $csv->uses('my_file.csv');
+     *   var_export($csv->asymmetry());
+     * </code>
+     *
+     * The result
+     *
+     * <code>
+     *
+     *   array (
+     *     0 =>
+     *     array (
+     *       0 => 'niki',
+     *       1 => '6',
+     *     ),
+     *   )
+     *
+     * </code>
      *
      * @access public
-     * @return array
+     * @return array filled with rows that do not match headers
+     * @see headers(), symmetrize(), symmetric()
      */
     public function asymmetry()
     {
@@ -313,11 +347,11 @@ class File_CSV_Get
     }
 
     /**
-     * all rows length regularizer
+     * all rows length equalizer
      *
-     * makes the length of all rows the same. If no $value is given 
+     * makes the length of all rows and headers the same. If no $value is given
      * all unexistent cells will be filled with empty spaces
-     * 
+     *
      * @param mixed $value the value to fill the unexistent cells
      *
      * @access public
@@ -346,20 +380,27 @@ class File_CSV_Get
      *
      * gets all the data for a specific column identified by $name
      *
+     * Note $name is the same as the items returned by headers()
+     *
+     * <code>
+     *   $csv->uses('my_file.csv');
+     *   var_export($csv->column('name'));
+     * </code>
+     *
      * @param string $name the name of the column to fetch
      *
      * @access public
-     * @return array like
+     * @return array filled with values of a column
      * <code>
-     *   $array = $csv->column('header1');
      *
-     *   // array
-     *   array(
-     *     'value1',
-     *     'value2',
-     *     'value3',
+     *   array (
+     *     0 => 'john',
+     *     1 => 'tanaka',
+     *     2 => 'jose',
      *   )
+     *
      * </code>
+     * @see headers(), fillColumn(), appendColumn(), cell(), rows(), row()
      */
     public function column($name)
     {
@@ -391,12 +432,58 @@ class File_CSV_Get
     /**
      * column appender
      *
+     * Appends a column and each or all values in it can be
+     * dinamically filled. Only when the $values argument is given.
+     * <code>
+     *
+     *
+     *  var_export($csv->fillColumn('age', 99));
+     *  true
+     *
+     *  var_export($csv->appendColumn('candy_ownership', array(99, 44, 65)));
+     *  true
+     *
+     *  var_export($csv->appendColumn('import_id', 111111111));
+     *  true
+     *
+     *  var_export($csv->connect());
+     *
+     *  array (
+     *    0 =>
+     *    array (
+     *      'name' => 'john',
+     *      'age' => 99,
+     *      'skill' => 'knows magic',
+     *      'candy_ownership' => 99,
+     *      'import_id' => 111111111,
+     *    ),
+     *    1 =>
+     *    array (
+     *      'name' => 'tanaka',
+     *      'age' => 99,
+     *      'skill' => 'makes sushi',
+     *      'candy_ownership' => 44,
+     *      'import_id' => 111111111,
+     *    ),
+     *    2 =>
+     *    array (
+     *      'name' => 'jose',
+     *      'age' => 99,
+     *      'skill' => 'dances salsa',
+     *      'candy_ownership' => 65,
+     *      'import_id' => 111111111,
+     *    ),
+     *  )
+     *
+     * </code>
+     *
      * @param string $column an item returned by headers()
      * @param mixed  $values same as fillColumn()
      *
      * @access public
      * @return boolean
-     * @see headers(), fillColumn()
+     * @see headers(), fillColumn(), fillCell(), createHeaders(),
+     * injectHeaders()
      */
     public function appendColumn($column, $values = null)
     {
@@ -424,7 +511,7 @@ class File_CSV_Get
      * collumn data injector
      *
      * fills alll the data in the given column with $values
-     * 
+     *
      * @param mixed $column the column identified by a string
      * @param mixed $values ither one of the following
      *  - (Number) will fill the whole column with the value of number
@@ -476,13 +563,36 @@ class File_CSV_Get
      *
      * gets the value of a specific cell by given coordinates
      *
+     * Note: That indexes start with zero, and headers are not
+     * searched!
+     *
+     * For example if we are trying to grab the cell that is in the
+     * second row and the third column
+     *
+     * <code>
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * we would do something like
+     * <code>
+     *   var_export($csv->cell(1, 2));
+     * </code>
+     *
+     * and get the following results
+     * <code>
+     *   'makes sushi'
+     * </code>
+     *
      * @param integer $x the row to fetch
      * @param integer $y the column to fetch
      *
      * @access public
-     * @return mixed the value of the cell or false if the cell does 
+     * @return mixed|false the value of the cell or false if the cell does
      * not exist
-     * @see coordinatable(), row(), rows(), column()
+     * @see headers(), coordinatable(), row(), rows(), column()
      */
     public function cell($x, $y)
     {
@@ -519,7 +629,7 @@ class File_CSV_Get
 
     /**
      * checks if a coordinate is valid
-     * 
+     *
      * @param mixed $x the row to fetch
      * @param mixed $y the column to fetch
      *
