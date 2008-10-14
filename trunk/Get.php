@@ -185,7 +185,26 @@ class File_CSV_Get
      * was captured and its corresponding header. The sample below shows
      * how a connection/relationship is built.
      *
+     * sample of a csv file "my_cool.csv"
+     *
      * <code>
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * php implementation
+     *
+     * <code>
+     *
+     *  $csv = new File_CSV_Get;
+     *  $csv->uses('my_cool.csv');
+     *
+     *  if (!$csv->symmetric()) {
+     *      die('file has headers and rows with different lengths 
+     *      cannot connect');
+     *  }
      *
      *  var_export($csv->connect());
      *
@@ -315,7 +334,7 @@ class File_CSV_Get
      * Then in our php code
      *
      * <code>
-     *   $csv->uses('my_file.csv');
+     *   $csv->uses('my_cool.csv');
      *   var_export($csv->asymmetry());
      * </code>
      *
@@ -385,15 +404,25 @@ class File_CSV_Get
      *
      * Note $name is the same as the items returned by headers()
      *
+     * sample of a csv file "my_cool.csv"
+     *
      * <code>
-     *   $csv->uses('my_file.csv');
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * php implementation
+     *
+     * <code>
+     *   $csv = new File_CSV_Get;
+     *   $csv->uses('my_cool.csv');
      *   var_export($csv->column('name'));
      * </code>
      *
-     * @param string $name the name of the column to fetch
+     * the above example outputs something like
      *
-     * @access public
-     * @return array filled with values of a column
      * <code>
      *
      *   array (
@@ -403,7 +432,13 @@ class File_CSV_Get
      *   )
      *
      * </code>
-     * @see headers(), fillColumn(), appendColumn(), cell(), rows(), row()
+     *
+     * @param string $name the name of the column to fetch
+     *
+     * @access public
+     * @return array filled with values of a column
+     * @see headers(), fillColumn(), appendColumn(), cell(), rows(),
+     * row(), columnExists()
      */
     public function column($name)
     {
@@ -420,6 +455,34 @@ class File_CSV_Get
 
     /**
      * column existance checker
+     *
+     * checks if a column exists, columns are identified by their 
+     * header name.
+     *
+     * sample of a csv file "my_cool.csv"
+     *
+     * <code>
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * php implementation
+     *
+     * <code>
+     *   $csv = new File_CSV_Get;
+     *   $csv->uses('my_cool.csv');
+     *   $headers = $csv->headers();
+     * </code>
+     *
+     * now lets check if the columns exist
+     *
+     * <code>
+     *   var_export($csv->columnExists($headers[0]));    // true
+     *   var_export($csv->columnExists('age'));          // true
+     *   var_export($csv->columnExists('I dont exist')); // false 
+     * </code>
      *
      * @param string $string an item returned by headers()
      *
