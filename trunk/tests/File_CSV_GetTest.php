@@ -267,11 +267,11 @@ class File_CSV_GetTest extends PHPUnit_Framework_TestCase
     public function test_coordinatable_must_return_true_when_coordinates_exist()
     {
         $this->assertTrue($this->csv->uses(path('symmetric.csv')));
-        $this->assertTrue($this->csv->coordinatable(0, 0));
-        $this->assertFalse($this->csv->coordinatable(-1, 0));
-        $this->assertFalse($this->csv->coordinatable(0, -1));
-        $this->assertFalse($this->csv->coordinatable(-1, -1));
-        $this->assertFalse($this->csv->coordinatable(1, 11));
+        $this->assertTrue($this->csv->coordinateable(0, 0));
+        $this->assertFalse($this->csv->coordinateable(-1, 0));
+        $this->assertFalse($this->csv->coordinateable(0, -1));
+        $this->assertFalse($this->csv->coordinateable(-1, -1));
+        $this->assertFalse($this->csv->coordinateable(1, 11));
     }
 
     public function test_fill_column_must_fill_all_values_of_a_column()

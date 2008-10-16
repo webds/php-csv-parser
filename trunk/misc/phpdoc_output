@@ -16,7 +16,6 @@ Hidden /var/www/dev/utils/File/CSV/tests/.svn Ignored
 Hidden /var/www/dev/utils/File/CSV/tests/data/.svn Ignored
 Hidden /var/www/dev/utils/File/CSV/.svn Ignored
 Hidden /var/www/dev/utils/File/CSV/data/.svn Ignored
-Hidden /var/www/dev/utils/File/CSV/.Get.php.swp Ignored
 
 
 Grabbing README/INSTALL/CHANGELOG
@@ -32,6 +31,7 @@ done
 General Parsing Stage
 
 Reading file /var/www/dev/utils/File/CSV/package.xml -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/my_cool.csv -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/elementindex_File_CSV_Get.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/index.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/elementindex.html -- File not parsed, not a php file
@@ -50,6 +50,7 @@ Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_data---top.xm
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/xFile_CSV_GetTest.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/xFile_CSV_GetSqlTest.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_k.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html -- File not parsed, not a php file
@@ -57,6 +58,7 @@ Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_C
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__k.php.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/li_File_CSV_GetSql.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/empty.png -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/style.css -- File not parsed, not a php file
@@ -76,6 +78,7 @@ Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/default/xFile_CSV_GetSqlTes
 Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/errors.html -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/docs/examples/EXAMPLES -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/mk_filelist -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/x -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/misc/pear_install_output -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/misc/pear_package_output -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/misc/build_output -- File not parsed, not a php file
@@ -230,7 +233,7 @@ done
 
 Parsing time: 2 seconds
 
-Conversion time: 13 seconds
+Conversion time: 14 seconds
 
-Total Documentation Time: 15 seconds
+Total Documentation Time: 16 seconds
 done

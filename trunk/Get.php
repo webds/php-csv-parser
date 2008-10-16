@@ -171,7 +171,7 @@ class File_CSV_Get
      * header counter
      *
      * @access public
-     * @return integer
+     * @return integer gets the length of headers
      */
     public function countHeaders()
     {
@@ -578,6 +578,71 @@ class File_CSV_Get
      *
      * fills alll the data in the given column with $values
      *
+     * sample of a csv file "my_cool.csv"
+     *
+     * <code>
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * php implementation
+     *
+     * <code>
+     *   $csv = new File_CSV_Get;
+     *   $csv->uses('my_cool.csv');
+     *
+     *   // if the csv file loads
+     *   if ($csv->uses('my_cool.csv')) {
+     *
+     *      // grab all data within the age column
+     *      var_export($csv->column('age'));
+     *      
+     *      // rename all values in it with the number 99
+     *      var_export($csv->fillColumn('age', 99));
+     *
+     *      // grab all data within the age column
+     *      var_export($csv->column('age'));
+     *
+     *      // rename each value in a column independently
+     *      $data = array(1, 2, 3);
+     *      $csv->fillColumn('age', $data);
+     *
+     *      var_export($csv->column('age'));
+     *   }
+     * </code>
+     *
+     * standard output
+     *
+     * <code>
+     *   array (
+     *     0 => '13',
+     *     1 => '8',
+     *     2 => '5',
+     *   )
+     * </code>
+     *
+     * <code>
+     *   true
+     * </code>
+     *
+     * <code>
+     *   array (
+     *     0 => 99,
+     *     1 => 99,
+     *     2 => 99,
+     *   )
+     * </code>
+     *
+     * <code>
+     *   array (
+     *     0 => 1,
+     *     1 => 2,
+     *     2 => 3,
+     *   )
+     * </code>
+     *
      * @param mixed $column the column identified by a string
      * @param mixed $values ither one of the following
      *  - (Number) will fill the whole column with the value of number
@@ -658,11 +723,11 @@ class File_CSV_Get
      * @access public
      * @return mixed|false the value of the cell or false if the cell does
      * not exist
-     * @see headers(), coordinatable(), row(), rows(), column()
+     * @see headers(), coordinateable(), row(), rows(), column()
      */
     public function cell($x, $y)
     {
-        if ($this->coordinatable($x, $y)) {
+        if ($this->coordinateable($x, $y)) {
             $row = $this->row($x);
             return $row[$y];
         }
@@ -674,17 +739,67 @@ class File_CSV_Get
      *
      * replaces the value of a specific cell
      *
+     * sample of a csv file "my_cool.csv"
+     *
+     * <code>
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * php implementation
+     *
+     * <code>
+     *
+     *   $csv = new File_CSV_Get;
+     *
+     *   // load the csv file
+     *   $csv->uses('my_cool.csv');
+     *
+     *   // find out if the given coordinate is valid
+     *   if($csv->coordinateable(1, 1)) {
+     *
+     *       // if so grab that cell and dump it 
+     *       var_export($csv->cell(1, 1));       // '8'
+     *
+     *       // replace the value of that cell
+     *       $csv->fillCell(1, 1, 'new value');  // true
+     *
+     *       // output the new value of the cell
+     *       var_export($csv->cell(1, 1));       // 'new value'
+     *
+     *   }
+     * </code>
+     *
+     * now lets try to grab the whole row
+     *
+     * <code>
+     *   // show the whole row
+     *   var_export($csv->row(1));
+     * </code>
+     *
+     * standard output
+     *
+     * <code>
+     *   array (
+     *     0 => 'tanaka',
+     *     1 => 'new value',
+     *     2 => 'makes sushi',
+     *   )
+     * </code>
+     *
      * @param integer $x     the row to fetch
      * @param integer $y     the column to fetch
      * @param mixed   $value the value to fill the cell with
      *
      * @access public
      * @return boolean
-     * @see coordinatable(), row(), rows(), column()
+     * @see coordinateable(), row(), rows(), column()
      */
     public function fillCell($x, $y, $value)
     {
-        if (!$this->coordinatable($x, $y)) {
+        if (!$this->coordinateable($x, $y)) {
             return false;
         }
         $row             = $this->row($x);
@@ -696,13 +811,43 @@ class File_CSV_Get
     /**
      * checks if a coordinate is valid
      *
+     * sample of a csv file "my_cool.csv"
+     *
+     * <code>
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * load the csv file
+     *
+     * <code>
+     *   $csv = new File_CSV_Get;
+     *   var_export($csv->uses('my_cool.csv'));   // true if file is 
+     *                                            // loaded
+     * </code>
+     *
+     * find out if a coordinate is valid
+     *
+     * <code>
+     *   var_export($csv->coordinateable(99, 3)); // false
+     * </code>
+     *
+     * check again for a know valid coordinate and grab that cell
+     *
+     * <code>
+     *   var_export($csv->coordinateable(1, 1));  // true
+     *   var_export($csv->cell(1, 1));            // '8'
+     * </code>
+     *
      * @param mixed $x the row to fetch
      * @param mixed $y the column to fetch
      *
      * @access public
      * @return void
      */
-    public function coordinatable($x, $y)
+    public function coordinateable($x, $y)
     {
         $has_x = array_key_exists($x, $this->_rows);
         $has_y = array_key_exists($y, $this->_headers);
@@ -759,7 +904,24 @@ class File_CSV_Get
     /**
      * row counter
      *
-     * this function excludes the headers
+     * This function will exclude the headers
+     *
+     * sample of a csv file "my_cool.csv"
+     *
+     * <code>
+     *   name,age,skill
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * php implementation
+     *
+     * <code>
+     *   $csv = new File_CSV_Get;
+     *   $csv->uses('my_cool.csv');
+     *   var_export($csv->countRows()); // returns 3
+     * </code>
      *
      * @access public
      * @return integer
@@ -790,6 +952,103 @@ class File_CSV_Get
      *
      * uses prefix and creates a header for each column suffixed by a
      * numeric value
+     *
+     * by default the first row is interpreted as headers but if we 
+     * have a csv file with data only and no headers it becomes really
+     * annoying to work with the current loaded data.
+     *
+     * this function will create a set dinamically generated headers
+     * and make the current headers accessable with the row handling
+     * functions
+     *
+     * Note: that the csv file contains only data but no headers
+     * sample of a csv file "my_cool.csv"
+     *
+     * <code>
+     *   john,13,knows magic
+     *   tanaka,8,makes sushi
+     *   jose,5,dances salsa
+     * </code>
+     *
+     * checks if the csv file was loaded
+     *
+     * <code>
+     *   $csv = new File_CSV_Get;
+     *   if (!$csv->uses('my_cool.csv')) {
+     *      die('can not load csv file');
+     *   }
+     * </code>
+     *
+     * dump current headers
+     *
+     * <code>
+     *   var_export($csv->headers());
+     * </code>
+     *
+     * standard output
+     *
+     * <code>
+     *   array (
+     *     0 => 'john',
+     *     1 => '13',
+     *     2 => 'knows magic',
+     *   )
+     * </code>
+     *
+     * generate headers named 'column' suffixed by a number and interpret
+     * the previous headers as rows.
+     *
+     * <code>
+     *   $csv->createHeaders('column')
+     * </code>
+     *
+     * dump current headers
+     *
+     * <code>
+     *   var_export($csv->headers());
+     * </code>
+     *
+     * standard output
+     *
+     * <code>
+     *   array (
+     *     0 => 'column_1',
+     *     1 => 'column_2',
+     *     2 => 'column_3',
+     *   )
+     * </code>
+     *
+     * build a relationship and dump it
+     *
+     * <code>
+     *   var_export($csv->connect());
+     * </code>
+     *
+     * standard output
+     *
+     * <code>
+     *
+     *  array (
+     *    0 => 
+     *    array (
+     *      'column_1' => 'john',
+     *      'column_2' => '13',
+     *      'column_3' => 'knows magic',
+     *    ),
+     *    1 => 
+     *    array (
+     *      'column_1' => 'tanaka',
+     *      'column_2' => '8',
+     *      'column_3' => 'makes sushi',
+     *    ),
+     *    2 => 
+     *    array (
+     *      'column_1' => 'jose',
+     *      'column_2' => '5',
+     *      'column_3' => 'dances salsa',
+     *    ),
+     *  )
+     * </code>
      *
      * @param string $prefix check your database engine for valid
      * column naming conventions.
