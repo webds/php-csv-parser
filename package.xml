@@ -17,7 +17,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
   <email>kazu.dev@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2008-10-14</date>
+ <date>2008-10-16</date>
  <time>20:19:56</time>
  <version>
   <release>0.1.2</release>
@@ -34,10 +34,10 @@ http://pear.php.net/dtd/package-2.0.xsd">
 
 
 <file baseinstalldir="File/CSV/" md5sum="1fd8cb14343089f0db146dfd9088d958" name="GetSql.php" role="php" />
-<file baseinstalldir="File/CSV/" md5sum="ac1887a351bc366cad5148c9d2d15366" name="Get.php" role="php" />
+<file baseinstalldir="File/CSV/" md5sum="fb4717e34147bb2fd36f6643d6b0bd0c" name="Get.php" role="php" />
 <file baseinstalldir="File_CSV_Get/tests/File_CSV_GetSqlTest.php" md5sum="f9fbdaf825f944c9847ab095c9dadd63" name="tests/File_CSV_GetSqlTest.php" role="test" />
 <file baseinstalldir="File_CSV_Get/tests/fixtures/csv.php" md5sum="9d79ebc43722b53bb23859a4dce78cbf" name="tests/fixtures/csv.php" role="test" />
-<file baseinstalldir="File_CSV_Get/tests/File_CSV_GetTest.php" md5sum="8a9fa0ef19754a9ff9091bc4aa7f3437" name="tests/File_CSV_GetTest.php" role="test" />
+<file baseinstalldir="File_CSV_Get/tests/File_CSV_GetTest.php" md5sum="75b20fe6b2bfffb33565039a80eff76e" name="tests/File_CSV_GetTest.php" role="test" />
 <file baseinstalldir="File_CSV_Get/tests/data/multcased.CsV" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/data/multcased.CsV" role="test" />
 <file baseinstalldir="File_CSV_Get/tests/data/escape_ok.csv" md5sum="14f80e41d3b24b8ec445e6de302fac91" name="tests/data/escape_ok.csv" role="test" />
 <file baseinstalldir="File_CSV_Get/tests/data/symmetric_with_empty_records.csv" md5sum="56de44ebc2e1dc8b43fdec3538c24832" name="tests/data/symmetric_with_empty_records.csv" role="test" />
@@ -53,47 +53,49 @@ http://pear.php.net/dtd/package-2.0.xsd">
 <file baseinstalldir="File_CSV_Get/tests/data/invalid_ext.csv.txt" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="tests/data/invalid_ext.csv.txt" role="test" />
 <file baseinstalldir="File_CSV_Get/misc/pear_install_output" md5sum="aa50fd17ffe2fa2acfd5f66be3413b56" name="misc/pear_install_output" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/pear_package_output" md5sum="ba1ebf1ad050003cfdbc0518985ce6ca" name="misc/pear_package_output" role="data" />
-<file baseinstalldir="File_CSV_Get/misc/build_output" md5sum="a048dda243d07802ac9305d6d9703098" name="misc/build_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/build_output" md5sum="d1a5356d1cc4582e6119b5251b4fbc28" name="misc/build_output" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/phpcs_output" md5sum="d41d8cd98f00b204e9800998ecf8427e" name="misc/phpcs_output" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/File_CSV.php" md5sum="542a2e0700a7913da32191a8fbb1c088" name="misc/File_CSV.php" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/README" md5sum="6386d3d99d9dcf5d2fcbbbbdec2e5451" name="misc/README" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/phpunit_output" md5sum="121fe5babfc8d44eb7e43795fa971b25" name="misc/phpunit_output" role="data" />
-<file baseinstalldir="File_CSV_Get/misc/phpdoc_output" md5sum="4f9d9551e3c1e694eb65ec762c7e1f91" name="misc/phpdoc_output" role="data" />
+<file baseinstalldir="File_CSV_Get/misc/phpdoc_output" md5sum="a773043be70188ef64f32ee32b317013" name="misc/phpdoc_output" role="data" />
 <file baseinstalldir="File_CSV_Get/misc/LICENSE" md5sum="696e8fb6aaa950b49f232f2b498d4b9e" name="misc/LICENSE" role="data" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/elementindex_File_CSV_Get.html" md5sum="377988472e445d263d9c4c8c705b2d46" name="docs/phpdoc/elementindex_File_CSV_Get.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/index.html" md5sum="d9430a1322ea8a90e7183c328b45b22a" name="docs/phpdoc/index.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/elementindex.html" md5sum="802c10f02c8fc9cf15ce756aa44cc8bc" name="docs/phpdoc/elementindex.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_GetSql/_GetSql.php.html" md5sum="d8783f3f11c711ebbf3668f6bb5683b6" name="docs/phpdoc/File_CSV_GetSql/_GetSql.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_GetSql/File_CSV_GetSql.html" md5sum="d4142d0bd3ea1769c3b3de1d112b102d" name="docs/phpdoc/File_CSV_GetSql/File_CSV_GetSql.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/classtrees_File_CSV_Get.html" md5sum="f6fb25acdaf3838fe326fcd0c73e127d" name="docs/phpdoc/classtrees_File_CSV_Get.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/elementindex_File_CSV_Get.html" md5sum="79a3a415411b7ec5963d4a2a66a6fbce" name="docs/phpdoc/elementindex_File_CSV_Get.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/index.html" md5sum="03f682be2a903cbe1447ea38c0b06576" name="docs/phpdoc/index.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/elementindex.html" md5sum="a5cc06411ef3ae9ffccb0838a2d385c6" name="docs/phpdoc/elementindex.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_GetSql/_GetSql.php.html" md5sum="72d4026c5256c409777b3c33df0b6d5c" name="docs/phpdoc/File_CSV_GetSql/_GetSql.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_GetSql/File_CSV_GetSql.html" md5sum="7f6a6a83ba261b093af1fc4c7faa1e7b" name="docs/phpdoc/File_CSV_GetSql/File_CSV_GetSql.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/classtrees_File_CSV_Get.html" md5sum="4d13120348b732cf0d3a5d0a43e769ef" name="docs/phpdoc/classtrees_File_CSV_Get.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/li_default.html" md5sum="13fba2429b4d53f8f90a4184ee7837b4" name="docs/phpdoc/li_default.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/File_CSV_Get.html" md5sum="b5dc030fd94442d2c0494de30b90333f" name="docs/phpdoc/File_CSV_Get/File_CSV_Get.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/File_CSV_GetSqlTest.html" md5sum="1890c5c3f2c56a9c6d355b193048539c" name="docs/phpdoc/File_CSV_Get/File_CSV_GetSqlTest.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/File_CSV_GetTest.html" md5sum="fa7499fca6460ae8da4a8c0c7ac1196b" name="docs/phpdoc/File_CSV_Get/File_CSV_GetTest.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_tests---fixtures---csv.php.html" md5sum="a3d8e60aa1f25b9b2daa3e86500afb26" name="docs/phpdoc/File_CSV_Get/_tests---fixtures---csv.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetSqlTest.php.html" md5sum="d06524ba4c0ede1d02f6d869e839ae23" name="docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetSqlTest.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_Get.php.html" md5sum="122745eb3ae542c9533bd6f1e26c53fd" name="docs/phpdoc/File_CSV_Get/_Get.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_misc---File_CSV.php.html" md5sum="f4c189b1796a8b0a077a8212779c2514" name="docs/phpdoc/File_CSV_Get/_misc---File_CSV.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_data---top.xml.php.html" md5sum="4b1399bce293a6131feaf4300a048846" name="docs/phpdoc/File_CSV_Get/_data---top.xml.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/File_CSV_Get.html" md5sum="5ed8e65e0e7b8276fc812023a802dbcf" name="docs/phpdoc/File_CSV_Get/File_CSV_Get.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/File_CSV_GetSqlTest.html" md5sum="3251a136f4dc17465725c232d4ad0687" name="docs/phpdoc/File_CSV_Get/File_CSV_GetSqlTest.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/File_CSV_GetTest.html" md5sum="f585b70b8761386a94d1ee61c381adbf" name="docs/phpdoc/File_CSV_Get/File_CSV_GetTest.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_tests---fixtures---csv.php.html" md5sum="03f1e7053d6b16a9a5cd94d99ba58f85" name="docs/phpdoc/File_CSV_Get/_tests---fixtures---csv.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetSqlTest.php.html" md5sum="e7667d034c482dcbb6c1ddd5edec39df" name="docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetSqlTest.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_Get.php.html" md5sum="57d1d0e1c97cfb50e7694bec8b0b988e" name="docs/phpdoc/File_CSV_Get/_Get.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_misc---File_CSV.php.html" md5sum="63b09f5a7d796dc72270cbc24f897c6d" name="docs/phpdoc/File_CSV_Get/_misc---File_CSV.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_data---top.xml.php.html" md5sum="ff09ac13cc0d3aae9dcc6d7f4f43a443" name="docs/phpdoc/File_CSV_Get/_data---top.xml.php.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/xFile_CSV_GetTest.html" md5sum="2fb4aee31967f2a943c1f35768342b41" name="docs/phpdoc/File_CSV_Get/xFile_CSV_GetTest.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html" md5sum="8a0e81edf8a29765ab4bff7c68d5d4e0" name="docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html" md5sum="e9f475e82dfb22b333c4e39f9e0b417e" name="docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/xFile_CSV_GetSqlTest.html" md5sum="d263136e36f84c468aa43c859a4dbea1" name="docs/phpdoc/File_CSV_Get/xFile_CSV_GetSqlTest.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html" md5sum="9b200de6a8e00a61633d75d348ef30b5" name="docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html" md5sum="eb9adaf99cd46a335639d889a0e89947" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html" md5sum="4e3c8cd705336920bf0f0b7a5f7e6d3d" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html" md5sum="51d96648d3a4c6eddab74b718054e7cf" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html" md5sum="0598a9375e71a7922f80e9080a4a7b87" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html" md5sum="bd02b918e6735b9e1592ddfaeef261ba" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html" md5sum="251b84fea3e766114bf2c1826a6b3530" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/li_File_CSV_GetSql.html" md5sum="dc0830d933e1f3a2786791a01db5ecee" name="docs/phpdoc/li_File_CSV_GetSql.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/File_CSV_Get/_k.php.html" md5sum="46a813f47dc350e6ef2e08118bc60242" name="docs/phpdoc/File_CSV_Get/_k.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html" md5sum="02241e2e9f220ebac6881a677c8ad874" name="docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html" md5sum="197246be13da565961bdf86f57424dae" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html" md5sum="9a69df879793ccc8cbc435f425800900" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html" md5sum="5493f3825c03d72c811002cd80b8d0ed" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html" md5sum="543ea96ea7a6c92ff055fae59262655c" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html" md5sum="54ea10691a19fb62a193bf45d378bb40" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html" md5sum="736cd6f91ddb41794b29aeed68680035" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/__filesource/fsource_File_CSV_Get__k.php.html" md5sum="41c27fe87fa1ff6aa46b5498ad710a0f" name="docs/phpdoc/__filesource/fsource_File_CSV_Get__k.php.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/li_File_CSV_GetSql.html" md5sum="270da4c5558d8b8735905b9ffb692cb9" name="docs/phpdoc/li_File_CSV_GetSql.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/media/empty.png" md5sum="4c480a60db1ab64317fe351a24396eb1" name="docs/phpdoc/media/empty.png" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/media/style.css" md5sum="db8e57f997ee81dcf8388074f5093d98" name="docs/phpdoc/media/style.css" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/media/background.png" md5sum="5189118af3e84698c51db5f8cac5525a" name="docs/phpdoc/media/background.png" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/elementindex_File_CSV_GetSql.html" md5sum="e2621a6a617a2d965c2803fdcc2a5d83" name="docs/phpdoc/elementindex_File_CSV_GetSql.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/elementindex_File_CSV_GetSql.html" md5sum="ea1ec23aa1ee33763456076c9a1a8050" name="docs/phpdoc/elementindex_File_CSV_GetSql.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/classtrees_default.html" md5sum="6fe463f3fa35302003df251f1212f5bc" name="docs/phpdoc/classtrees_default.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/elementindex_default.html" md5sum="d9acd155ad0b7266586da7d18da804dc" name="docs/phpdoc/elementindex_default.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/li_File_CSV_Get.html" md5sum="d9430a1322ea8a90e7183c328b45b22a" name="docs/phpdoc/li_File_CSV_Get.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/classtrees_File_CSV_GetSql.html" md5sum="0d44b838b613ceb00dade6355af31de1" name="docs/phpdoc/classtrees_File_CSV_GetSql.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/li_File_CSV_Get.html" md5sum="03f682be2a903cbe1447ea38c0b06576" name="docs/phpdoc/li_File_CSV_Get.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/classtrees_File_CSV_GetSql.html" md5sum="28ba6e3c18c9a7bddc9c339b0cfed879" name="docs/phpdoc/classtrees_File_CSV_GetSql.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/default/_tests---fixtures---csv.php.html" md5sum="fd23ec74dd9859bf1172617a59eec40f" name="docs/phpdoc/default/_tests---fixtures---csv.php.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/default/_tests---File_CSV_GetSqlTest.php.html" md5sum="bf5305e36285e37438f3935b5794d26f" name="docs/phpdoc/default/_tests---File_CSV_GetSqlTest.php.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/default/_misc---File_CSV.php.html" md5sum="d6d3cc639c4fc1b9f49b8eceba2456fd" name="docs/phpdoc/default/_misc---File_CSV.php.html" role="doc" />
@@ -101,7 +103,7 @@ http://pear.php.net/dtd/package-2.0.xsd">
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/default/xFile_CSV_GetTest.html" md5sum="0a8532b0eccb77f373a8e8976fb4700b" name="docs/phpdoc/default/xFile_CSV_GetTest.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/default/_tests---File_CSV_GetTest.php.html" md5sum="f35d384cb5abeb23962186da67fd1d31" name="docs/phpdoc/default/_tests---File_CSV_GetTest.php.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/phpdoc/default/xFile_CSV_GetSqlTest.html" md5sum="281a9f18fd1791380428242005dcd910" name="docs/phpdoc/default/xFile_CSV_GetSqlTest.html" role="doc" />
-<file baseinstalldir="File_CSV_Get/docs/phpdoc/errors.html" md5sum="d965ffb3cd244af6d87ad895106f9b30" name="docs/phpdoc/errors.html" role="doc" />
+<file baseinstalldir="File_CSV_Get/docs/phpdoc/errors.html" md5sum="ded4961a7100a3247ea3de1d0e012355" name="docs/phpdoc/errors.html" role="doc" />
 <file baseinstalldir="File_CSV_Get/docs/examples/EXAMPLES" md5sum="50a3d4437bc9c999a26806a6fceabc7d" name="docs/examples/EXAMPLES" role="doc" />
   </dir> <!-- / -->
  </contents>
