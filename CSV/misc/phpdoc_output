@@ -1,21 +1,21 @@
-PHP Version 5.2.3-1ubuntu6.4
+PHP Version 5.2.4-2ubuntu5.3
 phpDocumentor version 1.4.2
 
 Parsing configuration file phpDocumentor.ini...
-   (found in /usr/share/php/data/PhpDocumentor/)...
+   (found in /var/www/docs//PhpDocumentor/)...
 
 done
-Maximum memory usage set at 256M after considering php.ini...
+Maximum memory usage set at 1232M after considering php.ini...
 using tokenizer Parser
-Hidden /var/www/dev/utils/File/CSV/.svn Ignored
-Hidden /var/www/dev/utils/File/CSV/tests/.svn Ignored
-Hidden /var/www/dev/utils/File/CSV/tests/fixtures/.svn Ignored
-Hidden /var/www/dev/utils/File/CSV/tests/data/.svn Ignored
-Hidden /var/www/dev/utils/File/CSV/scripts/.svn Ignored
-Hidden /var/www/dev/utils/File/CSV/docs/.svn Ignored
 Hidden /var/www/dev/utils/File/CSV/docs/examples/.svn Ignored
-Hidden /var/www/dev/utils/File/CSV/data/.svn Ignored
+Hidden /var/www/dev/utils/File/CSV/docs/.svn Ignored
 Hidden /var/www/dev/utils/File/CSV/misc/.svn Ignored
+Hidden /var/www/dev/utils/File/CSV/scripts/.svn Ignored
+Hidden /var/www/dev/utils/File/CSV/tests/fixtures/.svn Ignored
+Hidden /var/www/dev/utils/File/CSV/tests/.svn Ignored
+Hidden /var/www/dev/utils/File/CSV/tests/data/.svn Ignored
+Hidden /var/www/dev/utils/File/CSV/.svn Ignored
+Hidden /var/www/dev/utils/File/CSV/data/.svn Ignored
 
 
 Grabbing README/INSTALL/CHANGELOG
@@ -31,8 +31,49 @@ done
 General Parsing Stage
 
 Reading file /var/www/dev/utils/File/CSV/package.xml -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/build -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/elementindex_File_CSV_Get.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/index.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/elementindex.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_GetSql/_GetSql.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_GetSql/File_CSV_GetSql.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/classtrees_File_CSV_Get.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/File_CSV_Get.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/File_CSV_GetSqlTest.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/File_CSV_GetTest.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---fixtures---csv.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetSqlTest.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_Get.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_misc---File_CSV.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_data---top.xml.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/li_File_CSV_GetSql.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/empty.png -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/style.css -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/background.png -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/elementindex_File_CSV_GetSql.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/li_File_CSV_Get.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/classtrees_File_CSV_GetSql.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/errors.html -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/docs/examples/EXAMPLES -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/mk_filelist -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/File_CSV_Get-0.1.3.tgz -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/misc/pear_install_output -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/misc/pear_package_output -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/misc/build_output -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/misc/phpcs_output -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/misc/File_CSV.php -- Parsing file
+WARNING in File_CSV.php on line 37: File "/var/www/dev/utils/File/CSV/misc/File_CSV.php" has no page-level DocBlock, use @package in the first DocBlock to create one
+Reading file /var/www/dev/utils/File/CSV/misc/README -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/misc/phpunit_output -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/misc/phpdoc_output -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/misc/LICENSE -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/tests/File_CSV_GetSqlTest.php -- Parsing file
 WARNING in File_CSV_GetSqlTest.php on line 11: no @package tag was used in a DocBlock for class File_CSV_GetSqlTest
 WARNING in File_CSV_GetSqlTest.php on line 59: File "/var/www/dev/utils/File/CSV/tests/File_CSV_GetSqlTest.php" has no page-level DocBlock, use @package in the first DocBlock to create one
@@ -41,71 +82,26 @@ WARNING in csv.php on line 487: File "/var/www/dev/utils/File/CSV/tests/fixtures
 Reading file /var/www/dev/utils/File/CSV/tests/File_CSV_GetTest.php -- Parsing file
 WARNING in File_CSV_GetTest.php on line 11: no @package tag was used in a DocBlock for class File_CSV_GetTest
 WARNING in File_CSV_GetTest.php on line 313: File "/var/www/dev/utils/File/CSV/tests/File_CSV_GetTest.php" has no page-level DocBlock, use @package in the first DocBlock to create one
-Reading file /var/www/dev/utils/File/CSV/tests/data/asymmetric.csv -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/uppercased.CSV -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/escape_ng.csv -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/symmetric_with_empty_lines.csv -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/empty.csv -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/invalid_ext.csv.txt -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/another_symmetric.csv -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/raw.csv -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/symmetric_with_trailing_spaces.csv -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/symmetric_with_empty_records.csv -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/tests/data/multcased.CsV -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/tests/data/symmetric.csv -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/tests/data/escape_ok.csv -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/File_CSV_Get-0.1.2.tgz -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/GetSql.php -- Parsing file
-WARNING in GetSql.php on line 20: package File_CSV_Get is already in category default, will now replace with category File
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/blank.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/packages.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/classtrees_File_CSV_Get.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_GetSql/File_CSV_GetSql.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_GetSql/_GetSql.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/classtrees_File_CSV_GetSql.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/index.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/elementindex.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/elementindex_File_CSV_Get.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/stylesheet.css -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/style.css -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/background.png -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/banner.css -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/media/empty.png -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/li_File_CSV_GetSql.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/elementindex_File_CSV_GetSql.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/errors.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_Get.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/File_CSV_Get.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_misc---File_CSV.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetTest.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_data---top.xml.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---fixtures---csv.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/_tests---File_CSV_GetSqlTest.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/File_CSV_GetSqlTest.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/File_CSV_Get/File_CSV_GetTest.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/li_File_CSV_Get.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__datatop.xml.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__miscFile_CSV.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetSqlTest.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_GetSql__GetSql.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsFile_CSV_GetTest.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__testsfixturescsv.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/phpdoc/__filesource/fsource_File_CSV_Get__Get.php.html -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/docs/examples/EXAMPLES -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/symmetric_with_empty_records.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/asymmetric.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/another_symmetric.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/empty.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/symmetric_with_trailing_spaces.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/uppercased.CSV -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/symmetric_with_empty_lines.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/escape_ng.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/raw.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/symmetric.csv -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/tests/data/invalid_ext.csv.txt -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/data/bottom.xml -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/data/top.xml.php -- Parsing file
 WARNING in top.xml.php on line 32: File "/var/www/dev/utils/File/CSV/data/top.xml.php" has no page-level DocBlock, use @package in the first DocBlock to create one
-Reading file /var/www/dev/utils/File/CSV/data/bottom.xml -- File not parsed, not a php file
 Reading file /var/www/dev/utils/File/CSV/Get.php -- Parsing file
-Reading file /var/www/dev/utils/File/CSV/misc/phpcs_output -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/misc/LICENSE -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/misc/pear_install_output -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/misc/README -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/misc/phpdoc_output -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/misc/pear_package_output -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/misc/build_output -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/misc/phpunit_output -- File not parsed, not a php file
-Reading file /var/www/dev/utils/File/CSV/misc/File_CSV.php -- Parsing file
-WARNING in File_CSV.php on line 37: File "/var/www/dev/utils/File/CSV/misc/File_CSV.php" has no page-level DocBlock, use @package in the first DocBlock to create one
+WARNING in Get.php on line 35: package File_CSV_Get is already in category default, will now replace with category File
+Reading file /var/www/dev/utils/File/CSV/build -- File not parsed, not a php file
+Reading file /var/www/dev/utils/File/CSV/GetSql.php -- Parsing file
 done
 
 Converting From Abstract Parsed Data
@@ -219,9 +215,9 @@ Converting Error Log...    Writing docs/phpdoc/errors.html
 To view errors and warnings, look at docs/phpdoc/errors.html
 done
 
-Parsing time: 0 seconds
+Parsing time: 2 seconds
 
-Conversion time: 5 seconds
+Conversion time: 15 seconds
 
-Total Documentation Time: 5 seconds
+Total Documentation Time: 17 seconds
 done
