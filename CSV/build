@@ -2,7 +2,7 @@
 <?php
 
 $cmds = array(
-    array('msg' => 'Compiling docs ', 'cmd' => 'phpdoc -s on -dn File_CSV_Get -d . -t docs/phpdoc -o HTML:Smarty:kazu_php > misc/phpdoc_output'),
+    array('msg' => 'Compiling docs ', 'cmd' => 'phpdoc -s on -dn File_CSV_Get -d . -t docs/phpdoc -o HTML:Smarty:PHP > misc/phpdoc_output'),
     array('msg' => 'Uninstalling   ', 'cmd' => 'pear uninstall File_CSV_Get'),
     array('msg' => '+- DELETE pkge ', 'cmd' => 'rm *.tgz'),
     array('msg' => 'Code Sniffing  ', 'cmd' => 'phpcs *.php > misc/phpcs_output'),
