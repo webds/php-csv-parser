@@ -202,7 +202,7 @@ class File_CSV_Get
      *  $csv->uses('my_cool.csv');
      *
      *  if (!$csv->symmetric()) {
-     *      die('file has headers and rows with different lengths 
+     *      die('file has headers and rows with different lengths
      *      cannot connect');
      *  }
      *
@@ -456,7 +456,7 @@ class File_CSV_Get
     /**
      * column existance checker
      *
-     * checks if a column exists, columns are identified by their 
+     * checks if a column exists, columns are identified by their
      * header name.
      *
      * sample of a csv file "my_cool.csv"
@@ -481,7 +481,7 @@ class File_CSV_Get
      * <code>
      *   var_export($csv->columnExists($headers[0]));    // true
      *   var_export($csv->columnExists('age'));          // true
-     *   var_export($csv->columnExists('I dont exist')); // false 
+     *   var_export($csv->columnExists('I dont exist')); // false
      * </code>
      *
      * @param string $string an item returned by headers()
@@ -598,7 +598,7 @@ class File_CSV_Get
      *
      *      // grab all data within the age column
      *      var_export($csv->column('age'));
-     *      
+     *
      *      // rename all values in it with the number 99
      *      var_export($csv->fillColumn('age', 99));
      *
@@ -760,7 +760,7 @@ class File_CSV_Get
      *   // find out if the given coordinate is valid
      *   if($csv->coordinateable(1, 1)) {
      *
-     *       // if so grab that cell and dump it 
+     *       // if so grab that cell and dump it
      *       var_export($csv->cell(1, 1));       // '8'
      *
      *       // replace the value of that cell
@@ -824,7 +824,7 @@ class File_CSV_Get
      *
      * <code>
      *   $csv = new File_CSV_Get;
-     *   var_export($csv->uses('my_cool.csv'));   // true if file is 
+     *   var_export($csv->uses('my_cool.csv'));   // true if file is
      *                                            // loaded
      * </code>
      *
@@ -953,7 +953,7 @@ class File_CSV_Get
      * uses prefix and creates a header for each column suffixed by a
      * numeric value
      *
-     * by default the first row is interpreted as headers but if we 
+     * by default the first row is interpreted as headers but if we
      * have a csv file with data only and no headers it becomes really
      * annoying to work with the current loaded data.
      *
@@ -1029,19 +1029,19 @@ class File_CSV_Get
      * <code>
      *
      *  array (
-     *    0 => 
+     *    0 =>
      *    array (
      *      'column_1' => 'john',
      *      'column_2' => '13',
      *      'column_3' => 'knows magic',
      *    ),
-     *    1 => 
+     *    1 =>
      *    array (
      *      'column_1' => 'tanaka',
      *      'column_2' => '8',
      *      'column_3' => 'makes sushi',
      *    ),
-     *    2 => 
+     *    2 =>
      *    array (
      *      'column_1' => 'jose',
      *      'column_2' => '5',
@@ -1137,7 +1137,7 @@ class File_CSV_Get
             $c ++;
         }
         fclose($res);
-        $this->_rows = $this->_removeEmpty($this->_rows);
+        $this->_rows = $this->removeEmpty($this->_rows);
         return true;
     }
 
@@ -1148,10 +1148,10 @@ class File_CSV_Get
      *
      * @param array $rows a collection of rows to scan
      *
-     * @access private
+     * @access public
      * @return array containing only the rows that have data
      */
-    private function _removeEmpty($rows)
+    public function removeEmpty($rows)
     {
         $ret_arr = array();
         foreach ($rows as $row) {
