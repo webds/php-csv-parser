@@ -1,3 +1,4 @@
+#labels Featured
 #source code moved to http://pear.svn.php.net website
 
 = Source Code Location =
