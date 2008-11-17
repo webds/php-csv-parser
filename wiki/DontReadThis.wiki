@@ -5,16 +5,17 @@
 
 As for *File_CSV_Get-0.1.1.tgz* and above
 
-There is a lot of new features
-some of changes that do _NOT_
-support backwards compatibility.
+There is a lot of new features, and many changes that do _NOT_ support backwards compatibility.
 
-= Installing using pear =
+= Installation =
 
-* Download the file and run this on your commmand line.
+  # Pear installation needed.
+  # Download the file and run this on your commmand line.
 {{{
-  $ pear install File_CSV_Get-0.1.1.tgz
+  $ pear install File_CSV_Get-0.X.X.tgz
 }}}
+  # see below for examples
+
 
 = Using the package =
 
