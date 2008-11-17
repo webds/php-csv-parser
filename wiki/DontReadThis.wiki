@@ -5,7 +5,7 @@
 
   # [Usage] Real world quick examples.
 
-  # [HowToUseJAPANESE] brief usage explanation in Japanese.
+  # [howToUseJAPANESE] brief usage explanation in Japanese.
 
   # [howToUseSPANISH] brief usage example in Spanish.
 
