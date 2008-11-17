@@ -10,3 +10,4 @@
   # [SourceCode] source code location (moved from Google to Pear)
   # *Documentation* ships with the package since version *0.1.6*
   # *Pear* http://pear.php.net/pepr/pepr-proposal-show.php?id=577 
+  # [JoinTheProject] Information on how to contribute.
