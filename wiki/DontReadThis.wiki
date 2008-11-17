@@ -1,6 +1,6 @@
 #labels Featured
-Migration
+  # [Migration] Information about the API migrating to Pear.
 
-Installation
+  # [Installation] Information on how to install.
 
-Usage
+  # [Usage] Real world quick examples.
