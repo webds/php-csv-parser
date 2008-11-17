@@ -1,17 +1,17 @@
 #labels Featured
-= The Api is Migrating to PEAR! =
+= Migration =
 
-There is a lot of new features and also a lot of changes that do NOT
+*The Api is Migrating to PEAR!*
+
+As for *File_CSV_Get-0.1.1.tgz* and above
+
+There is a lot of new features
+some of changes that do _NOT_
 support backwards compatibility.
-
-Please use the new (PEAR PACKAGE VERSION - beta)
-
-File_CSV_Get-0.1.1.tgz
-
 
 = Installing using pear =
 
-* download the file and run this on your commmand line.
+* Download the file and run this on your commmand line.
 {{{
   $ pear install File_CSV_Get-0.1.1.tgz
 }}}
