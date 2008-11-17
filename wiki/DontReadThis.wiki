@@ -1,16 +1,9 @@
 #labels Featured
   # [Migration] Information about the API migrating to Pear.
-
   # [Installation] Information on how to install.
-
   # [Usage] Real world quick examples.
-
   # [howToUseJAPANESE] brief usage explanation in Japanese.
-
   # [howToUseSPANISH] brief usage example in Spanish.
-
   # [howToUse] brief usage example in English.
-
   # [SourceCode] source code location (moved from Google to Pear)
-
   # Documentation ships with the package since version *0.1.6*
