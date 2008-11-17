@@ -13,7 +13,7 @@
 === Source ===
 
   * SourceCode
-  * Please send patches as [svn diff]
+  * Please send patches as _svn diff_
   * after a few times we'll provide you with a svn account.
 
 === Contact ===
