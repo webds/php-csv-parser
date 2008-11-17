@@ -1,0 +1,299 @@
+#labels Featured
+
+= Using the package =
+
+* csv file
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+* php file
+{{{
+
+<?php
+
+require_once 'File/CSV/Get.php';
+
+$csv = new File_CSV_Get;
+$csv->uses('my_cool.csv');
+var_export($csv->connect());
+
+?>
+
+}}}
+
+* output
+
+{{{
+
+array (
+  0 =>
+  array (
+    'name' => 'john',
+    'age' => '13',
+    'skill' => 'knows magic',
+  ),
+  1 =>
+  array (
+    'name' => 'tanaka',
+    'age' => '8',
+    'skill' => 'makes sushi',
+  ),
+  2 =>
+  array (
+    'name' => 'jose',
+    'age' => '5',
+    'skill' => 'dances salsa',
+  ),
+)
+
+
+}}}
+
+* connect only one header
+{{{
+
+
+var_export($csv->connect(array('age')));
+
+array (
+  0 =>
+  array (
+    'age' => '13',
+  ),
+  1 =>
+  array (
+    'age' => '8',
+  ),
+  2 =>
+  array (
+    'age' => '5',
+  ),
+)
+
+
+}}}
+
+* getting headers
+
+{{{
+
+var_export($csv->headers());
+
+array (
+  0 => 'name',
+  1 => 'age',
+  2 => 'skill',
+)
+
+}}}
+
+* getting columns
+{{{
+
+var_export($csv->column('name'));
+
+array (
+  0 => 'john',
+  1 => 'tanaka',
+  2 => 'jose',
+)
+
+}}}
+
+* getting rows
+
+{{{
+
+var_export($csv->rows());
+
+
+array (
+  0 =>
+  array (
+    0 => 'john',
+    1 => '13',
+    2 => 'knows magic',
+  ),
+  1 =>
+  array (
+    0 => 'tanaka',
+    1 => '8',
+    2 => 'makes sushi',
+  ),
+  2 =>
+  array (
+    0 => 'jose',
+    1 => '5',
+    2 => 'dances salsa',
+  ),
+)
+
+
+}}}
+
+* get a range or rows
+
+{{{
+
+var_export($csv->rows(range(1,2)));
+
+array (
+  0 =>
+  array (
+    0 => 'john',
+    1 => '13',
+    2 => 'knows magic',
+  ),
+  1 =>
+  array (
+    0 => 'tanaka',
+    1 => '8',
+    2 => 'makes sushi',
+  ),
+)
+
+
+}}}
+
+* get one row only
+
+{{{
+
+var_export($csv->row(1));
+
+array (
+  0 => 'tanaka',
+  1 => '8',
+  2 => 'makes sushi',
+)
+
+
+}}}
+
+
+* getting cells
+{{{
+
+var_export($csv->cell(1, 2));
+
+'makes sushi'
+
+}}}
+
+* override a whole column
+
+{{{
+var_export($csv->fillColumn('age', 99));
+
+true
+
+var_export($csv->column('age'));
+
+array (
+  0 => 99,
+  1 => 99,
+  2 => 99,
+)
+
+var_export($csv->connect());
+
+array (
+  0 =>
+  array (
+    'name' => 'john',
+    'age' => 99,
+    'skill' => 'knows magic',
+  ),
+  1 =>
+  array (
+    'name' => 'tanaka',
+    'age' => 99,
+    'skill' => 'makes sushi',
+  ),
+  2 =>
+  array (
+    'name' => 'jose',
+    'age' => 99,
+    'skill' => 'dances salsa',
+  ),
+)
+
+
+}}}
+
+* column appending
+
+{{{
+
+var_export($csv->fillColumn('age', 99));
+true
+
+var_export($csv->appendColumn('candy_ownership', array(99, 44, 65)));
+true
+
+var_export($csv->appendColumn('import_id', 111111111));
+true
+
+var_export($csv->connect());
+
+array (
+  0 =>
+  array (
+    'name' => 'john',
+    'age' => 99,
+    'skill' => 'knows magic',
+    'candy_ownership' => 99,
+    'import_id' => 111111111,
+  ),
+  1 =>
+  array (
+    'name' => 'tanaka',
+    'age' => 99,
+    'skill' => 'makes sushi',
+    'candy_ownership' => 44,
+    'import_id' => 111111111,
+  ),
+  2 =>
+  array (
+    'name' => 'jose',
+    'age' => 99,
+    'skill' => 'dances salsa',
+    'candy_ownership' => 65,
+    'import_id' => 111111111,
+  ),
+)
+
+
+}}}
+
+= Current Interface =
+
+{{{
+
+function appendColumn($column, $values = null)
+function asymmetry()
+function cell($x, $y)
+function column($name)
+function columnExists($string)
+function connect($columns = array())
+function coordinatable($x, $y)
+function countHeaders()
+function countRows()
+function createHeaders($prefix)
+function fillCell($x, $y, $value)
+function fillColumn($column, $values = null)
+function headers()
+function injectHeaders($list)
+function rawArray()
+function row($number)
+function rows($range = array())
+function settings($array)
+function symmetric()
+function symmetrize()
+function uses($filename)
+
+}}}
