@@ -1,13 +1,13 @@
 #labels Featured
- == Method:appendColumn == 
+ = Method:appendColumn = 
 
- ^column appender^ 
+_ column appender _
 
 Appends a column and each or all values in it can be
 dinamically filled. Only when the $values argument is given.
-*
 
-Code*
+
+*Code*
 {{{
 
 
@@ -59,28 +59,32 @@ array (
   * *Returns* boolean
   * *Also see* headers(), fillColumn(), fillCell(), createHeaders(),
 injectHeaders()
-----
- == Method:appendRow == 
 
- ^row appender^ 
+----
+
+ = Method:appendRow = 
+
+_ row appender _
 
   # *Argument* _array_  $values the values to be appended to the row
 
   * *Visibility*  public
   * *Returns* boolean
-----
- == Method:asymmetry == 
 
- ^asymmetric data fetcher^ 
+----
+
+ = Method:asymmetry = 
+
+_ asymmetric data fetcher _
 
 finds the rows that do not match the headers length
 
 lets assume that we add one more row to our csv file.
 that has only two values. Something like
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -92,9 +96,9 @@ niki,6
 
 Then in our php code
 
-*
 
-Code*
+
+*Code*
 {{{
 $csv->uses('my_cool.csv');
 var_export($csv->asymmetry());
@@ -103,9 +107,9 @@ var_export($csv->asymmetry());
 
 The result
 
-*
 
-Code*
+
+*Code*
 {{{
 
 array (
@@ -122,10 +126,12 @@ array (
   * *Visibility*  public
   * *Returns* array filled with rows that do not match headers
   * *Also see* headers(), symmetrize(), symmetric()
-----
- == Method:cell == 
 
- ^cell fetcher^ 
+----
+
+ = Method:cell = 
+
+_ cell fetcher _
 
 gets the value of a specific cell by given coordinates
 
@@ -135,9 +141,9 @@ searched!
 For example if we are trying to grab the cell that is in the
 second row and the third column
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -147,18 +153,18 @@ jose,5,dances salsa
 
 
 we would do something like
-*
 
-Code*
+
+*Code*
 {{{
 var_export($csv->cell(1, 2));
 }}}
 
 
 and get the following results
-*
 
-Code*
+
+*Code*
 {{{
 'makes sushi'
 }}}
@@ -171,10 +177,12 @@ Code*
   * *Returns* mixed|false the value of the cell or false if the cell does
 not exist
   * *Also see* headers(), coordinateable(), row(), rows(), column()
-----
- == Method:column == 
 
- ^column fetcher^ 
+----
+
+ = Method:column = 
+
+_ column fetcher _
 
 gets all the data for a specific column identified by $name
 
@@ -182,9 +190,9 @@ Note $name is the same as the items returned by headers()
 
 sample of a csv file "my_cool.csv"
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -195,9 +203,9 @@ jose,5,dances salsa
 
 php implementation
 
-*
 
-Code*
+
+*Code*
 {{{
 $csv = new File_CSV_Get;
 $csv->uses('my_cool.csv');
@@ -207,9 +215,9 @@ var_export($csv->column('name'));
 
 the above example outputs something like
 
-*
 
-Code*
+
+*Code*
 {{{
 
 array (
@@ -227,19 +235,21 @@ array (
   * *Returns* array filled with values of a column
   * *Also see* headers(), fillColumn(), appendColumn(), cell(), rows(),
 row(), columnExists()
-----
- == Method:columnExists == 
 
- ^column existance checker^ 
+----
+
+ = Method:columnExists = 
+
+_ column existance checker _
 
 checks if a column exists, columns are identified by their
 header name.
 
 sample of a csv file "my_cool.csv"
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -250,9 +260,9 @@ jose,5,dances salsa
 
 php implementation
 
-*
 
-Code*
+
+*Code*
 {{{
 $csv = new File_CSV_Get;
 $csv->uses('my_cool.csv');
@@ -262,9 +272,9 @@ $headers = $csv->headers();
 
 now lets check if the columns exist
 
-*
 
-Code*
+
+*Code*
 {{{
 var_export($csv->columnExists($headers[0]));    // true
 var_export($csv->columnExists('age'));          // true
@@ -277,10 +287,12 @@ var_export($csv->columnExists('I dont exist')); // false
   * *Visibility*  public
   * *Returns* boolean
   * *Also see* headers()
-----
- == Method:connect == 
 
- ^header and row relationship builder^ 
+----
+
+ = Method:connect = 
+
+_ header and row relationship builder _
 
 Attempts to create a relationship for every single cell that
 was captured and its corresponding header. The sample below shows
@@ -288,9 +300,9 @@ how a connection/relationship is built.
 
 sample of a csv file "my_cool.csv"
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -301,9 +313,9 @@ jose,5,dances salsa
 
 php implementation
 
-*
 
-Code*
+
+*Code*
 {{{
 
 $csv = new File_CSV_Get;
@@ -344,9 +356,9 @@ array (
 You can pass a collection of headers in an array to build
 a connection for those columns only!
 
-*
 
-Code*
+
+*Code*
 {{{
 
 var_export($csv->connect(array('age')));
@@ -376,16 +388,18 @@ is given all headers will be used to create a connection
   * *Returns* array If the data is not symmetric an empty array
 will be returned instead
   * *Also see* symmetric(), asymmetry(), symmetrize(), headers()
-----
- == Method:coordinateable == 
 
- ^checks if a coordinate is valid^ 
+----
+
+ = Method:coordinateable = 
+
+_ checks if a coordinate is valid _
 
 sample of a csv file "my_cool.csv"
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -396,9 +410,9 @@ jose,5,dances salsa
 
 load the csv file
 
-*
 
-Code*
+
+*Code*
 {{{
 $csv = new File_CSV_Get;
 var_export($csv->uses('my_cool.csv'));   // true if file is
@@ -408,9 +422,9 @@ var_export($csv->uses('my_cool.csv'));   // true if file is
 
 find out if a coordinate is valid
 
-*
 
-Code*
+
+*Code*
 {{{
 var_export($csv->coordinateable(99, 3)); // false
 }}}
@@ -418,9 +432,9 @@ var_export($csv->coordinateable(99, 3)); // false
 
 check again for a know valid coordinate and grab that cell
 
-*
 
-Code*
+
+*Code*
 {{{
 var_export($csv->coordinateable(1, 1));  // true
 var_export($csv->cell(1, 1));            // '8'
@@ -432,25 +446,29 @@ var_export($csv->cell(1, 1));            // '8'
 
   * *Visibility*  public
   * *Returns* void
-----
- == Method:countHeaders == 
 
- ^header counter^ 
+----
+
+ = Method:countHeaders = 
+
+_ header counter _
 
   * *Visibility*  public
   * *Returns* integer gets the length of headers
-----
- == Method:countRows == 
 
- ^row counter^ 
+----
+
+ = Method:countRows = 
+
+_ row counter _
 
 This function will exclude the headers
 
 sample of a csv file "my_cool.csv"
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -461,9 +479,9 @@ jose,5,dances salsa
 
 php implementation
 
-*
 
-Code*
+
+*Code*
 {{{
 $csv = new File_CSV_Get;
 $csv->uses('my_cool.csv');
@@ -473,10 +491,12 @@ var_export($csv->countRows()); // returns 3
 
   * *Visibility*  public
   * *Returns* integer
-----
- == Method:createHeaders == 
 
- ^header creator^ 
+----
+
+ = Method:createHeaders = 
+
+_ header creator _
 
 uses prefix and creates a header for each column suffixed by a
 numeric value
@@ -492,9 +512,9 @@ functions
 Note: that the csv file contains only data but no headers
 sample of a csv file "my_cool.csv"
 
-*
 
-Code*
+
+*Code*
 {{{
 john,13,knows magic
 tanaka,8,makes sushi
@@ -504,9 +524,9 @@ jose,5,dances salsa
 
 checks if the csv file was loaded
 
-*
 
-Code*
+
+*Code*
 {{{
 $csv = new File_CSV_Get;
 if (!$csv->uses('my_cool.csv')) {
@@ -517,9 +537,9 @@ die('can not load csv file');
 
 dump current headers
 
-*
 
-Code*
+
+*Code*
 {{{
 var_export($csv->headers());
 }}}
@@ -527,9 +547,9 @@ var_export($csv->headers());
 
 standard output
 
-*
 
-Code*
+
+*Code*
 {{{
 array (
 0 => 'john',
@@ -542,9 +562,9 @@ array (
 generate headers named 'column' suffixed by a number and interpret
 the previous headers as rows.
 
-*
 
-Code*
+
+*Code*
 {{{
 $csv->createHeaders('column')
 }}}
@@ -552,9 +572,9 @@ $csv->createHeaders('column')
 
 dump current headers
 
-*
 
-Code*
+
+*Code*
 {{{
 var_export($csv->headers());
 }}}
@@ -562,9 +582,9 @@ var_export($csv->headers());
 
 standard output
 
-*
 
-Code*
+
+*Code*
 {{{
 array (
 0 => 'column_1',
@@ -576,9 +596,9 @@ array (
 
 build a relationship and dump it
 
-*
 
-Code*
+
+*Code*
 {{{
 var_export($csv->connect());
 }}}
@@ -586,9 +606,9 @@ var_export($csv->connect());
 
 standard output
 
-*
 
-Code*
+
+*Code*
 {{{
 
 array (
@@ -620,18 +640,20 @@ column naming conventions.
   * *Visibility*  public
   * *Returns* boolean fails if data is not symmetric
   * *Also see* symmetric(), asymmetry()
-----
- == Method:fillCell == 
 
- ^cell value filler^ 
+----
+
+ = Method:fillCell = 
+
+_ cell value filler _
 
 replaces the value of a specific cell
 
 sample of a csv file "my_cool.csv"
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -642,9 +664,9 @@ jose,5,dances salsa
 
 php implementation
 
-*
 
-Code*
+
+*Code*
 {{{
 
 $csv = new File_CSV_Get;
@@ -670,9 +692,9 @@ var_export($csv->cell(1, 1));       // 'new value'
 
 now lets try to grab the whole row
 
-*
 
-Code*
+
+*Code*
 {{{
 // show the whole row
 var_export($csv->row(1));
@@ -681,9 +703,9 @@ var_export($csv->row(1));
 
 standard output
 
-*
 
-Code*
+
+*Code*
 {{{
 array (
 0 => 'tanaka',
@@ -700,18 +722,20 @@ array (
   * *Visibility*  public
   * *Returns* boolean
   * *Also see* coordinateable(), row(), rows(), column()
-----
- == Method:fillColumn == 
 
- ^collumn data injector^ 
+----
+
+ = Method:fillColumn = 
+
+_ collumn data injector _
 
 fills alll the data in the given column with $values
 
 sample of a csv file "my_cool.csv"
 
-*
 
-Code*
+
+*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -722,9 +746,9 @@ jose,5,dances salsa
 
 php implementation
 
-*
 
-Code*
+
+*Code*
 {{{
 $csv = new File_CSV_Get;
 $csv->uses('my_cool.csv');
@@ -752,9 +776,9 @@ var_export($csv->column('age'));
 
 standard output
 
-*
 
-Code*
+
+*Code*
 {{{
 array (
 0 => '13',
@@ -764,17 +788,17 @@ array (
 }}}
 
 
-*
 
-Code*
+
+*Code*
 {{{
 true
 }}}
 
 
-*
 
-Code*
+
+*Code*
 {{{
 array (
 0 => 99,
@@ -784,9 +808,9 @@ array (
 }}}
 
 
-*
 
-Code*
+
+*Code*
 {{{
 array (
 0 => 1,
@@ -798,17 +822,19 @@ array (
 
   # *Argument* _mixed_  $column the column identified by a string
   # *Argument* _mixed_  $values ither one of the following
-- (Number) will fill the whole column with the value of number
-- (String) will fill the whole column with the value of string
-- (Array) will fill the while column with the values of array
+  #  (Number) will fill the whole column with the value of number
+  #  (String) will fill the whole column with the value of string
+  #  (Array) will fill the while column with the values of array
 the array gets ignored if it does not match the length of rows
 
   * *Visibility*  public
   * *Returns* void
-----
- == Method:fillRow == 
 
- ^fillRow^ 
+----
+
+ = Method:fillRow = 
+
+_ fillRow _
 
   # *Argument* _integer_  $row    the row to fill identified by its key
   # *Argument* _mixed_    $values the value to use, if a string or number
@@ -820,16 +846,18 @@ the row. Only when the currently loaded dataset is symmetric
   * *Returns* boolean
   * *Also see* symmetric(), asymmetric(), symmetrize(), fillColumn(),
 fillCell()
-----
- == Method:headers == 
 
- ^header fetcher^ 
+----
+
+ = Method:headers = 
+
+_ header fetcher _
 
 gets csv headers into an array
 
-*
 
-Code*
+
+*Code*
 {{{
 
 var_export($csv->headers());
@@ -845,10 +873,12 @@ array (
 
   * *Visibility*  public
   * *Returns* array
-----
- == Method:injectHeaders == 
 
- ^header injector^ 
+----
+
+ = Method:injectHeaders = 
+
+_ header injector _
 
 uses a $list array filled with strings to fill headers to be
 used by this object.
@@ -860,19 +890,24 @@ this must be symmetric.
 check your database engine for column-name conventions.
 
   * *Visibility*  public
+
   * *Returns* boolean fails if data is not symmetric
   * *Also see* symmetric(), asymmetry()
-----
- == Method:rawArray == 
 
- ^raw data as array^ 
+----
+
+ = Method:rawArray = 
+
+_ raw data as array _
 
   * *Visibility*  public
   * *Returns* array
-----
- == Method:removeColumn == 
 
- ^column remover^ 
+----
+
+ = Method:removeColumn = 
+
+_ column remover _
 
 completly removes a whole column identified by header
 Note: that this function will only work if data is symmetric.
@@ -883,10 +918,12 @@ Note: that this function will only work if data is symmetric.
   * *Returns* boolean
   * *Also see* headers(), createHeaders(), injectHeaders(), symmetric(),
 asymmetric()
-----
- == Method:removeRow == 
 
- ^row remover^ 
+----
+
+ = Method:removeRow = 
+
+_ row remover _
 
 removes one row from the current data set.
 
@@ -894,10 +931,12 @@ removes one row from the current data set.
 
   * *Visibility*  public
   * *Returns* boolean
-----
- == Method:row == 
 
- ^row fetcher^ 
+----
+
+ = Method:row = 
+
+_ row fetcher _
 
 Note: first row is zero
 
@@ -906,17 +945,19 @@ Note: first row is zero
   * *Visibility*  public
   * *Returns* array the row identified by number, if $number does
 not exist an empty array is returned instead
-*
 
-Code*
+
+*Code*
 {{{
 $array = $csv->row(3); # array('val1', 'val2', 'val3')
 }}}
 
-----
- == Method:rowExists == 
 
- ^row existance checker^ 
+----
+
+ = Method:rowExists = 
+
+_ row existance checker _
 
   # *Argument* _mixed_  $number a numeric value that identifies the row
 you are trying to fetch.
@@ -924,10 +965,12 @@ you are trying to fetch.
   * *Visibility*  public
   * *Returns* boolean
   * *Also see* row(), rows(), appendRow(), fillRow()
-----
- == Method:rows == 
 
- ^multiple row fetcher^ 
+----
+
+ = Method:rows = 
+
+_ multiple row fetcher _
 
 extracts csv rows excluding the headers
 
@@ -935,10 +978,12 @@ extracts csv rows excluding the headers
 
   * *Visibility*  public
   * *Returns* array
-----
- == Method:settings == 
 
- ^settings alterator^ 
+----
+
+ = Method:settings = 
+
+_ settings alterator _
 
 lets you define different settings for scanning
 
@@ -947,19 +992,23 @@ lets you define different settings for scanning
   * *Visibility*  public
   * *Returns* boolean true if changes where applyed successfully
   * *Also see* $settings
-----
- == Method:symmetric == 
 
- ^data length/symmetry checker^ 
+----
+
+ = Method:symmetric = 
+
+_ data length/symmetry checker _
 
 tells if the headers and all of the contents length match.
 
   * *Visibility*  public
   * *Returns* boolean
-----
- == Method:symmetrize == 
 
- ^all rows length equalizer^ 
+----
+
+ = Method:symmetrize = 
+
+_ all rows length equalizer _
 
 makes the length of all rows and headers the same. If no $value is given
 all unexistent cells will be filled with empty spaces
@@ -968,16 +1017,18 @@ all unexistent cells will be filled with empty spaces
 
   * *Visibility*  public
   * *Returns* void
-----
- == Method:uses == 
 
- ^csv file loader^ 
+----
+
+ = Method:uses = 
+
+_ csv file loader _
 
 indicates the object which file is to be loaded
 
-*
 
-Code*
+
+*Code*
 {{{
 
 require_once 'File/CSV/Get.php';
@@ -1015,10 +1066,12 @@ array (
   * *Visibility*  public
   * *Returns* boolean true if file was loaded successfully
   * *Also see* symmetric(), asymmetry(), symmetrize()
-----
- == Method:walkColumn == 
 
- ^column walker^ 
+----
+
+ = Method:walkColumn = 
+
+_ column walker _
 
 goes through the whole column and executes a callback for each 
 one of the cells in it.
@@ -1034,10 +1087,12 @@ each cell value
   * *Visibility*  public
   * *Returns* boolean
   * *Also see* headers(), fillColumn(), appendColumn()
-----
- == Method:walkGrid == 
 
- ^grid walker^ 
+----
+
+ = Method:walkGrid = 
+
+_ grid walker _
 
 travels through the whole dataset executing a callback per each 
 cell
@@ -1052,10 +1107,12 @@ each cell in the dataset.
   * *Visibility*  public
   * *Returns* void
   * *Also see* walkColumn(), walkRow(), fillColumn(), fillRow(), fillCell()
-----
- == Method:walkRow == 
 
- ^row walker^ 
+----
+
+ = Method:walkRow = 
+
+_ row walker _
 
 goes through one full row of data and executes a callback
 function per each cell in that row.
@@ -1073,6 +1130,7 @@ per each cell in a row
 
   * *Visibility*  public
   * *Returns* boolean
-- false if callback does not exist
-- false if row does not exits
+  #  false if callback does not exist
+  #  false if row does not exits
+
 ----
