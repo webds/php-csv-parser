@@ -18,4 +18,3 @@ each cell value
   * *Returns* boolean
   * *Also see* headers(), fillColumn(), appendColumn()
 
-----

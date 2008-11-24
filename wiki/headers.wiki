@@ -24,4 +24,3 @@ array (
   * *Visibility*  public
   * *Returns* array
 
-----

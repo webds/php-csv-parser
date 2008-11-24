@@ -14,4 +14,3 @@ the row. Only when the currently loaded dataset is symmetric
   * *Also see* symmetric(), asymmetric(), symmetrize(), fillColumn(),
 fillCell()
 
-----

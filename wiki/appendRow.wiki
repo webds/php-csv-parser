@@ -8,4 +8,3 @@ _ row appender _
   * *Visibility*  public
   * *Returns* boolean
 
-----

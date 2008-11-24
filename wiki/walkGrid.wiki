@@ -17,4 +17,3 @@ each cell in the dataset.
   * *Returns* void
   * *Also see* walkColumn(), walkRow(), fillColumn(), fillRow(), fillCell()
 
-----

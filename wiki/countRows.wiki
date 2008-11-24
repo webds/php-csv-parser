@@ -33,4 +33,3 @@ var_export($csv->countRows()); // returns 3
   * *Visibility*  public
   * *Returns* integer
 
-----

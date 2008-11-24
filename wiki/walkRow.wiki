@@ -22,4 +22,3 @@ per each cell in a row
   #  false if callback does not exist
   #  false if row does not exits
 
-----

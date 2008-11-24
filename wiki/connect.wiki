@@ -98,4 +98,3 @@ is given all headers will be used to create a connection
 will be returned instead
   * *Also see* symmetric(), asymmetry(), symmetrize(), headers()
 
-----

@@ -46,4 +46,3 @@ array (
   * *Returns* boolean true if file was loaded successfully
   * *Also see* symmetric(), asymmetry(), symmetrize()
 
-----

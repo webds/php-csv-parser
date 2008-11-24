@@ -60,4 +60,3 @@ array (
   * *Also see* headers(), fillColumn(), fillCell(), createHeaders(),
 injectHeaders()
 
-----

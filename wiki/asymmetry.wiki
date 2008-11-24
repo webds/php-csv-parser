@@ -53,4 +53,3 @@ array (
   * *Returns* array filled with rows that do not match headers
   * *Also see* headers(), symmetrize(), symmetric()
 
-----

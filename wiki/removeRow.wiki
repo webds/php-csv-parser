@@ -10,4 +10,3 @@ removes one row from the current data set.
   * *Visibility*  public
   * *Returns* boolean
 
-----

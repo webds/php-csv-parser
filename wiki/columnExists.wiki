@@ -49,4 +49,3 @@ var_export($csv->columnExists('I dont exist')); // false
   * *Returns* boolean
   * *Also see* headers()
 
-----

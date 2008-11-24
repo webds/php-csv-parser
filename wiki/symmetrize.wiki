@@ -11,4 +11,3 @@ all unexistent cells will be filled with empty spaces
   * *Visibility*  public
   * *Returns* void
 
-----

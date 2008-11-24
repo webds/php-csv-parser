@@ -146,4 +146,3 @@ column naming conventions.
   * *Returns* boolean fails if data is not symmetric
   * *Also see* symmetric(), asymmetry()
 
-----

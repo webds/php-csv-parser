@@ -79,4 +79,3 @@ array (
   * *Returns* boolean
   * *Also see* coordinateable(), row(), rows(), column()
 
-----

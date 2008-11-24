@@ -10,4 +10,3 @@ you are trying to fetch.
   * *Returns* boolean
   * *Also see* row(), rows(), appendRow(), fillRow()
 
-----

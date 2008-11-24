@@ -48,4 +48,3 @@ and get the following results
 not exist
   * *Also see* headers(), coordinateable(), row(), rows(), column()
 
-----

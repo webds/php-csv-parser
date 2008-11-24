@@ -55,4 +55,3 @@ array (
   * *Also see* headers(), fillColumn(), appendColumn(), cell(), rows(),
 row(), columnExists()
 
-----

@@ -16,4 +16,3 @@ check your database engine for column-name conventions.
   * *Returns* boolean fails if data is not symmetric
   * *Also see* symmetric(), asymmetry()
 
-----

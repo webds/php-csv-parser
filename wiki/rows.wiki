@@ -10,4 +10,3 @@ extracts csv rows excluding the headers
   * *Visibility*  public
   * *Returns* array
 
-----

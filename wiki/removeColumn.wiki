@@ -13,4 +13,3 @@ Note: that this function will only work if data is symmetric.
   * *Also see* headers(), createHeaders(), injectHeaders(), symmetric(),
 asymmetric()
 
-----
