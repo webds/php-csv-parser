@@ -1,0 +1,82 @@
+
+= Method:fillCell = 
+
+_ cell value filler _
+
+replaces the value of a specific cell
+
+sample of a csv file "my_cool.csv"
+
+
+
+*Code*
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+*Code*
+{{{
+
+$csv = new File_CSV_Get;
+
+// load the csv file
+$csv->uses('my_cool.csv');
+
+// find out if the given coordinate is valid
+if($csv->coordinateable(1, 1)) {
+
+// if so grab that cell and dump it
+var_export($csv->cell(1, 1));       // '8'
+
+// replace the value of that cell
+$csv->fillCell(1, 1, 'new value');  // true
+
+// output the new value of the cell
+var_export($csv->cell(1, 1));       // 'new value'
+
+}
+}}}
+
+
+now lets try to grab the whole row
+
+
+
+*Code*
+{{{
+// show the whole row
+var_export($csv->row(1));
+}}}
+
+
+standard output
+
+
+
+*Code*
+{{{
+array (
+0 => 'tanaka',
+1 => 'new value',
+2 => 'makes sushi',
+)
+}}}
+
+
+  # *Argument* _integer_  $x     the row to fetch
+  # *Argument* _integer_  $y     the column to fetch
+  # *Argument* _mixed_    $value the value to fill the cell with
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* coordinateable(), row(), rows(), column()
+
+----

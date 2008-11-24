@@ -1,0 +1,13 @@
+
+= Method:rows = 
+
+_ multiple row fetcher _
+
+extracts csv rows excluding the headers
+
+  # *Argument* _array_  $range a list of rows to retrive
+
+  * *Visibility*  public
+  * *Returns* array
+
+----

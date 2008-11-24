@@ -1,0 +1,17 @@
+
+= Method:fillRow = 
+
+_ fillRow _
+
+  # *Argument* _integer_  $row    the row to fill identified by its key
+  # *Argument* _mixed_    $values the value to use, if a string or number
+is given the whole row will be replaced with this value.
+if an array is given instead the values will be used to fill
+the row. Only when the currently loaded dataset is symmetric
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* symmetric(), asymmetric(), symmetrize(), fillColumn(),
+fillCell()
+
+----

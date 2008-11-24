@@ -1,0 +1,9 @@
+
+= Method:countHeaders = 
+
+_ header counter _
+
+  * *Visibility*  public
+  * *Returns* integer gets the length of headers
+
+----

@@ -1,0 +1,13 @@
+
+= Method:removeRow = 
+
+_ row remover _
+
+removes one row from the current data set.
+
+  # *Argument* _mixed_  $number the key that identifies that row
+
+  * *Visibility*  public
+  * *Returns* boolean
+
+----

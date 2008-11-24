@@ -1,0 +1,58 @@
+
+= Method:column = 
+
+_ column fetcher _
+
+gets all the data for a specific column identified by $name
+
+Note $name is the same as the items returned by headers()
+
+sample of a csv file "my_cool.csv"
+
+
+
+*Code*
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+*Code*
+{{{
+$csv = new File_CSV_Get;
+$csv->uses('my_cool.csv');
+var_export($csv->column('name'));
+}}}
+
+
+the above example outputs something like
+
+
+
+*Code*
+{{{
+
+array (
+0 => 'john',
+1 => 'tanaka',
+2 => 'jose',
+)
+
+}}}
+
+
+  # *Argument* _string_  $name the name of the column to fetch
+
+  * *Visibility*  public
+  * *Returns* array filled with values of a column
+  * *Also see* headers(), fillColumn(), appendColumn(), cell(), rows(),
+row(), columnExists()
+
+----

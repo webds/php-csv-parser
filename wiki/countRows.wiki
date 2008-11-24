@@ -1,0 +1,36 @@
+
+= Method:countRows = 
+
+_ row counter _
+
+This function will exclude the headers
+
+sample of a csv file "my_cool.csv"
+
+
+
+*Code*
+{{{
+name,age,skill
+john,13,knows magic
+tanaka,8,makes sushi
+jose,5,dances salsa
+}}}
+
+
+php implementation
+
+
+
+*Code*
+{{{
+$csv = new File_CSV_Get;
+$csv->uses('my_cool.csv');
+var_export($csv->countRows()); // returns 3
+}}}
+
+
+  * *Visibility*  public
+  * *Returns* integer
+
+----

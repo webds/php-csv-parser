@@ -1,0 +1,11 @@
+
+= Method:symmetric = 
+
+_ data length/symmetry checker _
+
+tells if the headers and all of the contents length match.
+
+  * *Visibility*  public
+  * *Returns* boolean
+
+----

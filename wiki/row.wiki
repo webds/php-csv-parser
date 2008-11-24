@@ -1,0 +1,21 @@
+
+= Method:row = 
+
+_ row fetcher _
+
+Note: first row is zero
+
+  # *Argument* _integer_  $number the row number to fetch
+
+  * *Visibility*  public
+  * *Returns* array the row identified by number, if $number does
+not exist an empty array is returned instead
+
+
+*Code*
+{{{
+$array = $csv->row(3); # array('val1', 'val2', 'val3')
+}}}
+
+
+----

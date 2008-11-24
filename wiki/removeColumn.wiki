@@ -1,0 +1,16 @@
+
+= Method:removeColumn = 
+
+_ column remover _
+
+completly removes a whole column identified by header
+Note: that this function will only work if data is symmetric.
+
+  # *Argument* _string_  $name same as the ones returned by headers();
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* headers(), createHeaders(), injectHeaders(), symmetric(),
+asymmetric()
+
+----

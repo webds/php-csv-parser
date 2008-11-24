@@ -1,0 +1,13 @@
+
+= Method:rowExists = 
+
+_ row existance checker _
+
+  # *Argument* _mixed_  $number a numeric value that identifies the row
+you are trying to fetch.
+
+  * *Visibility*  public
+  * *Returns* boolean
+  * *Also see* row(), rows(), appendRow(), fillRow()
+
+----

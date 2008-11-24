@@ -1,0 +1,11 @@
+
+= Method:appendRow = 
+
+_ row appender _
+
+  # *Argument* _array_  $values the values to be appended to the row
+
+  * *Visibility*  public
+  * *Returns* boolean
+
+----

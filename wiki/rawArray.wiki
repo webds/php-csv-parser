@@ -1,0 +1,9 @@
+
+= Method:rawArray = 
+
+_ raw data as array _
+
+  * *Visibility*  public
+  * *Returns* array
+
+----

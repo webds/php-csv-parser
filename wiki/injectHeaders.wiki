@@ -1,0 +1,19 @@
+
+= Method:injectHeaders = 
+
+_ header injector _
+
+uses a $list array filled with strings to fill headers to be
+used by this object.
+
+Note: that given $list must match the length of all rows and
+this must be symmetric.
+
+  # *Argument* _array_  $list a collection of names to use as headers,
+check your database engine for column-name conventions.
+
+  * *Visibility*  public
+  * *Returns* boolean fails if data is not symmetric
+  * *Also see* symmetric(), asymmetry()
+
+----

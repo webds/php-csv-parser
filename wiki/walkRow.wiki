@@ -1,0 +1,25 @@
+
+= Method:walkRow = 
+
+_ row walker _
+
+goes through one full row of data and executes a callback
+function per each cell in that row.
+
+Note: callback functions get the value of the cell as an 
+argument, and whatever that callback returns will be used to 
+replace the current value of that cell.
+
+  # *Argument* _string_ |integer $row      anything that is numeric is a valid row
+identificator. As long as it is within the range of the currently
+loaded dataset
+
+  # *Argument* _string_          $callback the callback function to be executed
+per each cell in a row
+
+  * *Visibility*  public
+  * *Returns* boolean
+  #  false if callback does not exist
+  #  false if row does not exits
+
+----

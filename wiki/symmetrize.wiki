@@ -1,0 +1,14 @@
+
+= Method:symmetrize = 
+
+_ all rows length equalizer _
+
+makes the length of all rows and headers the same. If no $value is given
+all unexistent cells will be filled with empty spaces
+
+  # *Argument* _mixed_  $value the value to fill the unexistent cells
+
+  * *Visibility*  public
+  * *Returns* void
+
+----
