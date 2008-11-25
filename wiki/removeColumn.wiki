@@ -11,5 +11,5 @@ Note: that this function will only work if data is symmetric.
   * *Visibility*  public
   * *Returns* boolean
   * *Also see* headers(), createHeaders(), injectHeaders(), symmetric(),
-asymmetric()
+asymmetry()
 
