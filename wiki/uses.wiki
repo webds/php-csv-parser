@@ -7,7 +7,6 @@ indicates the object which file is to be loaded
 
 
 
-*Code*
 {{{
 
 require_once 'File/CSV/Get.php';

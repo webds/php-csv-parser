@@ -11,7 +11,6 @@ sample of a csv file "my_cool.csv"
 
 
 
-*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -24,7 +23,6 @@ php implementation
 
 
 
-*Code*
 {{{
 $csv = new File_CSV_Get;
 $csv->uses('my_cool.csv');
@@ -36,7 +34,6 @@ the above example outputs something like
 
 
 
-*Code*
 {{{
 
 array (

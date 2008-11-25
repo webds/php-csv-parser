@@ -7,7 +7,6 @@ sample of a csv file "my_cool.csv"
 
 
 
-*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -20,7 +19,6 @@ load the csv file
 
 
 
-*Code*
 {{{
 $csv = new File_CSV_Get;
 var_export($csv->uses('my_cool.csv'));   // true if file is
@@ -32,7 +30,6 @@ find out if a coordinate is valid
 
 
 
-*Code*
 {{{
 var_export($csv->coordinateable(99, 3)); // false
 }}}
@@ -42,7 +39,6 @@ check again for a know valid coordinate and grab that cell
 
 
 
-*Code*
 {{{
 var_export($csv->coordinateable(1, 1));  // true
 var_export($csv->cell(1, 1));            // '8'

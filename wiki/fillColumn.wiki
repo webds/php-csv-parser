@@ -9,7 +9,6 @@ sample of a csv file "my_cool.csv"
 
 
 
-*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -22,7 +21,6 @@ php implementation
 
 
 
-*Code*
 {{{
 $csv = new File_CSV_Get;
 $csv->uses('my_cool.csv');
@@ -52,7 +50,6 @@ standard output
 
 
 
-*Code*
 {{{
 array (
 0 => '13',
@@ -64,7 +61,6 @@ array (
 
 
 
-*Code*
 {{{
 true
 }}}
@@ -72,7 +68,6 @@ true
 
 
 
-*Code*
 {{{
 array (
 0 => 99,
@@ -84,7 +79,6 @@ array (
 
 
 
-*Code*
 {{{
 array (
 0 => 1,

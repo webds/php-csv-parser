@@ -10,7 +10,6 @@ that has only two values. Something like
 
 
 
-*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -24,7 +23,6 @@ Then in our php code
 
 
 
-*Code*
 {{{
 $csv->uses('my_cool.csv');
 var_export($csv->asymmetry());
@@ -35,7 +33,6 @@ The result
 
 
 
-*Code*
 {{{
 
 array (

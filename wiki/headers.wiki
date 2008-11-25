@@ -7,7 +7,6 @@ gets csv headers into an array
 
 
 
-*Code*
 {{{
 
 var_export($csv->headers());

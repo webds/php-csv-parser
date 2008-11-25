@@ -13,7 +13,6 @@ second row and the third column
 
 
 
-*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -25,7 +24,6 @@ jose,5,dances salsa
 we would do something like
 
 
-*Code*
 {{{
 var_export($csv->cell(1, 2));
 }}}
@@ -34,7 +32,6 @@ var_export($csv->cell(1, 2));
 and get the following results
 
 
-*Code*
 {{{
 'makes sushi'
 }}}

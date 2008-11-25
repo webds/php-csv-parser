@@ -7,7 +7,6 @@ Appends a column and each or all values in it can be
 dinamically filled. Only when the $values argument is given.
 
 
-*Code*
 {{{
 
 

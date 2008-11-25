@@ -9,7 +9,6 @@ sample of a csv file "my_cool.csv"
 
 
 
-*Code*
 {{{
 name,age,skill
 john,13,knows magic
@@ -22,7 +21,6 @@ php implementation
 
 
 
-*Code*
 {{{
 
 $csv = new File_CSV_Get;
@@ -50,7 +48,6 @@ now lets try to grab the whole row
 
 
 
-*Code*
 {{{
 // show the whole row
 var_export($csv->row(1));
@@ -61,7 +58,6 @@ standard output
 
 
 
-*Code*
 {{{
 array (
 0 => 'tanaka',
