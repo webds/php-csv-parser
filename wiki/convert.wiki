@@ -1,0 +1,10 @@
+
+= Method:convert = 
+
+_ cell value formatter & encoding transfomer _
+
+  # *Argument* _string_  $value the string to convert
+
+  * *Visibility*  public
+  * *Returns* string
+

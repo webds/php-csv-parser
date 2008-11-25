@@ -1,0 +1,13 @@
+
+= Method:conversion = 
+
+_ conversion specifier _
+
+tells this object what kind of conversion needs to be made
+
+  # *Argument* _string_  $from the original encoding that will be transformed
+  # *Argument* _string_  $to   the new encoding 
+
+  * *Visibility*   public
+  * *Returns*  void
+

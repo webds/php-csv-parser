@@ -1,0 +1,17 @@
+
+= Method:createQueries = 
+
+_ sql dumper for symmetric data _
+
+Exports csv data into sql. Only when the headers match all
+records length (symmetric)
+
+  # *Argument* _string_  $tablename the tablename to use for inserts
+  # *Argument* _array_   $headers   the headers to use, if none given
+all headers are included by default
+
+  * *Visibility*  public
+
+  * *Returns* array
+  * *Also see* symmetric(), asymmetry()
+
