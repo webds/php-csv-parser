@@ -1,21 +1,17 @@
 #labels Featured
 
+
 == Simple data access object for csv files in php5. ==
     by Kazuyoshi Tlacaelel.
 
 = Some features =
 
-== Transformation/Manipulation ==
 
-  # *[asymmetry]* _asymmetric data fetcher_ 
-  # *[coordinateable]* _checks if a coordinate is valid_ 
-  # *[rawArray]* _raw data as array_ 
-  # *[settings]* _settings alterator_ 
-  # *[symmetric]* _data length/symmetry checker_ 
-  # *[symmetrize]* _all rows length equalizer_ 
-  # *[uses]* _csv file loader_ 
-  # *[walkGrid]* _grid walker_ 
-  # *[connect]* _header and row relationship builder_ 
+== Cells ==
+
+  # *[cell]* _cell fetcher_ 
+  # *[fillCell]* _cell value filler_ 
+
 
 == Headers ==
 
@@ -47,6 +43,16 @@
   # *[walkRow]* _row walker_ 
 
 
-== Cells ==
-  # *[cell]* _cell fetcher_ 
-  # *[fillCell]* _cell value
+== Transformation/Manipulation ==
+
+  # *[asymmetry]* _asymmetric data fetcher_ 
+  # *[connect]* _header and row relationship builder_ 
+  # *[coordinateable]* _checks if a coordinate is valid_ 
+  # *[rawArray]* _raw data as array_ 
+  # *[settings]* _settings alterator_ 
+  # *[symmetric]* _data length/symmetry checker_ 
+  # *[symmetrize]* _all rows length equalizer_ 
+  # *[uses]* _csv file loader_ 
+  # *[walkGrid]* _grid walker_ 
+
+
