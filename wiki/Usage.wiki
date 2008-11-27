@@ -1,5 +1,4 @@
 #labels Featured
-
 = Using the package =
 
 * csv file
@@ -267,33 +266,5 @@ array (
   ),
 )
 
-
-}}}
-
-= Current Interface =
-
-{{{
-
-function appendColumn($column, $values = null)
-function asymmetry()
-function cell($x, $y)
-function column($name)
-function columnExists($string)
-function connect($columns = array())
-function coordinatable($x, $y)
-function countHeaders()
-function countRows()
-function createHeaders($prefix)
-function fillCell($x, $y, $value)
-function fillColumn($column, $values = null)
-function headers()
-function injectHeaders($list)
-function rawArray()
-function row($number)
-function rows($range = array())
-function settings($array)
-function symmetric()
-function symmetrize()
-function uses($filename)
 
 }}}
