@@ -6,8 +6,8 @@ _ row walker _
 goes through one full row of data and executes a callback
 function per each cell in that row.
 
-Note: callback functions get the value of the cell as an 
-argument, and whatever that callback returns will be used to 
+Note: callback functions get the value of the cell as an
+argument, and whatever that callback returns will be used to
 replace the current value of that cell.
 
   # *Argument* _string_ |integer $row      anything that is numeric is a valid row

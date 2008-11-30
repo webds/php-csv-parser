@@ -5,6 +5,20 @@ _ settings alterator _
 
 lets you define different settings for scanning
 
+Given array will override the internal settings
+
+
+
+{{{
+$settings = array(
+'delimiter' => ',',
+'eol' => ";",
+'length' => 999999,
+'escape' => '"'
+);
+}}}
+
+
   # *Argument* _mixed_  $array containing settings to use
 
   * *Visibility*  public

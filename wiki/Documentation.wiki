@@ -25,8 +25,8 @@
 
   # *[appendColumn]* _column appender_ 
   # *[column]* _column fetcher_ 
-  # *[columnExists]* _column existance checker_ 
   # *[fillColumn]* _collumn data injector_ 
+  # *[hasColumn]* _column existance checker_ 
   # *[removeColumn]* _column remover_ 
   # *[walkColumn]* _column walker_ 
 
@@ -36,9 +36,9 @@
   # *[appendRow]* _row appender_ 
   # *[countRows]* _row counter_ 
   # *[fillRow]* _fillRow_ 
+  # *[hasRow]* _row existance checker_ 
   # *[removeRow]* _row remover_ 
   # *[row]* _row fetcher_ 
-  # *[rowExists]* _row existance checker_ 
   # *[rows]* _multiple row fetcher_ 
   # *[walkRow]* _row walker_ 
 

@@ -50,5 +50,5 @@ array (
   * *Visibility*  public
   * *Returns* array filled with values of a column
   * *Also see* headers(), fillColumn(), appendColumn(), cell(), rows(),
-row(), columnExists()
+row(), hasColumn()
 

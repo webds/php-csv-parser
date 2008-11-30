@@ -3,11 +3,11 @@
 
 _ grid walker _
 
-travels through the whole dataset executing a callback per each 
+travels through the whole dataset executing a callback per each
 cell
 
-Note: callback functions get the value of the cell as an 
-argument, and whatever that callback returns will be used to 
+Note: callback functions get the value of the cell as an
+argument, and whatever that callback returns will be used to
 replace the current value of that cell.
 
   # *Argument* _string_  $callback the callback function to be called per

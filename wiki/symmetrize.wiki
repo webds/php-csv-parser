@@ -9,5 +9,6 @@ all unexistent cells will be filled with empty spaces
   # *Argument* _mixed_  $value the value to fill the unexistent cells
 
   * *Visibility*  public
-  * *Returns* void
+  * *Returns* array
+  * *Also see* symmetric(), asymmetry(), symmetrize()
 
