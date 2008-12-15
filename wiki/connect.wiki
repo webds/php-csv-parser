@@ -93,5 +93,5 @@ is given all headers will be used to create a connection
   * *Visibility*  public
   * *Returns* array If the data is not symmetric an empty array
 will be returned instead
-  * *Also see* symmetric(), asymmetry(), symmetrize(), headers()
+  * *Also see* symmetric(), asymmetry(), symmetrize(), getHeaders()
 

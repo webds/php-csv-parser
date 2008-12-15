@@ -1,0 +1,25 @@
+
+= Method:getHeaders = 
+
+_ header fetcher _
+
+gets csv headers into an array
+
+
+
+{{{
+
+var_export($csv->getHeaders());
+
+array (
+0 => 'name',
+1 => 'age',
+2 => 'skill',
+)
+
+}}}
+
+
+  * *Visibility*  public
+  * *Returns* array
+

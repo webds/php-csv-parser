@@ -29,19 +29,19 @@ $csv->uses('my_cool.csv');
 if ($csv->uses('my_cool.csv')) {
 
 // grab all data within the age column
-var_export($csv->column('age'));
+var_export($csv->getColumn('age'));
 
 // rename all values in it with the number 99
 var_export($csv->fillColumn('age', 99));
 
 // grab all data within the age column
-var_export($csv->column('age'));
+var_export($csv->getColumn('age'));
 
 // rename each value in a column independently
 $data = array(1, 2, 3);
 $csv->fillColumn('age', $data);
 
-var_export($csv->column('age'));
+var_export($csv->getColumn('age'));
 }
 }}}
 

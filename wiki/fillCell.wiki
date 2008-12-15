@@ -29,16 +29,16 @@ $csv = new File_CSV_Get;
 $csv->uses('my_cool.csv');
 
 // find out if the given coordinate is valid
-if($csv->coordinateable(1, 1)) {
+if($csv->hasCell(1, 1)) {
 
 // if so grab that cell and dump it
-var_export($csv->cell(1, 1));       // '8'
+var_export($csv->getCell(1, 1));       // '8'
 
 // replace the value of that cell
 $csv->fillCell(1, 1, 'new value');  // true
 
 // output the new value of the cell
-var_export($csv->cell(1, 1));       // 'new value'
+var_export($csv->getCell(1, 1));       // 'new value'
 
 }
 }}}
@@ -50,7 +50,7 @@ now lets try to grab the whole row
 
 {{{
 // show the whole row
-var_export($csv->row(1));
+var_export($csv->getRow(1));
 }}}
 
 
@@ -73,5 +73,5 @@ array (
 
   * *Visibility*  public
   * *Returns* boolean
-  * *Also see* coordinateable(), row(), rows(), column()
+  * *Also see* hasCell(), getRow(), getRows(), getColumn()
 

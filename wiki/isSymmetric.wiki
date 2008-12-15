@@ -1,0 +1,10 @@
+
+= Method:isSymmetric = 
+
+_ alias of symmetric() _
+
+  * *Visibility*  public
+  * *Also see* symmetric()
+  * *Returns* boolean please look at the symmetric() method for
+details
+

@@ -58,19 +58,19 @@ output
 
 {{{
 array (
-0 => 
+0 =>
 array (
 'name' => 'john',
 'age' => '13',
 'skill' => 'knows magic',
 ),
-1 => 
+1 =>
 array (
 'name' => 'x',
 'age' => 'x',
 'skill' => 'x',
 ),
-2 => 
+2 =>
 array (
 'name' => 'jose',
 'age' => '5',
@@ -114,19 +114,19 @@ output
 {{{
 
 array (
-0 => 
+0 =>
 array (
 'name' => 'john',
 'age' => '13',
 'skill' => 'knows magic',
 ),
-1 => 
+1 =>
 array (
 'name' => 1,
 'age' => 2,
 'skill' => 3,
 ),
-2 => 
+2 =>
 array (
 'name' => 'jose',
 'age' => '5',

@@ -36,19 +36,19 @@ output
 {{{
 
 array (
-0 => 
+0 =>
 array (
 'name' => 'john',
 'age' => '13',
 'skill' => 'knows magic',
 ),
-1 => 
+1 =>
 array (
 'name' => 'tanaka',
 'age' => '8',
 'skill' => 'makes sushi',
 ),
-2 => 
+2 =>
 array (
 'name' => 'jose',
 'age' => '5',
@@ -76,7 +76,7 @@ true
 }}}
 
 
-now lets dump again the data and see what changes have been 
+now lets dump again the data and see what changes have been
 made
 
 
@@ -92,13 +92,13 @@ output
 
 {{{
 array (
-0 => 
+0 =>
 array (
 'name' => 'john',
 'age' => '13',
 'skill' => 'knows magic',
 ),
-1 => 
+1 =>
 array (
 'name' => 'jose',
 'age' => '5',
@@ -112,6 +112,6 @@ array (
 
   * *Visibility*  public
   * *Returns* boolean
-  * *Also see* hasColumn(), headers(), createHeaders(), injectHeaders(),
+  * *Also see* hasColumn(), getHeaders(), createHeaders(), setHeaders(),
 symmetric(), asymmetry()
 

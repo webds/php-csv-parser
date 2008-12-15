@@ -1,0 +1,11 @@
+
+= Method:__construct = 
+
+_ data load initialize _
+
+  # *Argument* _mixed_  $filename please look at the uses() method
+
+  * *Visibility*  public
+  * *Also see* uses(), load()
+  * *Returns* void
+

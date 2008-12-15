@@ -43,19 +43,19 @@ output
 
 {{{
 array (
-0 => 
+0 =>
 array (
 'name' => 'john',
 'age' => '13',
 'skill' => 'knows magic',
 ),
-1 => 
+1 =>
 array (
 'name' => 'tanaka',
 'age' => '8',
 'skill' => 'makes sushi',
 ),
-2 => 
+2 =>
 array (
 'name' => 'jose',
 'age' => '5',
@@ -79,7 +79,7 @@ output
 
 
 {{{
-true 
+true
 }}}
 
 
@@ -89,17 +89,17 @@ those changes made let's dump the data again and see what we got
 
 {{{
 array (
-0 => 
+0 =>
 array (
 'name' => 'john',
 'skill' => 'knows magic',
 ),
-1 => 
+1 =>
 array (
 'name' => 'tanaka',
 'skill' => 'makes sushi',
 ),
-2 => 
+2 =>
 array (
 'name' => 'jose',
 'skill' => 'dances salsa',
@@ -108,10 +108,10 @@ array (
 }}}
 
 
-  # *Argument* _string_  $name same as the ones returned by headers();
+  # *Argument* _string_  $name same as the ones returned by getHeaders();
 
   * *Visibility*  public
   * *Returns* boolean
-  * *Also see* hasColumn(), headers(), createHeaders(), injectHeaders(),
+  * *Also see* hasColumn(), getHeaders(), createHeaders(), setHeaders(),
 symmetric(), asymmetry()
 

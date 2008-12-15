@@ -43,7 +43,7 @@ dump current headers
 
 
 {{{
-var_export($csv->headers());
+var_export($csv->getHeaders());
 }}}
 
 
@@ -75,7 +75,7 @@ dump current headers
 
 
 {{{
-var_export($csv->headers());
+var_export($csv->getHeaders());
 }}}
 
 

@@ -51,11 +51,11 @@ array (
 }}}
 
 
-  # *Argument* _string_  $column an item returned by headers()
+  # *Argument* _string_  $column an item returned by getHeaders()
   # *Argument* _mixed_   $values same as fillColumn()
 
   * *Visibility*  public
   * *Returns* boolean
-  * *Also see* headers(), fillColumn(), fillCell(), createHeaders(),
-injectHeaders()
+  * *Also see* getHeaders(), fillColumn(), fillCell(), createHeaders(),
+setHeaders()
 

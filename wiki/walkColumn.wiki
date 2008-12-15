@@ -16,5 +16,5 @@ each cell value
 
   * *Visibility*  public
   * *Returns* boolean
-  * *Also see* headers(), fillColumn(), appendColumn()
+  * *Also see* getHeaders(), fillColumn(), appendColumn()
 

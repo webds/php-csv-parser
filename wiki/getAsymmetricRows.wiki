@@ -1,0 +1,9 @@
+
+= Method:getAsymmetricRows = 
+
+_ alias of asymmetry() _
+
+  * *Visibility*  public
+  * *Also see* asymmetry()
+  * *Returns* array please look at the symmetry() method for details
+

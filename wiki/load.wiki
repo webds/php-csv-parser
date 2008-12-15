@@ -1,0 +1,11 @@
+
+= Method:load = 
+
+_ alias of uses($filename) _
+
+  # *Argument* _mixed_  $filename please refer to uses() for details
+
+  * *Visibility*  public
+  * *Also see* uses()
+  * *Returns* boolean
+

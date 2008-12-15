@@ -9,23 +9,24 @@
 
 == Cells ==
 
-  # *[cell]* _cell fetcher_ 
   # *[fillCell]* _cell value filler_ 
+  # *[getCell]* _cell fetcher_ 
+  # *[hasCell]* _checks if a coordinate is valid_ 
 
 
 == Headers ==
 
   # *[countHeaders]* _header counter_ 
   # *[createHeaders]* _header creator_ 
-  # *[headers]* _header fetcher_ 
-  # *[injectHeaders]* _header injector_ 
+  # *[getHeaders]* _header fetcher_ 
+  # *[setHeaders]* _header injector_ 
 
 
 == Columns ==
 
   # *[appendColumn]* _column appender_ 
-  # *[column]* _column fetcher_ 
   # *[fillColumn]* _collumn data injector_ 
+  # *[getColumn]* _column fetcher_ 
   # *[hasColumn]* _column existance checker_ 
   # *[removeColumn]* _column remover_ 
   # *[walkColumn]* _column walker_ 
@@ -36,19 +37,22 @@
   # *[appendRow]* _row appender_ 
   # *[countRows]* _row counter_ 
   # *[fillRow]* _fillRow_ 
+  # *[getAsymmetricRows]* _alias of asymmetry()_ 
+  # *[getRow]* _row fetcher_ 
+  # *[getRows]* _multiple row fetcher_ 
   # *[hasRow]* _row existance checker_ 
   # *[removeRow]* _row remover_ 
-  # *[row]* _row fetcher_ 
-  # *[rows]* _multiple row fetcher_ 
   # *[walkRow]* _row walker_ 
 
 
 == Transformation/Manipulation ==
 
+  # *[__construct]* _data load initialize_ 
   # *[asymmetry]* _asymmetric data fetcher_ 
   # *[connect]* _header and row relationship builder_ 
-  # *[coordinateable]* _checks if a coordinate is valid_ 
-  # *[rawArray]* _raw data as array_ 
+  # *[getRawArray]* _raw data as array_ 
+  # *[isSymmetric]* _alias of symmetric()_ 
+  # *[load]* _alias of uses($filename)_ 
   # *[settings]* _settings alterator_ 
   # *[symmetric]* _data length/symmetry checker_ 
   # *[symmetrize]* _all rows length equalizer_ 
