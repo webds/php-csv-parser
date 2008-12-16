@@ -1,0 +1,40 @@
+#labels Featured
+== Deprecations == 
+
+
+=== VERSION 0.2.1 ===
+
+  # *columnExists* will be renamed to hasColumn
+  # *rowExists* will be renamed to hasRow
+
+=== VERSION 0.2.2 ===
+
+* Method renaming *
+
+  # column > getColumn
+  # headers > getHeaders
+  # row > getRow
+  # rows > getRows
+  # cell > getCell
+  # uses > load (also loadable as an optional argument in the contructor method) // will keep alias
+  # rawArray > getRawArray
+  # coordinatable > hasCell
+  # injectHeaders > setHeaders
+  # symmetric > isSymmetric // will keep alias
+  # settings > setConfig
+  # asymmetry > getAsymmetricRows // will keep alias
+
+*Dropped classes*
+  # File_CSV_GetSql
+
+*File removal (from package.xml)*
+  # doc/phpdoc/*
+  # misc/output*
+
+* package.xml changes *
+  # README (change role from "data" to "doc")
+  # LICENCE (change role from "data" to "doc")
+
+* README *
+  # add link to google-code documentation
+
