@@ -11,3 +11,4 @@
   # [Documentation] Also ships with the package since version *0.1.6*
   # *Pear* http://pear.php.net/pepr/pepr-proposal-show.php?id=577 
   # [JoinTheProject] Information on how to contribute.
+  # [deprecations] a list of deprecated features since version 0.2.1
