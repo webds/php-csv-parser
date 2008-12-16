@@ -155,7 +155,6 @@ array (
 
 
   # *Argument* _array_  $list a collection of names to use as headers,
-check your database engine for column-name conventions.
 
   * *Visibility*  public
   * *Returns* boolean fails if data is not symmetric

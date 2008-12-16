@@ -130,8 +130,8 @@ array (
 }}}
 
 
-  # *Argument* _string_  $prefix check your database engine for valid
-column naming conventions.
+  # *Argument* _string_  $prefix string to use as prefix for each
+independent header
 
   * *Visibility*  public
   * *Returns* boolean fails if data is not symmetric
