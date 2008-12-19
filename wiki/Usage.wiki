@@ -1,5 +1,4 @@
 #labels Featured
-
 This page was here previous to documentation.
-please refer to the Documentation page for questions
+please refer to the [Documentation] page for questions
 and or usage examples.
