@@ -59,7 +59,7 @@ takaka, 8
             $array = $csv->connect(); // <- el array es igual que el de arriba
         } else {
 　　　　　　// extrae solamente los datos no concuerdan con las cabeceras 
-            $array = $csv->getAsymmetricRows);
+            $array = $csv->getAsymmetricRows();
         }
       
         // pone todos los datos de el archivo en un array

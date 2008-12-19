@@ -60,7 +60,7 @@ takaka, 8
         } else {
             // ヘッダーとデータの数が会わない場合
 　　　　　　// 会わない本文だけ配列に書き込む
-            $array = $csv->getAsymmetricRows);
+            $array = $csv->getAsymmetricRows();
         }
       
         // 全てのヘッダー＋データを読み込む
