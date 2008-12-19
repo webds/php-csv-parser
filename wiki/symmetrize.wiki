@@ -10,5 +10,5 @@ all unexistent cells will be filled with empty spaces
 
   * *Visibility*  public
   * *Returns* array
-  * *Also see* symmetric(), asymmetry(), symmetrize()
+  * *Also see* isSymmetric(), getAsymmetricRows(), symmetrize()
 

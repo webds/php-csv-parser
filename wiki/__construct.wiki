@@ -3,9 +3,9 @@
 
 _ data load initialize _
 
-  # *Argument* _mixed_  $filename please look at the uses() method
+  # *Argument* _mixed_  $filename please look at the load() method
 
   * *Visibility*  public
-  * *Also see* uses(), load()
+  * *Also see* load(), load()
   * *Returns* void
 

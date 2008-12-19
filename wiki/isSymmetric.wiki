@@ -1,10 +1,13 @@
 
 = Method:isSymmetric = 
 
-_ alias of symmetric() _
+_ data length/symmetry checker _
+
+tells if the headers and all of the contents length match.
+Note: there is a lot of methods that won't work if data is not
+symmetric this method is very important!
 
   * *Visibility*  public
-  * *Also see* symmetric()
-  * *Returns* boolean please look at the symmetric() method for
-details
+  * *Returns* boolean
+  * *Also see* symmetrize(), getAsymmetricRows(), isSymmetric()
 

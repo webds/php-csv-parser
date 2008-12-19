@@ -23,9 +23,9 @@ load the library and csv file
 
 
 {{{
-require_once 'File/CSV/Get.php';
-$csv = new File_CSV_Get;
-$csv->uses('my_cool.csv');
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
 }}}
 
 
@@ -113,5 +113,5 @@ array (
   * *Visibility*  public
   * *Returns* boolean
   * *Also see* hasColumn(), getHeaders(), createHeaders(), setHeaders(),
-symmetric(), asymmetry()
+isSymmetric(), getAsymmetricRows()
 

@@ -31,8 +31,8 @@ checks if the csv file was loaded
 
 
 {{{
-$csv = new File_CSV_Get;
-if (!$csv->uses('my_cool.csv')) {
+$csv = new File_CSV_DataSource;
+if (!$csv->load('my_cool.csv')) {
 die('can not load csv file');
 }
 }}}
@@ -135,5 +135,5 @@ independent header
 
   * *Visibility*  public
   * *Returns* boolean fails if data is not symmetric
-  * *Also see* symmetric(), asymmetry()
+  * *Also see* isSymmetric(), getAsymmetricRows()
 

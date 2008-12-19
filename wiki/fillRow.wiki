@@ -23,11 +23,11 @@ if we load the csv file and fill the second row with new data?
 
 {{{
 // load the library
-require_once 'File/CSV/Get.php';
-$csv = new File_CSV_Get;
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
 
 // load csv file
-$csv->uses('my_cool.csv');
+$csv->load('my_cool.csv');
 
 // fill exitent row
 var_export($csv->fillRow(1, 'x'));
@@ -144,6 +144,6 @@ the row. Only when the currently loaded dataset is symmetric
 
   * *Visibility*  public
   * *Returns* boolean
-  * *Also see* symmetric(), asymmetry(), symmetrize(), fillColumn(),
+  * *Also see* isSymmetric(), getAsymmetricRows(), symmetrize(), fillColumn(),
 fillCell(), appendRow()
 

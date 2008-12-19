@@ -32,31 +32,28 @@
   # *[walkColumn]* _column walker_ 
 
 
+== Transformation/Manipulation ==
+
+  # *[__construct]* _data load initialize_ 
+  # *[connect]* _header and row relationship builder_ 
+  # *[getRawArray]* _raw data as array_ 
+  # *[isSymmetric]* _data length/symmetry checker_ 
+  # *[load]* _csv file loader_ 
+  # *[settings]* _settings alterator_ 
+  # *[symmetrize]* _all rows length equalizer_ 
+  # *[walkGrid]* _grid walker_ 
+
+
 == Rows ==
 
   # *[appendRow]* _row appender_ 
   # *[countRows]* _row counter_ 
   # *[fillRow]* _fillRow_ 
-  # *[getAsymmetricRows]* _alias of asymmetry()_ 
+  # *[getAsymmetricRows]* _asymmetric data fetcher_ 
   # *[getRow]* _row fetcher_ 
   # *[getRows]* _multiple row fetcher_ 
   # *[hasRow]* _row existance checker_ 
   # *[removeRow]* _row remover_ 
   # *[walkRow]* _row walker_ 
-
-
-== Transformation/Manipulation ==
-
-  # *[__construct]* _data load initialize_ 
-  # *[asymmetry]* _asymmetric data fetcher_ 
-  # *[connect]* _header and row relationship builder_ 
-  # *[getRawArray]* _raw data as array_ 
-  # *[isSymmetric]* _alias of symmetric()_ 
-  # *[load]* _alias of uses($filename)_ 
-  # *[settings]* _settings alterator_ 
-  # *[symmetric]* _data length/symmetry checker_ 
-  # *[symmetrize]* _all rows length equalizer_ 
-  # *[uses]* _csv file loader_ 
-  # *[walkGrid]* _grid walker_ 
 
 

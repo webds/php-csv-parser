@@ -22,11 +22,11 @@ php implementation
 
 
 {{{
-$csv = new File_CSV_Get;
-$csv->uses('my_cool.csv');
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
 
 // if the csv file loads
-if ($csv->uses('my_cool.csv')) {
+if ($csv->load('my_cool.csv')) {
 
 // grab all data within the age column
 var_export($csv->getColumn('age'));

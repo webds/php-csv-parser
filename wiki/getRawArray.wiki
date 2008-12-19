@@ -10,6 +10,6 @@ values will also reflect on what this function retrives.
 
   * *Visibility*  public
   * *Returns* array
-  * *Also see* connect(), getHeaders(), getRows(), symmetric(), asymmetry(),
+  * *Also see* connect(), getHeaders(), getRows(), isSymmetric(), getAsymmetricRows(),
 symmetrize()
 

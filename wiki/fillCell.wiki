@@ -23,10 +23,10 @@ php implementation
 
 {{{
 
-$csv = new File_CSV_Get;
+$csv = new File_CSV_DataSource;
 
 // load the csv file
-$csv->uses('my_cool.csv');
+$csv->load('my_cool.csv');
 
 // find out if the given coordinate is valid
 if($csv->hasCell(1, 1)) {

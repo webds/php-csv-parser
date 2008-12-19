@@ -23,8 +23,8 @@ php implementation
 
 
 {{{
-$csv = new File_CSV_Get;
-$csv->uses('my_cool.csv');
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
 $headers = $csv->getHeaders();
 }}}
 

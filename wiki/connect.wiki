@@ -25,10 +25,10 @@ php implementation
 
 {{{
 
-$csv = new File_CSV_Get;
-$csv->uses('my_cool.csv');
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
 
-if (!$csv->symmetric()) {
+if (!$csv->isSymmetric()) {
 die('file has headers and rows with different lengths
 cannot connect');
 }
@@ -93,5 +93,5 @@ is given all headers will be used to create a connection
   * *Visibility*  public
   * *Returns* array If the data is not symmetric an empty array
 will be returned instead
-  * *Also see* symmetric(), asymmetry(), symmetrize(), getHeaders()
+  * *Also see* isSymmetric(), getAsymmetricRows(), symmetrize(), getHeaders()
 

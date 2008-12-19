@@ -20,8 +20,8 @@ load the csv file
 
 
 {{{
-$csv = new File_CSV_Get;
-var_export($csv->uses('my_cool.csv'));   // true if file is
+$csv = new File_CSV_DataSource;
+var_export($csv->load('my_cool.csv'));   // true if file is
 // loaded
 }}}
 

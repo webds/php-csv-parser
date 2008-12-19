@@ -7,7 +7,7 @@ uses a $list of values which wil be used to replace current
 headers.
 
 Note: that given $list must match the length of all rows.
-known as symmetric. see symmetric() and asymmetry() methods
+known as symmetric. see isSymmetric() and getAsymmetricRows() methods
 
 Also, that current headers will be used as first row of data
 and consecuently all rows order will change with this action.
@@ -29,9 +29,9 @@ load the library and csv file
 
 
 {{{
-require_once 'File/CSV/Get.php';
-$csv = new File_CSV_Get;
-$csv->uses('my_cool.csv');
+require_once 'File/CSV/DataSource.php';
+$csv = new File_CSV_DataSource;
+$csv->load('my_cool.csv');
 }}}
 
 
@@ -158,5 +158,5 @@ array (
 
   * *Visibility*  public
   * *Returns* boolean fails if data is not symmetric
-  * *Also see* symmetric(), asymmetry(), getHeaders(), createHeaders()
+  * *Also see* isSymmetric(), getAsymmetricRows(), getHeaders(), createHeaders()
 
