@@ -1,4 +1,4 @@
-#summary Quick sample!
+﻿#summary Quick sample!
 #labels Featured
 
 Lets get started with quick samples
@@ -15,13 +15,13 @@ takaka, 8
 {{{
 <?php
 
-  $csv = new File_CSV_Get;
+  $csv = new File_CSV_DataSource;
  
-  $csv->uses('my_file.csv'); // boolean
+  $csv->load('my_file.csv'); // boolean
 
-  $csv->headers(); // array('name', 'age');
+  $csv->getHeaders(); // array('name', 'age');
 
-  $csv->column('name'); // array('john', 'tanaka');
+  $csv->getColumn('name'); // array('john', 'tanaka');
 
   $csv->row(1); // array('john', '13');
 
@@ -41,31 +41,31 @@ takaka, 8
 <?php
 
      // usage sample
-     $csv = new File_CSV_Get;
+     $csv = new File_CSV_DataSource;
   
      // tell the object to parse a specific file
-     if ($csv->uses('my_file.csv')) {
+     if ($csv->load('my_file.csv')) {
   
        // execute the following if given file is usable
   
        // get the headers found in file
-       $array = $csv->headers();
+       $array = $csv->getHeaders();
       
        // get a specific column from csv file
-       $csv->column($array[2]);
+       $csv->getColumn($array[2]);
       
        // get each record with its related header
        // ONLY if all records length match the number
        // of headers
-        if ($csv->symmetric()) {
+        if ($csv->isSymmetric()) {
             $array = $csv->connect();
         } else {
             // fetch records that dont match headers length
-            $array = $csv->asymmetry();
+            $array = $csv->getAsymmetricRows);
         }
       
         // ignore everything and simply get the data as an array
-        $array = $csv->rawArray();
+        $array = $csv->getrawArray();
      }
 
 ?>

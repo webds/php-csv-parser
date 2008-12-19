@@ -1,4 +1,4 @@
-#summary 使い方について
+﻿#summary 使い方について
 #labels Featured,Phase-Implementation
 
 = シンプル　ー　サンプル =
@@ -14,13 +14,13 @@ takaka, 8
 
 <?php
 
-  $csv = new File_CSV_Get;
+  $csv = new File_CSV_DataSource;
  
-  $csv->uses('my_file.csv'); // boolean
+  $csv->load('my_file.csv'); // boolean
 
-  $csv->headers(); // array('name', 'age');
+  $csv->getHeaders(); // array('name', 'age');
 
-  $csv->column('name'); // array('john', 'tanaka');
+  $csv->getColumn('name'); // array('john', 'tanaka');
 
   $csv->row(1); // array('john', '13');
 
@@ -41,30 +41,30 @@ takaka, 8
 <?php
 
      // オブジェクトをつくる
-     $csv = new File_CSV_Get;
+     $csv = new File_CSV_DataSource;
   
      // 使いたいCSVの使用確認
-     if ($csv->uses('my_file.csv')) {
+     if ($csv->load('my_file.csv')) {
   
        // ヘッダーを配列に書き込む
-       $array = $csv->headers();
+       $array = $csv->getHeaders();
       
        // ヘッダーを使ってカラムのデータ配列に書き込む
-       $csv->column($array[2]);
+       $csv->getColumn($array[2]);
       
        // ヘッダーの数や全てのデータの数が会う場合
        // ヘッダーやデータ会わせって配列に書き込む
-        if ($csv->symmetric()) {
+        if ($csv->isSymmetric()) {
             // array(array('header1' => 'row1'), array('header1' => 'row2'));
             $array = $csv->connect(); // <- sample 上記の配列と同じです。
         } else {
             // ヘッダーとデータの数が会わない場合
 　　　　　　// 会わない本文だけ配列に書き込む
-            $array = $csv->asymmetry();
+            $array = $csv->getAsymmetricRows);
         }
       
         // 全てのヘッダー＋データを読み込む
-        $array = $csv->rawArray();
+        $array = $csv->getrawArray();
      }
 
 ?>

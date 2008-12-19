@@ -1,4 +1,4 @@
-#summary Simple Manual
+﻿#summary Simple Manual
 #labels Featured
 
 = Ejemplo Simple =
@@ -14,13 +14,13 @@ takaka, 8
 
 <?php
 
-  $csv = new File_CSV_Get;
+  $csv = new File_CSV_DataSource;
  
-  $csv->uses('my_file.csv'); // boolean
+  $csv->load('my_file.csv'); // boolean
 
-  $csv->headers(); // array('name', 'age');
+  $csv->getHeaders(); // array('name', 'age');
 
-  $csv->column('name'); // array('john', 'tanaka');
+  $csv->getColumn('name'); // array('john', 'tanaka');
 
   $csv->row(1); // array('john', '13');
 
@@ -40,30 +40,30 @@ takaka, 8
 <?php
 
      // instancia
-     $csv = new File_CSV_Get;
+     $csv = new File_CSV_DataSource;
   
      // verifica si el archivo se puede utilizar
-     if ($csv->uses('my_file.csv')) {
+     if ($csv->load('my_file.csv')) {
   
        // si es asi, recoge las cabeceras y ponlas en un array
-       $array = $csv->headers();
+       $array = $csv->getHeaders();
       
        // utiliza la segunda cabecera y pone todos los valores
        // de la columna en un array
-       $csv->column($array[2]);
+       $csv->getColumn($array[2]);
       
        // si las cabeceras y todos los datos concuerdan
        // crea una relacion entre cabeceras y los datos
-        if ($csv->symmetric()) {
+        if ($csv->isSymmetric()) {
             // array(array('header1' => 'row1'), array('header1' => 'row2'));
             $array = $csv->connect(); // <- el array es igual que el de arriba
         } else {
 　　　　　　// extrae solamente los datos no concuerdan con las cabeceras 
-            $array = $csv->asymmetry();
+            $array = $csv->getAsymmetricRows);
         }
       
         // pone todos los datos de el archivo en un array
-        $array = $csv->rawArray();
+        $array = $csv->getrawArray();
      }
 ?>
 
