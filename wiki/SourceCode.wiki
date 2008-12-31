@@ -3,7 +3,7 @@
 
 = Source Code Location =
 {{{
-http://svn.pear.php.net/PEAR2/sandbox/File_CSV_Get/
+http://svn.pear.php.net/PEAR2/sandbox/File_CSV_Datasource/
 }}}
 
 = Details =
