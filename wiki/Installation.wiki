@@ -2,10 +2,14 @@
   # Pear installation needed.
   # Download the file and run this on your commmand line.
 {{{
-  $ pear install File_CSV_Get-0.X.X.tgz
+  $ pear install File_CSV_Datasource-0.X.X.tgz
 }}}
   # see
   * [Usage]
   * [howToUseJAPANESE]
   * [howToUseSPANISH]
   * [howToUse] 
+
+Installation through PEAR
+  # make sure you have pear installed
+  # $ sudo pear install file_csv_datasource
