@@ -8,7 +8,7 @@
   # [howToUseSPANISH] brief usage example in Spanish.
   # [howToUse] brief usage example in English.
   # [SourceCode] source code location (moved from Google to Pear)
-  # [Documentation] Also ships with the package since version *0.1.6*
-  # *Pear* http://pear.php.net/pepr/pepr-proposal-show.php?id=577 
+  # [Documentation] Refer to this website for documentation and usage.
+  # *PEAR* - [http://pear.php.net/package/File_CSV_DataSource]
   # [JoinTheProject] Information on how to contribute.
   # [deprecations] a list of deprecated features since version 0.2.1
